@@ -6,8 +6,8 @@ const Navbar = () => {
     <NavLink to="/my-profile">My Profile</NavLink>
     </>
   return (
-    <nav className=''>
-      <div className="navbar bg-base-100 shadow-sm">
+    <nav className='shadow-sm'>
+      <div className="navbar bg-gray-300 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -18,13 +18,15 @@ const Navbar = () => {
        {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <h2 className="brand text-xl font-bold shadow-xs p-1">SHADOW<span className="text-primary">PREP</span></h2>
   </div>
   <div className="navbar-center hidden lg:flex">
    {links}
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-2">
+    <button className="btn btn-primary">Login</button>
+    <button className="btn btn-primary">Sign Up</button>
+
   </div>
 </div>
     </nav>
