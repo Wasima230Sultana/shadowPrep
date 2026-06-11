@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "icon": "FaReact",
+    "questions": 120,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "React, JavaScript, HTML, CSS, Tailwind",
+    "color": "#61DAFB"
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "icon": "FaServer",
+    "questions": 110,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Node.js, Express, MongoDB, REST APIs",
+    "color": "#68A063"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "icon": "FaLayerGroup",
+    "questions": 130,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Frontend + Backend Development",
+    "color": "#8B5CF6"
+  },
+  {
+    "id": 4,
+    "title": "Mobile App Developer",
+    "icon": "FaMobileAlt",
+    "questions": 90,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Flutter, Dart, Android, iOS",
+    "color": "#0EA5E9"
+  },
+  {
+    "id": 5,
+    "title": "UI/UX Designer",
+    "icon": "FaPaintBrush",
+    "questions": 80,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Figma, Wireframes, Design Systems",
+    "color": "#EC4899"
+  },
+  {
+    "id": 6,
+    "title": "Data Analyst",
+    "icon": "FaChartBar",
+    "questions": 95,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Excel, SQL, Power BI, Data Visualization",
+    "color": "#3B82F6"
+  },
+  {
+    "id": 7,
+    "title": "Data Scientist",
+    "icon": "FaDatabase",
+    "questions": 120,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Python, Statistics, Machine Learning",
+    "color": "#2563EB"
+  },
+  {
+    "id": 8,
+    "title": "Machine Learning Engineer",
+    "icon": "FaRobot",
+    "questions": 110,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "ML Models, TensorFlow, Scikit-Learn",
+    "color": "#7C3AED"
+  },
+  {
+    "id": 9,
+    "title": "AI Engineer",
+    "icon": "FaBrain",
+    "questions": 100,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "LLMs, Generative AI, Prompt Engineering",
+    "color": "#9333EA"
+  },
+  {
+    "id": 10,
+    "title": "DevOps Engineer",
+    "icon": "FaInfinity",
+    "questions": 85,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Docker, Kubernetes, CI/CD",
+    "color": "#6366F1"
+  },
+  {
+    "id": 11,
+    "title": "Cloud Engineer",
+    "icon": "FaCloud",
+    "questions": 90,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "AWS, Azure, GCP",
+    "color": "#06B6D4"
+  },
+  {
+    "id": 12,
+    "title": "Cybersecurity Specialist",
+    "icon": "FaShieldAlt",
+    "questions": 80,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Network Security, OWASP, Ethical Hacking",
+    "color": "#F59E0B"
+  },
+  {
+    "id": 13,
+    "title": "QA Engineer",
+    "icon": "FaBug",
+    "questions": 75,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Manual Testing, Automation Testing",
+    "color": "#14B8A6"
+  },
+  {
+    "id": 14,
+    "title": "Product Manager",
+    "icon": "FaBriefcase",
+    "questions": 85,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Product Strategy, Agile, Roadmaps, Stakeholders",
+    "color": "#FBBF24"
+  },
+  {
+    "id": 15,
+    "title": "Business Analyst",
+    "icon": "FaBusinessTime",
+    "questions": 70,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Requirements Gathering, Process Analysis",
+    "color": "#F97316"
+  },
+  {
+    "id": 16,
+    "title": "Software Engineer",
+    "icon": "FaCode",
+    "questions": 140,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "DSA, OOP, System Design",
+    "color": "#10B981"
+  },
+  {
+    "id": 17,
+    "title": "Java Developer",
+    "icon": "FaJava",
+    "questions": 100,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Java, Spring Boot, Microservices",
+    "color": "#DC2626"
+  },
+  {
+    "id": 18,
+    "title": "Python Developer",
+    "icon": "FaPython",
+    "questions": 100,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Python, Django, Flask, APIs",
+    "color": "#3776AB"
+  },
+  {
+    "id": 19,
+    "title": "Database Administrator",
+    "icon": "FaDatabase",
+    "questions": 65,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "SQL, PostgreSQL, MySQL, Optimization",
+    "color": "#0F766E"
+  },
+  {
+    "id": 20,
+    "title": "Flutter Developer",
+    "icon": "FaMobile",
+    "questions": 95,
+    "difficulty": ["Easy", "Medium", "Hard"],
+    "description": "Flutter, Dart, Firebase, State Management",
+    "color": "#02569B"
+  }
+]
