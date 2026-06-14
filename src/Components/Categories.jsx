@@ -61,7 +61,7 @@ const Categories = ({ cat }) => {
   const IconComponent = iconMap[icon];
 
   return (
-    <div className="relative bg-white/10 backdrop-blur-md p-5 rounded-xl border border-white/20 hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
+    <div className="relative bg-white/10 backdrop-blur-md p-5 rounded-xl border border-white/20 hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 p-2">
       
       {/* Badge */}
       {badge && (
@@ -71,7 +71,7 @@ const Categories = ({ cat }) => {
       )}
 
       {/* Header */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 ">
         <div
           className="w-14 h-14 rounded-xl flex items-center justify-center text-white"
           style={{ backgroundColor: color }}
@@ -80,7 +80,7 @@ const Categories = ({ cat }) => {
         </div>
 
         <div>
-          <h2 className="font-bold text-lg text-white">
+          <h2 className="font-bold text-sm md:text-lg text-white mt-4">
             {title}
           </h2>
 
@@ -104,16 +104,6 @@ const Categories = ({ cat }) => {
 <Link to={`/category/${id}`} className="inline-block mt-6 text-sm font-medium text-[#8b5cf6] hover:underline border-2 border-[#8b5cf6] px-3 py-1 rounded-full transition-colors duration-300">
   View Details →
 </Link>
-      {/* Footer */}
-      {/* <div className="flex justify-between items-center mt-5 pt-4 border-t border-white/10 text-sm">
-        <span className="text-yellow-400">
-          ⭐ {rating}
-        </span>
-
-        <span className="text-gray-400">
-          ⏱ {duration}
-        </span>
-      </div> */}
     </div>
   );
 };
