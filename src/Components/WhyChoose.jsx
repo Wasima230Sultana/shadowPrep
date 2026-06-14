@@ -31,8 +31,8 @@ const WhyChoose = () => {
         }
     ];
     return (
-        <div className="bg-gradient-to-b from-[#0f172a] via-[#111827] to-[#0f172a] text-white py-16 px-4">
-            <h2 className="text-4xl font-bold text-center mb-3">
+        <div className="bg-gradient-to-b from-[#0f172a] via-[#111827] to-[#0f172a] text-white py-2 px-4">
+            <h2 className="text-4xl font-bold text-center mb-2">
                 Why Choose <span className="text-[#8b5cf6]">ShadowPrep?</span>
             </h2>
 
@@ -41,7 +41,7 @@ const WhyChoose = () => {
                 and real-time performance tracking.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 text-center border-t border-white/10 pt-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-5 text-center border-t border-white/10 pt-5">
                 {features.map((feature, index) => (
                     <div
                         key={index}

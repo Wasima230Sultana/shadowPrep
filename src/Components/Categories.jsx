@@ -20,6 +20,7 @@ import {
   FaPython,
   FaMobile,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const iconMap = {
   FaReact,
@@ -45,6 +46,7 @@ const iconMap = {
 
 const Categories = ({ cat }) => {
   const {
+    id,
     title,
     icon,
     questions,
@@ -63,7 +65,7 @@ const Categories = ({ cat }) => {
       
       {/* Badge */}
       {badge && (
-        <span className="absolute top-3 right-3 px-2 py-1 text-xs font-medium rounded-full bg-[#8b5cf6] text-white">
+        <span className="absolute top-2 right-3 px-2 py-1 text-xs font-medium rounded-full bg-[#8b5cf6] text-white">
           {badge}
         </span>
       )}
@@ -99,9 +101,9 @@ const Categories = ({ cat }) => {
           </span>
         ))}
       </div>
-<button className="mt-5 p-3 bg-[#8b5cf6] hover:bg-[#7c3aed] text-white font-medium py-2.5 rounded-lg transition-all duration-300">
+<Link to={`/category/${id}`} className="inline-block mt-6 text-sm font-medium text-[#8b5cf6] hover:underline border-2 border-[#8b5cf6] px-3 py-1 rounded-full transition-colors duration-300">
   View Details →
-</button>
+</Link>
       {/* Footer */}
       {/* <div className="flex justify-between items-center mt-5 pt-4 border-t border-white/10 text-sm">
         <span className="text-yellow-400">
