@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
     const links = (
@@ -39,13 +39,13 @@ const Navbar = () => {
    {links}
   </div>
   <div className="navbar-end gap-2">
-    <button className="btn bg-[#8b5cf6] border-none text-white hover:bg-purple-700">
+    <Link to={'/auth/login'} className="btn bg-[#8b5cf6] border-none text-white hover:bg-purple-700">
   Login
-</button>
+</Link>
 
-<button className="btn btn-outline border-[#8b5cf6] text-[#8b5cf6] hover:bg-[#8b5cf6] hover:text-white">
+<Link to={'/auth/register'} className="btn btn-outline border-[#8b5cf6] text-[#8b5cf6] hover:bg-[#8b5cf6] hover:text-white">
   Sign Up
-</button>
+</Link>
 
   </div>
 </div>
