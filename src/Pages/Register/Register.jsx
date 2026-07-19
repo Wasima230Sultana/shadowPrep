@@ -1,142 +1,369 @@
 
 
+// import React, { useContext, useState } from "react";
+// import { Link, useNavigate } from "react-router";
+// import { AuthContext } from "../../Context/AuthContext";
+
+// const Register = () => {
+//   const { createUser } = useContext(AuthContext);
+
+//   const navigate = useNavigate();
+
+//   const [error, setError] = useState("");
+//   const [success, setSuccess] = useState("");
+//   const [loading, setLoading] = useState(false);
+
+//   const handleCreateUser = (e) => {
+//     e.preventDefault();
+
+//     setError("");
+//     setSuccess("");
+
+//     const form = e.target;
+//     const name = form.name.value;
+//     const email = form.email.value;
+//     const password = form.password.value;
+
+//     // Validation
+//     if (!name.trim()) {
+//       return setError("Name is required.");
+//     }
+
+//     if (password.length < 6) {
+//       return setError("Password must be at least 6 characters.");
+//     }
+
+//     setLoading(true);
+
+//     createUser(email, password)
+//       .then((result) => {
+//         console.log(result.user);
+
+//         setSuccess("🎉 Registration Successful!");
+
+//         form.reset();
+
+//         // Redirect after 2 seconds
+//         setTimeout(() => {
+//           navigate("/");
+//         }, 2000);
+//       })
+//       .catch((error) => {
+//         setError(error.message);
+//       })
+//       .finally(() => {
+//         setLoading(false);
+//       });
+//   };
+
+//   return (
+//     <div className="hero min-h-screen">
+//       <div className="hero-content flex-col lg:flex-row-reverse gap-12">
+
+//         <div>
+//           <h1 className="text-5xl font-bold">Register Now!</h1>
+//           <p className="py-6">
+//             Create your account and start exploring our platform.
+//           </p>
+//         </div>
+
+//         <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+//           <form onSubmit={handleCreateUser}>
+//             <div className="card-body">
+
+//               <fieldset className="fieldset">
+
+//                 <label className="label">Name</label>
+//                 <input
+//                   type="text"
+//                   className="input input-bordered"
+//                   placeholder="Enter Your Name"
+//                   name="name"
+//                 />
+
+//                 <label className="label">Email</label>
+//                 <input
+//                   type="email"
+//                   className="input input-bordered"
+//                   placeholder="Enter Your Email"
+//                   name="email"
+//                 />
+
+//                 <label className="label">Password</label>
+//                 <input
+//                   type="password"
+//                   className="input input-bordered"
+//                   placeholder="Enter Your Password"
+//                   name="password"
+//                 />
+
+//                 {error && (
+//                   <p className="text-red-500 mt-2 text-sm">{error}</p>
+//                 )}
+
+//                 {success && (
+//                   <p className="text-green-600 mt-2 text-sm">{success}</p>
+//                 )}
+
+//                 <button
+//                   className="btn btn-neutral mt-4"
+//                   disabled={loading}
+//                 >
+//                   {loading ? (
+//                     <>
+//                       <span className="loading loading-spinner loading-sm"></span>
+//                       Registering...
+//                     </>
+//                   ) : (
+//                     "Register"
+//                   )}
+//                 </button>
+
+//                 <p className="text-center mt-3">
+//                   Already have an account?
+//                   <Link
+//                     to="/auth/login"
+//                     className="text-purple-700 font-bold ml-1"
+//                   >
+//                     Login
+//                   </Link>
+//                 </p>
+
+//               </fieldset>
+
+//             </div>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Register;
+
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Context/AuthContext";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+    const [loading, setLoading] = useState(false);
 
-  const handleCreateUser = (e) => {
-    e.preventDefault();
+    const handleCreateUser = (e) => {
+        e.preventDefault();
 
-    setError("");
-    setSuccess("");
+        setError("");
+        setSuccess("");
 
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const password = form.password.value;
+        const form = e.target;
 
-    // Validation
-    if (!name.trim()) {
-      return setError("Name is required.");
-    }
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
 
-    if (password.length < 6) {
-      return setError("Password must be at least 6 characters.");
-    }
+        // Validation
+        if (!name.trim()) {
+            return setError("Name is required.");
+        }
 
-    setLoading(true);
+        if (password.length < 6) {
+            return setError("Password must be at least 6 characters.");
+        }
 
-    createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+        setLoading(true);
 
-        setSuccess("🎉 Registration Successful!");
+        createUser(email, password)
+            .then((result) => {
+                console.log(result.user);
 
-        form.reset();
+                setSuccess("🎉 Registration Successful!");
 
-        // Redirect after 2 seconds
-        setTimeout(() => {
-          navigate("/");
-        }, 2000);
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
+                form.reset();
 
-  return (
-    <div className="hero min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse gap-12">
+                setTimeout(() => {
+                    navigate("/");
+                }, 1500);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => setLoading(false));
+    };
 
-        <div>
-          <h1 className="text-5xl font-bold">Register Now!</h1>
-          <p className="py-6">
-            Create your account and start exploring our platform.
-          </p>
-        </div>
+    return (
+        <div className="relative min-h-screen overflow-hidden bg-slate-500 flex items-center justify-center">
 
-        <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
-          <form onSubmit={handleCreateUser}>
-            <div className="card-body">
+            {/* Animated Background */}
+            {/* Purple Blob */}
+            <div className="absolute -top-20 -left-20 sm:-top-32 sm:-left-32 lg:-top-40 lg:-left-40
+                h-52 w-52 sm:h-72 sm:w-72 lg:h-96 lg:w-96
+                rounded-full bg-purple-500 blur-5xl animate-pulse">
+            </div>
 
-              <fieldset className="fieldset">
+            {/* Pink Blob */}
+            <div className="absolute top-1/4 -right-16 sm:-right-24 lg:-right-32
+                h-52 w-52 sm:h-72 sm:w-72 lg:h-96 lg:w-96
+                rounded-full bg-pink-500 blur-5xl animate-pulse">
+            </div>
 
-                <label className="label">Name</label>
-                <input
-                  type="text"
-                  className="input input-bordered"
-                  placeholder="Enter Your Name"
-                  name="name"
-                />
+            {/* Cyan Blob */}
+            <div className="absolute -bottom-16 left-1/2 -translate-x-1/2
+                lg:left-1/3 lg:translate-x-0
+                h-52 w-52 sm:h-72 sm:w-72 lg:h-96 lg:w-96
+                rounded-full bg-cyan-500 blur-5xl animate-pulse">
+            </div>
 
-                <label className="label">Email</label>
-                <input
-                  type="email"
-                  className="input input-bordered"
-                  placeholder="Enter Your Email"
-                  name="email"
-                />
+            {/* Content */}
+            <div className="relative z-10 hero-content flex-col lg:flex-row-reverse gap-16">
 
-                <label className="label">Password</label>
-                <input
-                  type="password"
-                  className="input input-bordered"
-                  placeholder="Enter Your Password"
-                  name="password"
-                />
+                {/* Left Side */}
+                <div className="text-white max-w-lg">
 
-                {error && (
-                  <p className="text-red-500 mt-2 text-sm">{error}</p>
-                )}
+                    <h1 className="text-6xl font-extrabold leading-tight">
+                        Create Your
+                        <span className="block text-cyan-300">
+                            Dream Account
+                        </span>
+                    </h1>
 
-                {success && (
-                  <p className="text-green-600 mt-2 text-sm">{success}</p>
-                )}
+                    <p className="mt-6 text-lg text-gray-300 leading-relaxed">
+                        Join thousands of users and unlock premium features.
+                        Secure authentication, fast performance, and a beautiful
+                        experience await you.
+                    </p>
 
-                <button
-                  className="btn btn-neutral mt-4"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <>
-                      <span className="loading loading-spinner loading-sm"></span>
-                      Registering...
-                    </>
-                  ) : (
-                    "Register"
-                  )}
-                </button>
+                </div>
 
-                <p className="text-center mt-3">
-                  Already have an account?
-                  <Link
-                    to="/auth/login"
-                    className="text-purple-700 font-bold ml-1"
-                  >
-                    Login
-                  </Link>
-                </p>
+                {/* Register Card */}
+                <div className="w-full max-w-md rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_40px_rgba(0,0,0,.4)]">
 
-              </fieldset>
+                    <form onSubmit={handleCreateUser}>
+
+                        <div className="card-body">
+
+                            <h2 className="text-3xl font-bold text-center text-white mb-2">
+                                Register
+                            </h2>
+
+                            <p className="text-center text-gray-300 mb-4">
+                                Create a new account
+                            </p>
+
+                            {/* Name */}
+
+                            <label className="label text-white">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Enter your name"
+                                className="input input-bordered w-full"
+                            />
+
+                            {/* Email */}
+
+                            <label className="label text-white mt-2">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                className="input input-bordered w-full"
+                            />
+
+                            {/* Password */}
+
+                            <label className="label text-white mt-2">
+                                Password
+                            </label>
+
+                            <div className="relative">
+
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    className="input input-bordered w-full pr-12"
+                                />
+
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-4 top-4 text-gray-500"
+                                >
+                                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                </button>
+
+                            </div>
+
+                            {/* Error */}
+
+                            {error && (
+                                <div className="alert alert-error mt-4">
+                                    <span>{error}</span>
+                                </div>
+                            )}
+
+                            {/* Success */}
+
+                            {success && (
+                                <div className="alert alert-success mt-4">
+                                    <span>{success}</span>
+                                </div>
+                            )}
+
+                            {/* Button */}
+
+                            <button
+                                disabled={loading}
+                                className="btn mt-6 w-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 border-none text-white hover:scale-105 transition duration-300"
+                            >
+                                {loading ? (
+                                    <>
+                                        <span className="loading loading-spinner loading-sm"></span>
+                                        Registering...
+                                    </>
+                                ) : (
+                                    "Create Account"
+                                )}
+                            </button>
+
+                            {/* Login */}
+
+                            <p className="text-center text-gray-200 mt-5">
+
+                                Already have an account?
+
+                                <Link
+                                    to="/auth/login"
+                                    className="ml-2 text-blue-900 hover:text-cyan-300 font-semibold"
+                                >
+                                    Login
+                                </Link>
+
+                            </p>
+
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
-          </form>
+
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Register;

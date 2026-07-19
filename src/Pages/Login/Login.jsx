@@ -35,7 +35,7 @@
 //             <div className="hero bg-base-200 min-h-screen">
 //                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
 //                     <h1 className="text-5xl font-bold">Login now!</h1>
-                
+
 //                         <div className="card-body">
 //                             <form onSubmit={handlesignIn}>
 //                                 <fieldset className="fieldset">
@@ -53,7 +53,7 @@
 //   Login with Google
 // </button>
 //                         </div>
-                   
+
 //                 </div>
 //             </div>
 //         </div>
@@ -68,167 +68,181 @@ import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Context/AuthContext";
 
 const Login = () => {
-  const {
-    signInWithEmailAndPasswordFunc,
-    signInWithPopUpFunc,
-  } = useContext(AuthContext);
+    const {
+        signInWithEmailAndPasswordFunc,
+        signInWithPopUpFunc,
+    } = useContext(AuthContext);
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
 
-  const handlesignIn = (e) => {
-    e.preventDefault();
+    const handlesignIn = (e) => {
+        e.preventDefault();
 
-    setError("");
-    setSuccess("");
+        setError("");
+        setSuccess("");
 
-    const form = e.target;
+        const form = e.target;
 
-    const email = form.email.value;
-    const password = form.password.value;
+        const email = form.email.value;
+        const password = form.password.value;
 
-    setLoading(true);
+        setLoading(true);
 
-    signInWithEmailAndPasswordFunc(email, password)
-      .then(() => {
-        setSuccess("Login Successful 🎉");
+        signInWithEmailAndPasswordFunc(email, password)
+            .then(() => {
+                setSuccess("Login Successful 🎉");
 
-        form.reset();
+                form.reset();
 
-        setTimeout(() => {
-          navigate("/");
-        }, 1200);
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => setLoading(false));
-  };
+                setTimeout(() => {
+                    navigate("/");
+                }, 1200);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => setLoading(false));
+    };
 
-  const handleGoogleSignIn = () => {
-    setLoading(true);
+    const handleGoogleSignIn = () => {
+        setLoading(true);
 
-    signInWithPopUpFunc()
-      .then(() => {
-        navigate("/");
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => setLoading(false));
-  };
+        signInWithPopUpFunc()
+            .then(() => {
+                navigate("/");
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => setLoading(false));
+    };
 
-  return (
-    // <div
-    //   className="min-h-screen flex justify-center items-center bg-cover bg-center "
-    // >
-    <div className="relative min-h-screen overflow-hidden bg-slate-400 flex items-center justify-center">
+    return (
+        // <div
+        //   className="min-h-screen flex justify-center items-center bg-cover bg-center "
+        // >
+        <div className="relative min-h-screen overflow-hidden bg-slate-400 flex items-center justify-center">
 
-          <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-purple-500 opacity-40 blur-3xl animate-pulse"></div>
+            {/* Purple Blob */}
+            <div className="absolute -top-20 -left-20 sm:-top-32 sm:-left-32 lg:-top-40 lg:-left-40
+                h-52 w-52 sm:h-72 sm:w-72 lg:h-96 lg:w-96
+                rounded-full bg-purple-500 blur-5xl animate-pulse">
+            </div>
 
-  <div className="absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-pink-100 opacity-40 blur-3xl animate-pulse"></div>
+            {/* Pink Blob */}
+            <div className="absolute top-1/4 -right-16 sm:-right-24 lg:-right-32
+                h-52 w-52 sm:h-72 sm:w-72 lg:h-96 lg:w-96
+                rounded-full bg-pink-500 blur-5xl animate-pulse">
+            </div>
 
-  <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-cyan-500 opacity-40 blur-3xl animate-pulse"></div>
-      <div className="w-full max-w-md bg-white/20 backdrop-blur-lg shadow-2xl rounded-3xl p-8 border border-white/30 my-10">
+            {/* Cyan Blob */}
+            <div className="absolute -bottom-16 left-1/2 -translate-x-1/2
+                lg:left-1/3 lg:translate-x-0
+                h-52 w-52 sm:h-72 sm:w-72 lg:h-96 lg:w-96
+                rounded-full bg-cyan-500 blur-5xl animate-pulse">
+            </div>
 
-        <h1 className="text-4xl font-bold text-center text-white">
-          Welcome Back 👋
-        </h1>
+            <div className="w-full max-w-md bg-white/20 backdrop-blur-lg shadow-2xl rounded-3xl p-8 border border-white/30 my-10">
 
-        <p className="text-center text-gray-200 mt-2 mb-6">
-          Login to continue
-        </p>
+                <h1 className="text-4xl font-bold text-center text-white">
+                    Welcome Back 👋
+                </h1>
 
-        <form onSubmit={handlesignIn}>
+                <p className="text-center text-gray-200 mt-2 mb-6">
+                    Login to continue
+                </p>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            className="input input-bordered w-full mb-4"
-            required
-          />
+                <form onSubmit={handlesignIn}>
 
-          <div className="relative">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        className="input input-bordered w-full mb-4"
+                        required
+                    />
 
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="Password"
-              className="input input-bordered w-full"
-              required
-            />
+                    <div className="relative">
 
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-4"
-            >
-              {!showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            name="password"
+                            placeholder="Password"
+                            className="input input-bordered w-full"
+                            required
+                        />
 
-          </div>
+                        <button
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="absolute right-4 top-4"
+                        >
+                            {!showPassword ? <FaEyeSlash /> : <FaEye />}
+                        </button>
 
-          <div className="text-right mt-2">
-            <Link
-              to="/auth/forgotPassword"
-              className="text-white hover:underline"
-            >
-              Forgot Password?
-            </Link>
-          </div>
+                    </div>
 
-          {error && (
-            <p className="text-red-300 mt-3">{error}</p>
-          )}
+                    <div className="text-right mt-2">
+                        <Link
+                            to="/auth/forgotPassword"
+                            className="text-white hover:underline"
+                        >
+                            Forgot Password?
+                        </Link>
+                    </div>
 
-          {success && (
-            <p className="text-green-300 mt-3">{success}</p>
-          )}
+                    {error && (
+                        <p className="text-red-300 mt-3">{error}</p>
+                    )}
 
-          <button
-            className="btn btn-primary w-full mt-5"
-            disabled={loading}
-          >
-            {loading ? (
-              <>
-                <span className="loading loading-spinner loading-sm"></span>
-                Logging in...
-              </>
-            ) : (
-              "Login"
-            )}
-          </button>
+                    {success && (
+                        <p className="text-green-300 mt-3">{success}</p>
+                    )}
 
-        </form>
+                    <button
+                        className="btn btn-primary w-full mt-5"
+                        disabled={loading}
+                    >
+                        {loading ? (
+                            <>
+                                <span className="loading loading-spinner loading-sm"></span>
+                                Logging in...
+                            </>
+                        ) : (
+                            "Login"
+                        )}
+                    </button>
 
-        <div className="divider text-white">OR</div>
+                </form>
 
-        <button
-          onClick={handleGoogleSignIn}
-          className="btn bg-white text-black w-full hover:bg-gray-100"
-        >
-          <FaGoogle className="text-red-500" />
-          Continue with Google
-        </button>
+                <div className="divider text-white">OR</div>
 
-        <p className="text-center text-white mt-6">
-          Don't have an account?
-          <Link
-            to="/auth/register"
-            className="font-bold ml-2 underline"
-          >
-            Register
-          </Link>
-        </p>
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="btn bg-white text-black w-full hover:bg-gray-100"
+                >
+                    <FaGoogle />
+                    Continue with Google
+                </button>
 
-      </div>
-    </div>
-  );
+                <p className="text-center text-white mt-6">
+                    Don't have an account?
+                    <Link
+                        to="/auth/register"
+                        className="font-bold ml-2 underline"
+                    >
+                        Register
+                    </Link>
+                </p>
+
+            </div>
+        </div>
+    );
 };
 
 export default Login;
