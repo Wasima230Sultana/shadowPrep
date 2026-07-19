@@ -5,13 +5,13 @@ const Banner = () => {
   return (
     <div className="bg-[#0f172a] text-white overflow-hidden ">
 
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-10">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-center my-5">
         Practice. Prepare.
         <span className="text-[#8b5cf6]"> Ace.</span>
       </h1>
 
       {/* Top Marquee */}
-      <marquee speed={50} className="border-b border-purple-500 py-3">
+      <marquee speed={50} className="border-b border-purple-500 py-2">
         <span className="mx-8">🚀 5000+ Problems</span>
         <span className="mx-8">💻 Mock Interviews</span>
         <span className="mx-8">📚 DSA Roadmaps</span>
@@ -19,7 +19,7 @@ const Banner = () => {
         <span className="mx-8">🎯 Track Progress</span>
       </marquee>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 px-4 md:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 px-4 md:px-20">
         <div>
           <Leftside></Leftside>
         </div>
