@@ -7,7 +7,7 @@ import { AuthContext } from "../../Context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-    const { createUser, signInWithPopUpFunc } = useContext(AuthContext);
+    const { createUser, signInWithPopUpFunc, updateProfileFunc, setUser } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -41,28 +41,34 @@ const Register = () => {
         setLoading(true);
 
         createUser(email, password)
-            .then((result) => {
-                console.log(result.user);
+            .then(result => {
+                const createdUser = result.user;
+                updateProfileFunc({ displayName: name, photoURL: photoURL })
+                    .then(() => {
+                        setUser({
+                            ...createdUser,
+                            displayName: name,
+                            photoURL: photoURL
+                        });
+                        navigate('/')
+                        //   console.log(createUser)
+                    })
+                    .catch((error) => {
+                        setUser(createdUser);
+                    })
 
-                setSuccess("🎉 Registration Successful!");
-
-                form.reset();
-
-                setTimeout(() => {
-                    navigate("/");
-                }, 1500);
             })
-            .catch((error) => {
+            .catch(error => {
                 setError(error.message);
             })
-            .finally(() => setLoading(false));
     };
 
     const handleGoogleSignIn = () => {
         setLoading(true);
 
         signInWithPopUpFunc()
-            .then(() => {
+            .then((result) => {
+                const loggedUser = result.user;
                 navigate("/");
             })
             .catch((error) => {
@@ -154,14 +160,14 @@ const Register = () => {
                                 placeholder="Enter your email"
                                 className="input input-bordered w-full"
                             />
-{/* PhotoURL */}
+                            {/* PhotoURL */}
 
-                       <label className="label text-white mt-2">Photo-URL</label>
-                        <input 
-                        type="text" className="input" placeholder="Enter photo URL" 
-                        name='photoURL'
-                        className="input input-bordered w-full"
-                         />
+                            <label className="label text-white mt-2">Photo-URL</label>
+                            <input
+                                type="text" className="input" placeholder="Enter photo URL"
+                                name='photoURL'
+                                className="input input-bordered w-full"
+                            />
 
                             {/* Password */}
 

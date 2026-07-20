@@ -1,5 +1,5 @@
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Context/AuthContext";
@@ -8,17 +8,19 @@ import { FcGoogle } from "react-icons/fc";
 const Login = () => {
     const {
         signInWithEmailAndPasswordFunc,
-        signInWithPopUpFunc
+        signInWithPopUpFunc,
+        loading,
+        setLoading
     } = useContext(AuthContext);
 
+    const emailRef = useRef(null)
     const navigate = useNavigate();
     const location = useLocation();
     const [showPassword, setShowPassword] = useState(false);
-    const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
-    const handlesignIn = (e) => {
+    const handleSignIn = (e) => {
         e.preventDefault();
 
         setError("");
@@ -34,7 +36,7 @@ const Login = () => {
                 setSuccess("Login Successful 🎉");
 
                 form.reset();
-                    navigate(location.state || "/");
+                navigate(`${location.state ? location.state : "/"}`)
             })
             .catch((error) => {
                 setError(error.message);
@@ -42,11 +44,10 @@ const Login = () => {
     };
 
     const handleGoogleSignIn = () => {
-        setLoading(true);
-
         signInWithPopUpFunc()
-            .then(() => {
-                navigate(location.state || "/");
+            .then((result) => {
+                console.log(result.user);
+                navigate(`${location.state ? location.state : "/"}`)
             })
             .catch((error) => {
                 setError(error.message);
@@ -85,7 +86,7 @@ const Login = () => {
                     Login to continue
                 </p>
 
-                <form onSubmit={handlesignIn}>
+                <form onSubmit={handleSignIn}>
 
                     <input
                         type="email"
@@ -118,6 +119,7 @@ const Login = () => {
                     <div className="text-right mt-2">
                         <Link
                             to={'/forget-password'}
+                            state={{ email: emailRef.current?.value }}
                             className="text-white hover:underline"
                         >
                             Forgot Password?
