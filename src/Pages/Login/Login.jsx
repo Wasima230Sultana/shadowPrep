@@ -1,8 +1,9 @@
 
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Context/AuthContext";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     const {
@@ -153,7 +154,7 @@ const Login = () => {
                     onClick={handleGoogleSignIn}
                     className="btn bg-white text-black w-full hover:bg-gray-100"
                 >
-                    <FaGoogle />
+                    <FcGoogle />
                     Continue with Google
                 </button>
 

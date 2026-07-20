@@ -4,9 +4,10 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Context/AuthContext";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInWithPopUpFunc } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -25,6 +26,7 @@ const Register = () => {
 
         const name = form.name.value;
         const email = form.email.value;
+        const photoURL = form.photoURL.value;
         const password = form.password.value;
 
         // Validation
@@ -47,13 +49,25 @@ const Register = () => {
                 form.reset();
 
                 setTimeout(() => {
-                    navigate(location.state || "/");
+                    navigate("/");
                 }, 1500);
             })
             .catch((error) => {
                 setError(error.message);
             })
             .finally(() => setLoading(false));
+    };
+
+    const handleGoogleSignIn = () => {
+        setLoading(true);
+
+        signInWithPopUpFunc()
+            .then(() => {
+                navigate("/");
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
     };
 
     return (
@@ -103,10 +117,10 @@ const Register = () => {
                 {/* Register Card */}
                 <div className="w-full max-w-md rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_40px_rgba(0,0,0,.4)]">
 
-                    <form onSubmit={handleCreateUser}>
 
-                        <div className="card-body">
+                    <div className="card-body">
 
+                        <form onSubmit={handleCreateUser}>
                             <h2 className="text-3xl font-bold text-center text-white mb-2">
                                 Register
                             </h2>
@@ -140,6 +154,14 @@ const Register = () => {
                                 placeholder="Enter your email"
                                 className="input input-bordered w-full"
                             />
+{/* PhotoURL */}
+
+                       <label className="label text-white mt-2">Photo-URL</label>
+                        <input 
+                        type="text" className="input" placeholder="Enter photo URL" 
+                        name='photoURL'
+                        className="input input-bordered w-full"
+                         />
 
                             {/* Password */}
 
@@ -161,7 +183,7 @@ const Register = () => {
                                     onClick={() => setShowPassword(!showPassword)}
                                     className="absolute right-4 top-4 text-gray-500"
                                 >
-                                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                    {!showPassword ? <FaEyeSlash /> : <FaEye />}
                                 </button>
 
                             </div>
@@ -197,25 +219,36 @@ const Register = () => {
                                     "Create Account"
                                 )}
                             </button>
+                        </form>
+                        <div className="divider text-white">OR</div>
 
-                            {/* Login */}
+                        <button
+                            onClick={handleGoogleSignIn}
+                            className="btn bg-white text-black w-full hover:bg-gray-100"
+                        >
+                            <FcGoogle />
+                            Continue with Google
+                        </button>
+                        {/* Login */}
 
-                            <p className="text-center text-gray-200 mt-5">
+                        <p className="text-center text-gray-200 mt-5">
 
-                                Already have an account?
+                            Already have an account?
 
-                                <Link
-                                    to="/auth/login"
-                                    className="ml-2 text-blue-900 hover:text-cyan-300 font-semibold"
-                                >
-                                    Login
-                                </Link>
+                            <Link
+                                to="/auth/login"
+                                className="ml-2 text-blue-900 hover:text-cyan-300 font-semibold"
+                            >
+                                Login
+                            </Link>
 
-                            </p>
+                        </p>
 
-                        </div>
 
-                    </form>
+
+
+                    </div>
+
 
                 </div>
 

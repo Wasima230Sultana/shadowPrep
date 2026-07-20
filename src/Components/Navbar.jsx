@@ -1,18 +1,20 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
+import { IoPersonCircleSharp } from "react-icons/io5";
+import { ClockLoader } from "react-spinners";
 
 const Navbar = () => {
-  const { user,signOutUser } = useContext(AuthContext);
+  const { user, signOutUser, loading } = useContext(AuthContext);
 
-  const handleSignOut =()=>{
+  const handleSignOut = () => {
     signOutUser()
-    .then(()=>{
-      console.log('Successful')
-    })
-    .catch(()=>{
-      console.log('Failed')
-    })
+      .then(() => {
+        console.log('Successful')
+      })
+      .catch(() => {
+        console.log('Failed')
+      })
   }
 
 
@@ -56,27 +58,41 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-2">
           {
-            user ?
-            (
-              <>
-                <button onClick={handleSignOut} className="btn bg-[#8b5cf6] border-none text-white hover:bg-purple-700">
-                  Sign Out
-                </button></>
-            )
-            :(
-              <>
-                <Link to={'/auth/login'} className="btn bg-[#8b5cf6] border-none text-white hover:bg-purple-700">
-                  Login
-                </Link>
+            loading ?
+              (<ClockLoader></ClockLoader>) :
+              (<div className='login-btn flex items-center gap-1'>
 
-                <Link to={'/auth/register'} className="btn btn-outline border-[#8b5cf6] text-[#8b5cf6] hover:bg-[#8b5cf6] hover:text-white">
-                  Sign Up
-                </Link></>
-            ) 
+                {user?.photoURL ? (
+                  <img
+                    className="w-7 h-7 md:w-10 md:h-10 rounded-full"
+                    src={user.photoURL}
+                    alt="User"
+                  />
+                ) : (
+                  <IoPersonCircleSharp className="w-7 h-7 md:w-10 md:h-10 text-white" />
+                )}
+                {
+                  user ?
+                    (
+                      <>
+                        <button onClick={handleSignOut} className="btn bg-[#8b5cf6] border-none text-white hover:bg-purple-700">
+                          Sign Out
+                        </button></>
+                    )
+                    : (
+                      <>
+                        <Link to={'/auth/login'} className="btn bg-[#8b5cf6] border-none text-white hover:bg-purple-700">
+                          Login
+                        </Link>
+
+                        <Link to={'/auth/register'} className="btn btn-outline border-[#8b5cf6] text-[#8b5cf6] hover:bg-[#8b5cf6] hover:text-white">
+                          Sign Up
+                        </Link></>
+                    )
+                }
+              </div>)
+
           }
-
-
-
         </div>
       </div>
     </nav>
