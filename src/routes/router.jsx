@@ -9,7 +9,7 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../Components/UpdateProfile";
-
+import ForgetPassword from '../Pages/ForgetPassword'
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -58,5 +58,8 @@ export const router = createBrowserRouter([
           element:<Login></Login>
         },
       ]
+      },{
+        path:'/forget-password',
+        element:<ForgetPassword></ForgetPassword>
       }
 ]);

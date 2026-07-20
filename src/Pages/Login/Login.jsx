@@ -8,7 +8,7 @@ import { FcGoogle } from "react-icons/fc";
 const Login = () => {
     const {
         signInWithEmailAndPasswordFunc,
-        signInWithPopUpFunc,
+        signInWithPopUpFunc
     } = useContext(AuthContext);
 
     const navigate = useNavigate();
@@ -117,7 +117,7 @@ const Login = () => {
 
                     <div className="text-right mt-2">
                         <Link
-                            to="/auth/forgotPassword"
+                            to={'/forget-password'}
                             className="text-white hover:underline"
                         >
                             Forgot Password?
