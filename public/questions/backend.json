@@ -1,0 +1,311 @@
+[
+  {
+    "id": 1,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is Node.js?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about JavaScript outside the browser.",
+    "expectedTopics": [
+      "JavaScript runtime",
+      "Chrome V8 engine",
+      "Server-side development"
+    ],
+    "followUpQuestion": "Why is Node.js suitable for scalable applications?"
+  },
+  {
+    "id": 2,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is Express.js?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about web frameworks.",
+    "expectedTopics": [
+      "Node.js framework",
+      "Routing",
+      "Middleware"
+    ],
+    "followUpQuestion": "What advantages does Express provide over Node's built-in HTTP module?"
+  },
+  {
+    "id": 3,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is a REST API?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about communication between client and server.",
+    "expectedTopics": [
+      "Representational State Transfer",
+      "HTTP methods",
+      "Resources"
+    ],
+    "followUpQuestion": "Which HTTP methods are commonly used in REST APIs?"
+  },
+  {
+    "id": 4,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is MongoDB?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about NoSQL databases.",
+    "expectedTopics": [
+      "NoSQL",
+      "Document database",
+      "Collections"
+    ],
+    "followUpQuestion": "How is MongoDB different from MySQL?"
+  },
+  {
+    "id": 5,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is middleware in Express?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about functions executed during requests.",
+    "expectedTopics": [
+      "Request processing",
+      "Response processing",
+      "next() function"
+    ],
+    "followUpQuestion": "Can you name some commonly used middleware?"
+  },
+  {
+    "id": 6,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What are environment variables?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about configuration.",
+    "expectedTopics": [
+      ".env",
+      "Security",
+      "Configuration"
+    ],
+    "followUpQuestion": "Why shouldn't secrets be committed to GitHub?"
+  },
+  {
+    "id": 7,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is CRUD?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about database operations.",
+    "expectedTopics": [
+      "Create",
+      "Read",
+      "Update",
+      "Delete"
+    ],
+    "followUpQuestion": "Which HTTP methods correspond to CRUD operations?"
+  },
+  {
+    "id": 8,
+    "categoryId": 2,
+    "difficulty": "Easy",
+    "question": "What is JSON?",
+    "timeLimit": 90,
+    "score": 10,
+    "hint": "Think about data exchange.",
+    "expectedTopics": [
+      "JavaScript Object Notation",
+      "Data format",
+      "API communication"
+    ],
+    "followUpQuestion": "Why is JSON widely used in web APIs?"
+  },
+  {
+    "id": 9,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "Explain JWT Authentication.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about secure user authentication.",
+    "expectedTopics": [
+      "JSON Web Token",
+      "Header",
+      "Payload",
+      "Signature"
+    ],
+    "followUpQuestion": "Where should JWT tokens be stored on the client?"
+  },
+  {
+    "id": 10,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "What is Mongoose?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about MongoDB in Node.js.",
+    "expectedTopics": [
+      "ODM",
+      "Schema",
+      "Model"
+    ],
+    "followUpQuestion": "Why use Mongoose instead of the MongoDB driver directly?"
+  },
+  {
+    "id": 11,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "How do you handle errors in Express?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about centralized error handling.",
+    "expectedTopics": [
+      "Error middleware",
+      "try/catch",
+      "Status codes"
+    ],
+    "followUpQuestion": "Why is centralized error handling beneficial?"
+  },
+  {
+    "id": 12,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "What is CORS?",
+    "timeLimit": 150,
+    "score": 15,
+    "hint": "Think about browser security.",
+    "expectedTopics": [
+      "Cross-Origin Resource Sharing",
+      "Origins",
+      "Browser policy"
+    ],
+    "followUpQuestion": "Why do frontend applications often need CORS?"
+  },
+  {
+    "id": 13,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "Explain the Express request-response lifecycle.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about what happens after a client request.",
+    "expectedTopics": [
+      "Request",
+      "Middleware",
+      "Route handler",
+      "Response"
+    ],
+    "followUpQuestion": "Where does middleware fit into this lifecycle?"
+  },
+  {
+    "id": 14,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "How do you secure REST APIs?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about authentication and validation.",
+    "expectedTopics": [
+      "JWT",
+      "Validation",
+      "HTTPS",
+      "Rate limiting"
+    ],
+    "followUpQuestion": "What security risks should every backend developer know?"
+  },
+  {
+    "id": 15,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "Explain password hashing.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about storing passwords securely.",
+    "expectedTopics": [
+      "bcrypt",
+      "Hashing",
+      "Salt"
+    ],
+    "followUpQuestion": "Why should passwords never be stored as plain text?"
+  },
+  {
+    "id": 16,
+    "categoryId": 2,
+    "difficulty": "Medium",
+    "question": "How do you connect Node.js with MongoDB?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about database connections.",
+    "expectedTopics": [
+      "Mongoose",
+      "Connection string",
+      "Database URI"
+    ],
+    "followUpQuestion": "Where should the MongoDB URI be stored?"
+  },
+  {
+    "id": 17,
+    "categoryId": 2,
+    "difficulty": "Hard",
+    "question": "Explain the Node.js Event Loop.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about asynchronous execution.",
+    "expectedTopics": [
+      "Event loop",
+      "Callback queue",
+      "Non-blocking I/O"
+    ],
+    "followUpQuestion": "How does the event loop improve performance?"
+  },
+  {
+    "id": 18,
+    "categoryId": 2,
+    "difficulty": "Hard",
+    "question": "How would you design a scalable REST API?",
+    "timeLimit": 300,
+    "score": 20,
+    "hint": "Think about architecture and maintainability.",
+    "expectedTopics": [
+      "Modular architecture",
+      "Authentication",
+      "Validation",
+      "Versioning",
+      "Documentation"
+    ],
+    "followUpQuestion": "How would you version your APIs?"
+  },
+  {
+    "id": 19,
+    "categoryId": 2,
+    "difficulty": "Hard",
+    "question": "Explain authentication vs authorization.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about identity versus permissions.",
+    "expectedTopics": [
+      "Authentication",
+      "Authorization",
+      "Roles",
+      "Permissions"
+    ],
+    "followUpQuestion": "Can a user be authenticated but not authorized?"
+  },
+  {
+    "id": 20,
+    "categoryId": 2,
+    "difficulty": "Hard",
+    "question": "Describe a backend project you built and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss routes, controllers, database, authentication, and deployment.",
+    "expectedTopics": [
+      "Project structure",
+      "REST API",
+      "Database",
+      "Authentication",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you were to redesign the project today, what improvements would you make?"
+  }
+]

@@ -1,0 +1,305 @@
+[
+  {
+    "id": 1,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "What is React?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about reusable UI and components.",
+    "expectedTopics": [
+      "JavaScript library",
+      "User interfaces",
+      "Component-based architecture"
+    ],
+    "followUpQuestion": "Why is React called a library instead of a framework?"
+  },
+  {
+    "id": 2,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "What is JSX?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "It looks like HTML inside JavaScript.",
+    "expectedTopics": [
+      "JavaScript XML",
+      "HTML-like syntax",
+      "Babel"
+    ],
+    "followUpQuestion": "Can browsers understand JSX directly?"
+  },
+  {
+    "id": 3,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "What is the Virtual DOM?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about performance optimization.",
+    "expectedTopics": [
+      "Virtual representation",
+      "DOM",
+      "Efficient updates"
+    ],
+    "followUpQuestion": "How does the Virtual DOM improve performance?"
+  },
+  {
+    "id": 4,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "What is the difference between Props and State?",
+    "timeLimit": 150,
+    "score": 10,
+    "hint": "One is read-only, the other changes.",
+    "expectedTopics": [
+      "Props",
+      "State",
+      "Data flow"
+    ],
+    "followUpQuestion": "When should you use state instead of props?"
+  },
+  {
+    "id": 5,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "What are React Components?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about reusable UI.",
+    "expectedTopics": [
+      "Reusable",
+      "Functional",
+      "Class components"
+    ],
+    "followUpQuestion": "Which type of component is recommended today?"
+  },
+  {
+    "id": 6,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "What does useState do?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about component data.",
+    "expectedTopics": [
+      "State",
+      "Hooks",
+      "Re-render"
+    ],
+    "followUpQuestion": "What happens after state changes?"
+  },
+  {
+    "id": 7,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "Why are keys important in React lists?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about rendering efficiency.",
+    "expectedTopics": [
+      "Unique key",
+      "Reconciliation",
+      "Performance"
+    ],
+    "followUpQuestion": "Can array indexes always be used as keys?"
+  },
+  {
+    "id": 8,
+    "categoryId": 1,
+    "difficulty": "Easy",
+    "question": "How do you handle events in React?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about event handlers.",
+    "expectedTopics": [
+      "onClick",
+      "Synthetic events",
+      "Functions"
+    ],
+    "followUpQuestion": "What is a Synthetic Event?"
+  },
+  {
+    "id": 9,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "Explain useEffect.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about side effects.",
+    "expectedTopics": [
+      "Side effects",
+      "Dependency array",
+      "Cleanup"
+    ],
+    "followUpQuestion": "When does the cleanup function execute?"
+  },
+  {
+    "id": 10,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "Explain Context API.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about global state.",
+    "expectedTopics": [
+      "Provider",
+      "Consumer",
+      "Prop drilling"
+    ],
+    "followUpQuestion": "When would Redux be preferred over Context API?"
+  },
+  {
+    "id": 11,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "What are custom hooks?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reusable logic.",
+    "expectedTopics": [
+      "Hooks",
+      "Reuse",
+      "Functions"
+    ],
+    "followUpQuestion": "Can custom hooks use other hooks?"
+  },
+  {
+    "id": 12,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "How do you fetch data in React?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about APIs.",
+    "expectedTopics": [
+      "fetch",
+      "Axios",
+      "useEffect"
+    ],
+    "followUpQuestion": "How do you handle API errors?"
+  },
+  {
+    "id": 13,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "Explain controlled and uncontrolled components.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about forms.",
+    "expectedTopics": [
+      "Forms",
+      "State",
+      "Refs"
+    ],
+    "followUpQuestion": "Which approach is more common in React?"
+  },
+  {
+    "id": 14,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "Explain conditional rendering.",
+    "timeLimit": 150,
+    "score": 15,
+    "hint": "Think about showing UI conditionally.",
+    "expectedTopics": [
+      "if",
+      "&&",
+      "Ternary"
+    ],
+    "followUpQuestion": "Which conditional rendering method do you use most often?"
+  },
+  {
+    "id": 15,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "What is React Router?",
+    "timeLimit": 150,
+    "score": 15,
+    "hint": "Think about navigation.",
+    "expectedTopics": [
+      "Routing",
+      "SPA",
+      "Navigation"
+    ],
+    "followUpQuestion": "What is the difference between Link and NavLink?"
+  },
+  {
+    "id": 16,
+    "categoryId": 1,
+    "difficulty": "Medium",
+    "question": "Explain lifting state up.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about shared state.",
+    "expectedTopics": [
+      "Parent component",
+      "Shared state",
+      "Props"
+    ],
+    "followUpQuestion": "When should you lift state up?"
+  },
+  {
+    "id": 17,
+    "categoryId": 1,
+    "difficulty": "Hard",
+    "question": "Explain the React rendering lifecycle.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about rendering phases.",
+    "expectedTopics": [
+      "Render",
+      "Commit",
+      "Re-render"
+    ],
+    "followUpQuestion": "How does React decide when to re-render?"
+  },
+  {
+    "id": 18,
+    "categoryId": 1,
+    "difficulty": "Hard",
+    "question": "How does React optimize performance?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about memoization.",
+    "expectedTopics": [
+      "React.memo",
+      "useMemo",
+      "useCallback",
+      "Lazy loading"
+    ],
+    "followUpQuestion": "When should you avoid premature optimization?"
+  },
+  {
+    "id": 19,
+    "categoryId": 1,
+    "difficulty": "Hard",
+    "question": "Explain React reconciliation.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about the diffing algorithm.",
+    "expectedTopics": [
+      "Virtual DOM",
+      "Diffing",
+      "Efficient updates"
+    ],
+    "followUpQuestion": "Why is the diffing algorithm important?"
+  },
+  {
+    "id": 20,
+    "categoryId": 1,
+    "difficulty": "Hard",
+    "question": "Describe a React project you built and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss structure, routing, state, APIs, and deployment.",
+    "expectedTopics": [
+      "Project structure",
+      "Components",
+      "Routing",
+      "State management",
+      "API integration"
+    ],
+    "followUpQuestion": "If you had more time, what improvements would you make?"
+  }
+]

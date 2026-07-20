@@ -24,7 +24,7 @@ const UpdateProfile = () => {
                 navigate('/my-profile')
             })
             .catch((error) => {
-                console.log(error)
+                // console.log(error)
             })
     }
     return (

@@ -10,6 +10,8 @@ import Login from "../Pages/Login/Login";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../Components/UpdateProfile";
 import ForgetPassword from '../Pages/ForgetPassword'
+import TopicDetails from "../Pages/TopicDetails/TopicDetails";
+import Interview from "../Pages/Interview/Interview";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -25,8 +27,7 @@ export const router = createBrowserRouter([
           <UpdateProfile />
         </PrivateRoutes>
         
-      }
-      ,
+      },
       {
          path: "/my-profile",
         element: <PrivateRoutes>
@@ -45,6 +46,20 @@ export const router = createBrowserRouter([
         </PrivateRoutes>,
         loader:()=>fetch('/categories.json')
       },
+      {
+         path: "/topics/:id",
+        element: <PrivateRoutes>
+          <TopicDetails />
+        </PrivateRoutes>
+        
+      },
+      {
+         path: "/interview/:id",
+        element: <PrivateRoutes>
+          <Interview />
+        </PrivateRoutes>
+        
+      }
     ]
   },{
         path:'/auth',

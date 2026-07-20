@@ -1,0 +1,140 @@
+{
+  "categoryId": 1,
+  "title": "Frontend Developer",
+  "studyTime": "30-45 min",
+  "overview": "Frontend developers build the user interface of web applications. They work with HTML, CSS, JavaScript, React, responsive design, APIs, and performance optimization to create fast and user-friendly websites.",
+
+  "concepts": [
+    {
+      "title": "HTML",
+      "topics": [
+        "Semantic HTML",
+        "Forms",
+        "Input Types",
+        "Accessibility",
+        "SEO Basics"
+      ]
+    },
+    {
+      "title": "CSS",
+      "topics": [
+        "Selectors",
+        "Flexbox",
+        "Grid",
+        "Position",
+        "Animations",
+        "Media Queries"
+      ]
+    },
+    {
+      "title": "JavaScript",
+      "topics": [
+        "Variables",
+        "Scope",
+        "Closures",
+        "Promises",
+        "Async/Await",
+        "ES6 Features",
+        "Array Methods",
+        "DOM Manipulation",
+        "Fetch API"
+      ]
+    },
+    {
+      "title": "React",
+      "topics": [
+        "Components",
+        "JSX",
+        "Props",
+        "State",
+        "Hooks",
+        "useEffect",
+        "useContext",
+        "React Router",
+        "Conditional Rendering",
+        "Lists & Keys"
+      ]
+    },
+    {
+      "title": "State Management",
+      "topics": [
+        "Context API",
+        "Redux Basics",
+        "Global State"
+      ]
+    },
+    {
+      "title": "API",
+      "topics": [
+        "REST API",
+        "HTTP Methods",
+        "Axios",
+        "Fetch",
+        "JSON"
+      ]
+    },
+    {
+      "title": "Performance",
+      "topics": [
+        "Lazy Loading",
+        "Memoization",
+        "Code Splitting",
+        "Optimization"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Git",
+        "GitHub",
+        "Vite",
+        "npm",
+        "Firebase",
+        "Chrome DevTools"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Understand React fundamentals before advanced hooks.",
+    "Practice building responsive layouts.",
+    "Know the difference between state and props.",
+    "Be able to explain the Virtual DOM.",
+    "Practice API integration.",
+    "Write clean and reusable components.",
+    "Understand asynchronous JavaScript."
+  ],
+
+  "practiceChecklist": [
+    "Build a Todo App",
+    "Build a Weather App",
+    "Use REST API",
+    "Implement Authentication",
+    "Create Protected Routes",
+    "Deploy to Vercel",
+    "Use Firebase Authentication"
+  ],
+
+  "resources": [
+    {
+      "name": "React Documentation",
+      "url": "https://react.dev"
+    },
+    {
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org"
+    },
+    {
+      "name": "JavaScript.info",
+      "url": "https://javascript.info"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain concepts before writing code.",
+    "Give practical examples.",
+    "Think aloud during coding questions.",
+    "Mention performance considerations.",
+    "Stay calm and communicate clearly."
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "categoryId": 2,
+  "title": "Backend Developer",
+  "studyTime": "35-50 min",
+  "overview": "Backend developers create server-side applications, APIs, authentication systems, and databases. They focus on application logic, security, scalability, and performance.",
+
+  "concepts": [
+    {
+      "title": "Node.js",
+      "topics": [
+        "Runtime Environment",
+        "Modules",
+        "Event Loop",
+        "File System",
+        "Streams"
+      ]
+    },
+    {
+      "title": "Express.js",
+      "topics": [
+        "Routing",
+        "Middleware",
+        "Request & Response",
+        "Error Handling",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "MongoDB",
+      "topics": [
+        "Collections",
+        "Documents",
+        "CRUD Operations",
+        "Indexes",
+        "Aggregation"
+      ]
+    },
+    {
+      "title": "Mongoose",
+      "topics": [
+        "Schemas",
+        "Models",
+        "Validation",
+        "Populate"
+      ]
+    },
+    {
+      "title": "Authentication",
+      "topics": [
+        "JWT",
+        "Firebase Auth",
+        "OAuth",
+        "Password Hashing",
+        "Sessions"
+      ]
+    },
+    {
+      "title": "Security",
+      "topics": [
+        "CORS",
+        "Helmet",
+        "Rate Limiting",
+        "Environment Variables",
+        "Input Validation"
+      ]
+    },
+    {
+      "title": "Database",
+      "topics": [
+        "Relationships",
+        "Normalization",
+        "Transactions",
+        "Optimization"
+      ]
+    },
+    {
+      "title": "Deployment",
+      "topics": [
+        "Render",
+        "Railway",
+        "Vercel",
+        "Environment Variables"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Understand the request-response lifecycle.",
+    "Know CRUD operations thoroughly.",
+    "Practice REST API design.",
+    "Understand authentication flow.",
+    "Learn database optimization.",
+    "Write modular code.",
+    "Focus on security best practices."
+  ],
+
+  "practiceChecklist": [
+    "Build REST API",
+    "Connect MongoDB",
+    "Implement JWT Authentication",
+    "Use Middleware",
+    "Handle Errors Properly",
+    "Deploy Backend",
+    "Secure Environment Variables"
+  ],
+
+  "resources": [
+    {
+      "name": "Node.js Documentation",
+      "url": "https://nodejs.org"
+    },
+    {
+      "name": "Express Documentation",
+      "url": "https://expressjs.com"
+    },
+    {
+      "name": "MongoDB Documentation",
+      "url": "https://www.mongodb.com/docs"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain architecture before implementation.",
+    "Discuss scalability.",
+    "Mention security practices.",
+    "Describe API flow clearly.",
+    "Use real-world backend examples."
+  ]
+}
