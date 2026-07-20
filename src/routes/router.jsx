@@ -7,6 +7,7 @@ import MyProfile from "../Components/MyProfile";
 import AuthLayout from "../layout/AuthLayout";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -19,7 +20,10 @@ export const router = createBrowserRouter([
       },
       {
          path: "/my-profile",
-        element: <MyProfile />
+        element: <PrivateRoutes>
+          <MyProfile />
+        </PrivateRoutes>
+        
       },
       {
          path: "/category",
@@ -27,7 +31,9 @@ export const router = createBrowserRouter([
       },
       {
          path: "/category/:id",
-        element: <CategoryDetails />,
+        element: <PrivateRoutes>
+          <CategoryDetails />
+        </PrivateRoutes>,
         loader:()=>fetch('/categories.json')
       },
     ]

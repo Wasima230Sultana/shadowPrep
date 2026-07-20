@@ -152,15 +152,15 @@ const Rightside = () => {
                 </p>
 
                 {/* Button */}
-<Link to={`/my-profile`}>
-<button className="w-full py-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-500 text-white font-semibold flex justify-center items-center gap-3 hover:scale-[1.02] transition">
+
+                <Link to={`/auth/login`} className="w-full py-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-500 text-white font-semibold flex justify-center items-center gap-3 hover:scale-[1.02] transition">
 
                   {slide.button}
 
                   <FaArrowRight />
 
-                </button></Link> 
-                
+                </Link>
+
 
               </div>
 
