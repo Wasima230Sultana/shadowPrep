@@ -56,52 +56,6 @@ const CategoryDetails = () => {
   const IconComponent = iconMap[category.icon];
 
   return (
-    //         <div className="max-w-4xl mx-auto my-10 bg-white shadow-lg rounded-sm overflow-hidden">
-    //             <div
-    //           className="w-14 h-14 rounded-xl flex items-center justify-center text-white"
-    //           style={{ backgroundColor: category.color }}
-    //         >
-    //           {IconComponent && <IconComponent size={28} />}
-    //         </div>
-
-    //         <div>
-    //           <h2 className="font-bold text-lg text-white">
-    //             {category.title}
-    //           </h2>
-
-    //           <p className="text-sm text-gray-400">
-    //             {category.questions} Questions
-    //           </p>
-    //         </div>
-
-    //       {/* Description */}
-    //       <p className="mt-4 text-gray-300 text-sm leading-relaxed">
-    //         {category.description}
-    //       </p>
-
-    //       {/* Difficulty */}
-    //       <div className="flex flex-wrap gap-2 mt-4">
-    //        {category.difficulty?.map((level, index) => (
-    //   <span
-    //     key={index}
-    //     className="px-2 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-    //   >
-    //     {level}
-    //   </span>
-    // ))}
-    //       </div>
-
-    //       {/* Footer */}
-    //       <div className="flex justify-between items-center mt-5 pt-4 border-t border-white/10 text-sm">
-    //         <span className="text-yellow-400">
-    //           ⭐ {category.rating}
-    //         </span>
-
-    //         <span className="text-gray-400">
-    //           ⏱ {category.duration}
-    //         </span>
-    //       </div>
-    //         </div>
     <div className="max-w-4xl mx-auto px-4 py-10">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
 
@@ -212,7 +166,7 @@ const CategoryDetails = () => {
           <Link to={`/topics/${category.id}`}
             className="btn w-full py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-[1.02]"
             style={{ backgroundColor: category.color }}>
-            Practice Now
+             Related Topics & Practice
           </Link>
 
           <Link to={`/interview/${category.id}`}

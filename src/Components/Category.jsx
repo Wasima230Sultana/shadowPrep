@@ -1,6 +1,4 @@
 
-
-
 import React, { use, useContext } from "react";
 import Categories from "./Categories";
 import { Link } from "react-router";

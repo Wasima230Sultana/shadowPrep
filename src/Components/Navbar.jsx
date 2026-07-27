@@ -39,6 +39,9 @@ const Navbar = () => {
       <NavLink to="/category" className={navClass}>
         All Category
       </NavLink>
+       <NavLink to="/my-profile" className={navClass}>
+        My Profile
+      </NavLink>
     </>
   );
 

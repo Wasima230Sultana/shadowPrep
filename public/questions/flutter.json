@@ -1,0 +1,304 @@
+[
+  {
+    "id": 1,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What is Flutter?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about cross-platform development.",
+    "expectedTopics": [
+      "Google",
+      "SDK",
+      "Cross-platform"
+    ],
+    "followUpQuestion": "Why is Flutter popular for mobile app development?"
+  },
+  {
+    "id": 2,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What is Dart?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Flutter applications are written in this language.",
+    "expectedTopics": [
+      "Programming language",
+      "Google",
+      "Object-oriented"
+    ],
+    "followUpQuestion": "Can Flutter be developed without Dart?"
+  },
+  {
+    "id": 3,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What are Widgets in Flutter?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Everything in Flutter is built using them.",
+    "expectedTopics": [
+      "UI",
+      "Widget tree",
+      "Reusable"
+    ],
+    "followUpQuestion": "Why are widgets important in Flutter?"
+  },
+  {
+    "id": 4,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What is the difference between StatelessWidget and StatefulWidget?",
+    "timeLimit": 150,
+    "score": 10,
+    "hint": "One can rebuild when data changes.",
+    "expectedTopics": [
+      "State",
+      "Immutable",
+      "Mutable"
+    ],
+    "followUpQuestion": "When should you use StatefulWidget?"
+  },
+  {
+    "id": 5,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What is Hot Reload?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about developer productivity.",
+    "expectedTopics": [
+      "Fast development",
+      "UI update",
+      "Debugging"
+    ],
+    "followUpQuestion": "How is Hot Reload different from Hot Restart?"
+  },
+  {
+    "id": 6,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What is pubspec.yaml?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Project configuration file.",
+    "expectedTopics": [
+      "Dependencies",
+      "Assets",
+      "Packages"
+    ],
+    "followUpQuestion": "What happens after adding a new package?"
+  },
+  {
+    "id": 7,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "How do you navigate between screens in Flutter?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about Navigator.",
+    "expectedTopics": [
+      "Navigator",
+      "push",
+      "pop"
+    ],
+    "followUpQuestion": "What is the purpose of named routes?"
+  },
+  {
+    "id": 8,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "What does setState() do?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about updating the UI.",
+    "expectedTopics": [
+      "State",
+      "Rebuild",
+      "UI update"
+    ],
+    "followUpQuestion": "When should setState() be avoided?"
+  },
+  {
+    "id": 9,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "Explain the Flutter widget tree.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about parent-child relationships.",
+    "expectedTopics": [
+      "Hierarchy",
+      "Parent widget",
+      "Child widget"
+    ],
+    "followUpQuestion": "Why is the widget tree important?"
+  },
+  {
+    "id": 10,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you fetch API data in Flutter?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about asynchronous programming.",
+    "expectedTopics": [
+      "http package",
+      "Future",
+      "JSON"
+    ],
+    "followUpQuestion": "How do you handle API failures?"
+  },
+  {
+    "id": 11,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "What is FutureBuilder?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Used for asynchronous UI.",
+    "expectedTopics": [
+      "Future",
+      "Loading state",
+      "Snapshot"
+    ],
+    "followUpQuestion": "When would you use StreamBuilder instead?"
+  },
+  {
+    "id": 12,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "Explain state management in Flutter.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think beyond setState().",
+    "expectedTopics": [
+      "Provider",
+      "Riverpod",
+      "Bloc"
+    ],
+    "followUpQuestion": "Which state management solution have you used?"
+  },
+  {
+    "id": 13,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you store data locally in Flutter?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about persistent storage.",
+    "expectedTopics": [
+      "SharedPreferences",
+      "Hive",
+      "SQLite"
+    ],
+    "followUpQuestion": "When is Hive preferred over SQLite?"
+  },
+  {
+    "id": 14,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you integrate Firebase into a Flutter app?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about authentication and database.",
+    "expectedTopics": [
+      "Firebase Auth",
+      "Firestore",
+      "Storage"
+    ],
+    "followUpQuestion": "Which Firebase services have you used?"
+  },
+  {
+    "id": 15,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "What is package management in Flutter?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about pub.dev.",
+    "expectedTopics": [
+      "pub.dev",
+      "Dependencies",
+      "Versioning"
+    ],
+    "followUpQuestion": "How do you update package versions?"
+  },
+  {
+    "id": 16,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you improve Flutter app performance?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about widget rebuilding.",
+    "expectedTopics": [
+      "const widgets",
+      "Lazy loading",
+      "Efficient rebuilds"
+    ],
+    "followUpQuestion": "Why should unnecessary widget rebuilds be avoided?"
+  },
+  {
+    "id": 17,
+    "categoryId": 3,
+    "difficulty": "Hard",
+    "question": "Explain Flutter's rendering pipeline.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about Widget, Element and RenderObject.",
+    "expectedTopics": [
+      "Widget tree",
+      "Element tree",
+      "RenderObject tree"
+    ],
+    "followUpQuestion": "What is the purpose of the Element tree?"
+  },
+  {
+    "id": 18,
+    "categoryId": 3,
+    "difficulty": "Hard",
+    "question": "How do you architect a scalable Flutter application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about clean architecture.",
+    "expectedTopics": [
+      "Repository pattern",
+      "MVVM",
+      "Dependency Injection"
+    ],
+    "followUpQuestion": "Why is separation of concerns important?"
+  },
+  {
+    "id": 19,
+    "categoryId": 3,
+    "difficulty": "Hard",
+    "question": "How do you secure sensitive data in Flutter?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about authentication and secure storage.",
+    "expectedTopics": [
+      "flutter_secure_storage",
+      "HTTPS",
+      "Firebase Authentication"
+    ],
+    "followUpQuestion": "Why shouldn't secrets be stored in SharedPreferences?"
+  },
+  {
+    "id": 20,
+    "categoryId": 3,
+    "difficulty": "Hard",
+    "question": "Describe a Flutter application you built and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss project structure, state management, APIs, Firebase and deployment.",
+    "expectedTopics": [
+      "Project structure",
+      "State management",
+      "API integration",
+      "Firebase",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]
