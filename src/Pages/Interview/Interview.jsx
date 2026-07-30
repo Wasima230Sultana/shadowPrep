@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { Link } from "react-router";
+import VoiceRecorder from "../../VoiceRecorder/VoiceRecorder";
 const Interview = () => {
     const questions = useLoaderData();
     const QUESTION_TIME = 120;
@@ -421,6 +422,11 @@ ${question.difficulty === "Easy"
                                         );
                                     }}
                                 />
+                               <VoiceRecorder
+    question={question}
+    answers={answers}
+    setAnswers={setAnswers}
+/>
 
                                 <div className="flex justify-between mt-8">
                                     <button
