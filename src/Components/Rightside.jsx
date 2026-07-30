@@ -13,6 +13,8 @@ import laptopImg from "../assets/using_laptop.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
 
 const slides = [
   {
@@ -60,6 +62,7 @@ const slides = [
 ];
 
 const Rightside = () => {
+  const {user} = useContext(AuthContext)
   return (
     <div className="relative py-2">
 
@@ -108,58 +111,35 @@ const Rightside = () => {
                   {slide.description}
                 </p>
 
-                {/* Features */}
-
-                {/* <div className="space-y-3 mb-8">
-                  {slide.features.map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3"
-                    >
-                      <FaCheckCircle className="text-green-400" />
-
-                      <span className="text-slate-200">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div> */}
-
-                {/* Learning Path */}
-
-                {/* <div className="flex justify-between items-center text-sm text-slate-400 border-y border-slate-700 py-5 mb-6">
-
-                  <span>Learn</span>
-
-                  <span>→</span>
-
-                  <span>Practice</span>
-
-                  <span>→</span>
-
-                  <span>Build</span>
-
-                  <span>→</span>
-
-                  <span>Success</span>
-
-                </div> */}
-
-                {/* Quote */}
 
                 <p className="italic text-center text-slate-400 mb-4">
                   "{slide.quote}"
                 </p>
 
                 {/* Button */}
-
-                <Link to={`/auth/login`} className="w-full py-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-500 text-white font-semibold flex justify-center items-center gap-3 hover:scale-[1.02] transition">
+                {
+                  user ?
+                  <>
+                   <Link to={`/category`} className="w-full py-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-500 text-white font-semibold flex justify-center items-center gap-3 hover:scale-[1.02] transition">
 
                   {slide.button}
 
                   <FaArrowRight />
 
                 </Link>
+                  
+                  </>
+                   :
+                   <> <Link to={`/auth/login`} className="w-full py-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-500 text-white font-semibold flex justify-center items-center gap-3 hover:scale-[1.02] transition">
+
+                  {slide.button}
+
+                  <FaArrowRight />
+
+                </Link></>
+                }
+
+               
 
 
               </div>
