@@ -30,6 +30,32 @@ const Interview = () => {
     }
     const interviewQuestions = questions.slice(0, selectedCount);
     const question = interviewQuestions[currentQuestion] || {};
+
+useEffect(() => {
+    if (!started || !question?.question) return;
+
+    // Stop any previous speech
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(question.question);
+
+    utterance.lang = "en-US";
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    // Small delay so cancel() finishes first
+    const timer = setTimeout(() => {
+        window.speechSynthesis.speak(utterance);
+    }, 150);
+
+    return () => {
+        clearTimeout(timer);
+        window.speechSynthesis.cancel();
+    };
+}, [question?.id, started]);
+
+
     const progress = ((currentQuestion + 1) / interviewQuestions.length) * 100;
     const answeredCount = Object.values(answers).filter(
         answer => answer.trim() !== ""
@@ -47,33 +73,38 @@ const Interview = () => {
         (answeredCount / totalQuestions) * 100
     );
     const seconds = String(timeLeft % 60).padStart(2, "0");
-
     const handleNext = () => {
+        // Stop reading the current question
+        window.speechSynthesis.cancel();
+
         if (currentQuestion < interviewQuestions.length - 1) {
-            const next = currentQuestion + 1;
-            // if (!visitedQuestions.includes(next)) {
-            //     setVisitedQuestions(prev => [...prev, next]);
-            // }
-            setCurrentQuestion(next);
+            setCurrentQuestion(prev => prev + 1);
         }
     };
 
     const handlePrevious = () => {
+        // Stop reading the current question
+        window.speechSynthesis.cancel();
+
         if (currentQuestion > 0) {
-            const prev = currentQuestion - 1;
-            setCurrentQuestion(prev);
+            setCurrentQuestion(prev => prev - 1);
         }
     };
 
     const handleSubmit = () => {
+        window.speechSynthesis.cancel();
         setSubmitted(true);
     };
 
     const handleSkip = () => {
+        window.speechSynthesis.cancel();
+
         const id = question.id;
+
         if (!skippedQuestions.includes(id)) {
             setSkippedQuestions(prev => [...prev, id]);
         }
+
         if (currentQuestion < interviewQuestions.length - 1) {
             setCurrentQuestion(prev => prev + 1);
         } else {
@@ -97,6 +128,13 @@ const Interview = () => {
         }, 1000);
         return () => clearInterval(timer);
     }, [currentQuestion, started]);
+  
+    useEffect(() => {
+        return () => {
+            window.speechSynthesis.cancel();
+        };
+    }, []);
+
 
     const getQuestionStatus = (q, index) => {
 
@@ -115,6 +153,7 @@ const Interview = () => {
         return "unvisited";
 
     };
+
     if (!started) {
         return (
             <div className="min-h-screen flex justify-center items-center">
@@ -145,6 +184,9 @@ const Interview = () => {
                         <button
                             className="btn btn-primary mt-6"
                             onClick={() => {
+                                // Stop any speech from a previous interview
+                                window.speechSynthesis.cancel();
+
                                 setCurrentQuestion(0);
                                 setAnswers({});
                                 setSkippedQuestions([]);
@@ -238,10 +280,10 @@ const Interview = () => {
 
                             <div
                                 className={`badge badge-lg ${score >= 80
-                                        ? "badge-success"
-                                        : score >= 60
-                                            ? "badge-warning"
-                                            : "badge-error"
+                                    ? "badge-success"
+                                    : score >= 60
+                                        ? "badge-warning"
+                                        : "badge-error"
                                     }`}
                             >
                                 {score >= 80
@@ -422,11 +464,11 @@ ${question.difficulty === "Easy"
                                         );
                                     }}
                                 />
-                               <VoiceRecorder
-    question={question}
-    answers={answers}
-    setAnswers={setAnswers}
-/>
+                                <VoiceRecorder
+                                    question={question}
+                                    answers={answers}
+                                    setAnswers={setAnswers}
+                                />
 
                                 <div className="flex justify-between mt-8">
                                     <button
