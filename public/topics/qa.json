@@ -1,0 +1,125 @@
+{
+  "categoryId": 13,
+  "title": "QA Engineer",
+  "studyTime": "30-45 min",
+  "overview": "QA Engineers ensure software quality by designing test cases, performing manual and automated testing, identifying bugs, and improving software reliability.",
+
+  "concepts": [
+    {
+      "title": "Testing Fundamentals",
+      "topics": [
+        "SDLC",
+        "STLC",
+        "Bug Life Cycle",
+        "Testing Levels",
+        "Testing Types"
+      ]
+    },
+    {
+      "title": "Manual Testing",
+      "topics": [
+        "Test Cases",
+        "Test Plan",
+        "Smoke Testing",
+        "Regression Testing",
+        "Exploratory Testing"
+      ]
+    },
+    {
+      "title": "Automation Testing",
+      "topics": [
+        "Selenium",
+        "Cypress",
+        "Playwright",
+        "TestNG"
+      ]
+    },
+    {
+      "title": "API Testing",
+      "topics": [
+        "REST API",
+        "Postman",
+        "HTTP Methods",
+        "JSON Validation"
+      ]
+    },
+    {
+      "title": "Performance Testing",
+      "topics": [
+        "JMeter",
+        "Load Testing",
+        "Stress Testing"
+      ]
+    },
+    {
+      "title": "Bug Tracking",
+      "topics": [
+        "Jira",
+        "Bug Reports",
+        "Severity",
+        "Priority"
+      ]
+    },
+    {
+      "title": "CI/CD",
+      "topics": [
+        "Jenkins",
+        "GitHub Actions",
+        "Pipeline Testing"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Selenium",
+        "Postman",
+        "JMeter",
+        "Jira",
+        "Git"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Write detailed test cases.",
+    "Learn automation testing.",
+    "Understand API testing.",
+    "Report bugs clearly.",
+    "Practice exploratory testing.",
+    "Know testing methodologies.",
+    "Improve debugging skills."
+  ],
+
+  "practiceChecklist": [
+    "Write Test Cases",
+    "Test REST APIs",
+    "Automate UI Tests",
+    "Perform Regression Testing",
+    "Report Bugs",
+    "Execute Load Tests",
+    "Use Selenium"
+  ],
+
+  "resources": [
+    {
+      "name": "Selenium Documentation",
+      "url": "https://www.selenium.dev/documentation/"
+    },
+    {
+      "name": "Postman Learning Center",
+      "url": "https://learning.postman.com"
+    },
+    {
+      "name": "Cypress Documentation",
+      "url": "https://docs.cypress.io"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain testing methodologies.",
+    "Discuss bug reporting.",
+    "Mention automation experience.",
+    "Use testing examples.",
+    "Demonstrate attention to detail."
+  ]
+}

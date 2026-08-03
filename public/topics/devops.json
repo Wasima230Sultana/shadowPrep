@@ -1,0 +1,128 @@
+{
+  "categoryId": 10,
+  "title": "DevOps Engineer",
+  "studyTime": "45-60 min",
+  "overview": "DevOps Engineers automate software development, testing, deployment, and infrastructure management using CI/CD pipelines, containers, cloud platforms, and monitoring tools.",
+
+  "concepts": [
+    {
+      "title": "Linux",
+      "topics": [
+        "Linux Commands",
+        "Shell Scripting",
+        "File Permissions",
+        "Process Management",
+        "Cron Jobs"
+      ]
+    },
+    {
+      "title": "Version Control",
+      "topics": [
+        "Git",
+        "GitHub",
+        "Branching",
+        "Merge",
+        "Pull Requests"
+      ]
+    },
+    {
+      "title": "CI/CD",
+      "topics": [
+        "Continuous Integration",
+        "Continuous Deployment",
+        "GitHub Actions",
+        "Jenkins",
+        "Pipeline"
+      ]
+    },
+    {
+      "title": "Containers",
+      "topics": [
+        "Docker",
+        "Docker Compose",
+        "Kubernetes",
+        "Container Registry"
+      ]
+    },
+    {
+      "title": "Cloud",
+      "topics": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Cloud Deployment"
+      ]
+    },
+    {
+      "title": "Infrastructure as Code",
+      "topics": [
+        "Terraform",
+        "Ansible",
+        "Configuration Management"
+      ]
+    },
+    {
+      "title": "Monitoring",
+      "topics": [
+        "Prometheus",
+        "Grafana",
+        "Logging",
+        "Alerting"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Jenkins",
+        "GitHub Actions",
+        "Helm"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master Linux fundamentals.",
+    "Practice Docker every day.",
+    "Understand CI/CD workflows.",
+    "Learn Kubernetes basics.",
+    "Automate repetitive tasks.",
+    "Study cloud deployment.",
+    "Understand monitoring and logging."
+  ],
+
+  "practiceChecklist": [
+    "Build a CI/CD Pipeline",
+    "Containerize an Application",
+    "Deploy to Kubernetes",
+    "Provision Infrastructure with Terraform",
+    "Configure Monitoring",
+    "Automate Deployment",
+    "Deploy an Application on AWS"
+  ],
+
+  "resources": [
+    {
+      "name": "Docker Documentation",
+      "url": "https://docs.docker.com"
+    },
+    {
+      "name": "Kubernetes Documentation",
+      "url": "https://kubernetes.io/docs"
+    },
+    {
+      "name": "Terraform Documentation",
+      "url": "https://developer.hashicorp.com/terraform/docs"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain automation workflows clearly.",
+    "Discuss deployment and rollback strategies.",
+    "Mention scalability and monitoring.",
+    "Describe real CI/CD implementations.",
+    "Show problem-solving through practical examples."
+  ]
+}

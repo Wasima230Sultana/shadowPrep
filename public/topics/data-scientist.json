@@ -1,0 +1,132 @@
+{
+  "categoryId": 7,
+  "title": "Data Scientist",
+  "studyTime": "45-60 min",
+  "overview": "Data Scientists analyze large datasets, build predictive models, and generate business insights using statistics, machine learning, programming, and data visualization techniques.",
+
+  "concepts": [
+    {
+      "title": "Python",
+      "topics": [
+        "Variables",
+        "Functions",
+        "OOP",
+        "NumPy",
+        "Pandas",
+        "Matplotlib"
+      ]
+    },
+    {
+      "title": "Statistics",
+      "topics": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Probability",
+        "Hypothesis Testing",
+        "Correlation"
+      ]
+    },
+    {
+      "title": "Machine Learning",
+      "topics": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Model Evaluation"
+      ]
+    },
+    {
+      "title": "Data Preparation",
+      "topics": [
+        "Data Cleaning",
+        "Feature Engineering",
+        "Missing Values",
+        "Normalization",
+        "Encoding"
+      ]
+    },
+    {
+      "title": "Deep Learning",
+      "topics": [
+        "Neural Networks",
+        "CNN",
+        "RNN",
+        "Transfer Learning"
+      ]
+    },
+    {
+      "title": "Visualization",
+      "topics": [
+        "Matplotlib",
+        "Seaborn",
+        "Plotly",
+        "Power BI"
+      ]
+    },
+    {
+      "title": "Big Data",
+      "topics": [
+        "Spark Basics",
+        "Hadoop",
+        "Distributed Computing"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Jupyter Notebook",
+        "Scikit-learn",
+        "TensorFlow",
+        "PyTorch",
+        "Git",
+        "Kaggle"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Build strong Python programming skills.",
+    "Understand statistics before machine learning.",
+    "Practice feature engineering.",
+    "Learn how to evaluate ML models.",
+    "Build end-to-end data science projects.",
+    "Improve data visualization skills.",
+    "Practice explaining insights clearly."
+  ],
+
+  "practiceChecklist": [
+    "Perform Exploratory Data Analysis",
+    "Build a Classification Model",
+    "Build a Regression Model",
+    "Train a Neural Network",
+    "Create Interactive Visualizations",
+    "Participate in Kaggle Competitions",
+    "Deploy a Machine Learning Model"
+  ],
+
+  "resources": [
+    {
+      "name": "Kaggle",
+      "url": "https://www.kaggle.com"
+    },
+    {
+      "name": "Scikit-learn Documentation",
+      "url": "https://scikit-learn.org"
+    },
+    {
+      "name": "TensorFlow Documentation",
+      "url": "https://www.tensorflow.org"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain your data analysis approach.",
+    "Discuss feature engineering decisions.",
+    "Mention evaluation metrics.",
+    "Explain model selection clearly.",
+    "Relate insights to business value."
+  ]
+}

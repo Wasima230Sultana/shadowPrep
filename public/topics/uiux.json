@@ -1,0 +1,126 @@
+{
+  "categoryId": 5,
+  "title": "UI/UX Designer",
+  "studyTime": "30-45 min",
+  "overview": "UI/UX Designers create intuitive, visually appealing, and user-centered digital experiences through research, wireframing, prototyping, usability testing, and design systems.",
+
+  "concepts": [
+    {
+      "title": "UX Fundamentals",
+      "topics": [
+        "User Research",
+        "Personas",
+        "User Journey",
+        "Information Architecture",
+        "Usability"
+      ]
+    },
+    {
+      "title": "UI Design",
+      "topics": [
+        "Typography",
+        "Color Theory",
+        "Layout",
+        "Spacing",
+        "Icons"
+      ]
+    },
+    {
+      "title": "Wireframing",
+      "topics": [
+        "Low Fidelity",
+        "High Fidelity",
+        "User Flow",
+        "Screen Layout"
+      ]
+    },
+    {
+      "title": "Prototyping",
+      "topics": [
+        "Interactive Prototype",
+        "Microinteractions",
+        "Animation",
+        "Design Handoff"
+      ]
+    },
+    {
+      "title": "Design Systems",
+      "topics": [
+        "Components",
+        "Style Guide",
+        "Design Tokens",
+        "Consistency"
+      ]
+    },
+    {
+      "title": "Accessibility",
+      "topics": [
+        "WCAG",
+        "Contrast",
+        "Responsive Design",
+        "Inclusive Design"
+      ]
+    },
+    {
+      "title": "Usability Testing",
+      "topics": [
+        "A/B Testing",
+        "User Feedback",
+        "Heuristic Evaluation"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "Miro",
+        "Photoshop"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Design for users, not yourself.",
+    "Keep interfaces simple.",
+    "Build a strong portfolio.",
+    "Learn accessibility guidelines.",
+    "Understand design systems.",
+    "Practice user research.",
+    "Iterate using feedback."
+  ],
+
+  "practiceChecklist": [
+    "Create Wireframes",
+    "Design a Mobile App",
+    "Build Interactive Prototypes",
+    "Conduct User Research",
+    "Create a Design System",
+    "Perform Usability Testing",
+    "Publish a Portfolio"
+  ],
+
+  "resources": [
+    {
+      "name": "Figma Learn",
+      "url": "https://help.figma.com"
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com"
+    },
+    {
+      "name": "Material Design",
+      "url": "https://m3.material.io"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain your design process.",
+    "Discuss design decisions.",
+    "Present portfolio case studies.",
+    "Focus on user-centered design.",
+    "Communicate design rationale clearly."
+  ]
+}

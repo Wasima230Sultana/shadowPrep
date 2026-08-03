@@ -1,0 +1,125 @@
+{
+  "categoryId": 4,
+  "title": "Mobile App Developer",
+  "studyTime": "30-45 min",
+  "overview": "Mobile App Developers create Android and iOS applications using native or cross-platform technologies while focusing on user experience, performance, APIs, and mobile architecture.",
+
+  "concepts": [
+    {
+      "title": "Programming",
+      "topics": [
+        "Java",
+        "Kotlin",
+        "Dart",
+        "Swift",
+        "OOP"
+      ]
+    },
+    {
+      "title": "UI Development",
+      "topics": [
+        "Layouts",
+        "Widgets",
+        "Navigation",
+        "Responsive Design",
+        "Animations"
+      ]
+    },
+    {
+      "title": "State Management",
+      "topics": [
+        "Provider",
+        "Bloc",
+        "Riverpod",
+        "MVVM"
+      ]
+    },
+    {
+      "title": "API Integration",
+      "topics": [
+        "REST API",
+        "JSON",
+        "HTTP",
+        "Authentication"
+      ]
+    },
+    {
+      "title": "Database",
+      "topics": [
+        "SQLite",
+        "Hive",
+        "Firebase Firestore",
+        "Room Database"
+      ]
+    },
+    {
+      "title": "Testing",
+      "topics": [
+        "Unit Testing",
+        "Widget Testing",
+        "Integration Testing"
+      ]
+    },
+    {
+      "title": "Deployment",
+      "topics": [
+        "Google Play Store",
+        "Apple App Store",
+        "App Signing"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Android Studio",
+        "VS Code",
+        "Flutter",
+        "Firebase",
+        "Git"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master one mobile framework first.",
+    "Build responsive interfaces.",
+    "Practice API integration.",
+    "Learn local and cloud databases.",
+    "Optimize app performance.",
+    "Test your applications thoroughly.",
+    "Publish real apps."
+  ],
+
+  "practiceChecklist": [
+    "Build a Notes App",
+    "Consume REST APIs",
+    "Implement Authentication",
+    "Store Data Locally",
+    "Use Firebase",
+    "Publish an Android App",
+    "Build a Cross-platform Application"
+  ],
+
+  "resources": [
+    {
+      "name": "Flutter Documentation",
+      "url": "https://docs.flutter.dev"
+    },
+    {
+      "name": "Android Developers",
+      "url": "https://developer.android.com"
+    },
+    {
+      "name": "Firebase Documentation",
+      "url": "https://firebase.google.com/docs"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain app architecture.",
+    "Discuss state management.",
+    "Describe API integration.",
+    "Mention performance optimization.",
+    "Share mobile project experience."
+  ]
+}

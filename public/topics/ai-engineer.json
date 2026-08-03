@@ -1,0 +1,144 @@
+{
+  "categoryId": 9,
+  "title": "AI Engineer",
+  "studyTime": "45-60 min",
+  "overview": "AI Engineers design, develop, and deploy intelligent systems using machine learning, deep learning, natural language processing, computer vision, and cloud AI services. They combine software engineering with data-driven models to solve real-world problems.",
+
+  "concepts": [
+    {
+      "title": "Python",
+      "topics": [
+        "Variables",
+        "Functions",
+        "OOP",
+        "File Handling",
+        "Exception Handling",
+        "Virtual Environments"
+      ]
+    },
+    {
+      "title": "Machine Learning",
+      "topics": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Model Evaluation"
+      ]
+    },
+    {
+      "title": "Deep Learning",
+      "topics": [
+        "Neural Networks",
+        "CNN",
+        "RNN",
+        "LSTM",
+        "Transformers",
+        "Transfer Learning"
+      ]
+    },
+    {
+      "title": "Data Processing",
+      "topics": [
+        "NumPy",
+        "Pandas",
+        "Data Cleaning",
+        "Feature Engineering",
+        "Data Visualization"
+      ]
+    },
+    {
+      "title": "Natural Language Processing",
+      "topics": [
+        "Text Preprocessing",
+        "Tokenization",
+        "Word Embeddings",
+        "Sentiment Analysis",
+        "Large Language Models"
+      ]
+    },
+    {
+      "title": "Computer Vision",
+      "topics": [
+        "Image Processing",
+        "Object Detection",
+        "Image Classification",
+        "OpenCV"
+      ]
+    },
+    {
+      "title": "Frameworks",
+      "topics": [
+        "TensorFlow",
+        "PyTorch",
+        "Scikit-learn",
+        "Keras",
+        "Hugging Face"
+      ]
+    },
+    {
+      "title": "Deployment",
+      "topics": [
+        "REST API",
+        "FastAPI",
+        "Docker",
+        "Cloud Deployment",
+        "Model Serving"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Git",
+        "GitHub",
+        "Jupyter Notebook",
+        "Google Colab",
+        "VS Code"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master Python before diving into AI frameworks.",
+    "Understand the mathematics behind machine learning.",
+    "Practice building end-to-end AI projects.",
+    "Learn how to evaluate and improve model performance.",
+    "Know the differences between ML, DL, and Generative AI.",
+    "Understand overfitting, underfitting, and regularization.",
+    "Stay updated with the latest AI research."
+  ],
+
+  "practiceChecklist": [
+    "Build an Image Classifier",
+    "Create a Sentiment Analysis Model",
+    "Train a CNN",
+    "Deploy a Machine Learning API",
+    "Use Hugging Face Transformers",
+    "Build a Chatbot",
+    "Deploy a Model to the Cloud"
+  ],
+
+  "resources": [
+    {
+      "name": "Scikit-learn Documentation",
+      "url": "https://scikit-learn.org"
+    },
+    {
+      "name": "TensorFlow Documentation",
+      "url": "https://www.tensorflow.org"
+    },
+    {
+      "name": "PyTorch Documentation",
+      "url": "https://pytorch.org"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain the problem before selecting an algorithm.",
+    "Discuss model evaluation metrics.",
+    "Mention preprocessing and feature engineering.",
+    "Explain trade-offs between different models.",
+    "Describe deployment and scalability considerations."
+  ]
+}

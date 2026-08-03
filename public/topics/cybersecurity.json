@@ -1,0 +1,121 @@
+{
+  "categoryId": 12,
+  "title": "Cybersecurity",
+  "studyTime": "45-60 min",
+  "overview": "Cybersecurity professionals protect systems, networks, and applications from cyber threats by implementing security controls, identifying vulnerabilities, and responding to security incidents.",
+
+  "concepts": [
+    {
+      "title": "Security Fundamentals",
+      "topics": [
+        "CIA Triad",
+        "Authentication",
+        "Authorization",
+        "Risk Management",
+        "Security Policies"
+      ]
+    },
+    {
+      "title": "Network Security",
+      "topics": [
+        "Firewalls",
+        "VPN",
+        "IDS",
+        "IPS",
+        "DNS Security",
+        "Network Monitoring"
+      ]
+    },
+    {
+      "title": "Web Security",
+      "topics": [
+        "SQL Injection",
+        "Cross Site Scripting",
+        "CSRF",
+        "HTTPS",
+        "OWASP Top 10"
+      ]
+    },
+    {
+      "title": "Cryptography",
+      "topics": [
+        "Encryption",
+        "Hashing",
+        "Digital Signatures",
+        "SSL/TLS",
+        "PKI"
+      ]
+    },
+    {
+      "title": "Ethical Hacking",
+      "topics": [
+        "Penetration Testing",
+        "Vulnerability Assessment",
+        "Reconnaissance",
+        "Exploitation"
+      ]
+    },
+    {
+      "title": "Incident Response",
+      "topics": [
+        "Threat Detection",
+        "Malware Analysis",
+        "Digital Forensics",
+        "Recovery"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Wireshark",
+        "Nmap",
+        "Burp Suite",
+        "Metasploit",
+        "Kali Linux"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Learn networking before security.",
+    "Understand common cyber attacks.",
+    "Practice ethical hacking in legal environments.",
+    "Study the OWASP Top 10.",
+    "Keep up with new vulnerabilities.",
+    "Understand cryptography basics.",
+    "Practice incident response."
+  ],
+
+  "practiceChecklist": [
+    "Scan a Network using Nmap",
+    "Capture Packets with Wireshark",
+    "Practice OWASP Juice Shop",
+    "Perform Vulnerability Assessment",
+    "Study Malware Samples",
+    "Secure a Web Application",
+    "Complete CTF Challenges"
+  ],
+
+  "resources": [
+    {
+      "name": "OWASP",
+      "url": "https://owasp.org"
+    },
+    {
+      "name": "PortSwigger Web Security Academy",
+      "url": "https://portswigger.net/web-security"
+    },
+    {
+      "name": "Cybrary",
+      "url": "https://www.cybrary.it"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain security concepts clearly.",
+    "Discuss attack and defense techniques.",
+    "Mention real-world security incidents.",
+    "Show knowledge of security tools.",
+    "Focus on prevention and mitigation."
+  ]
+}

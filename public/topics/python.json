@@ -1,0 +1,129 @@
+{
+  "categoryId": 18,
+  "title": "Python Developer",
+  "studyTime": "30-45 min",
+  "overview": "Python Developers build web applications, automation scripts, APIs, and backend systems using Python, frameworks like Django and Flask, databases, and modern development tools.",
+
+  "concepts": [
+    {
+      "title": "Python Basics",
+      "topics": [
+        "Variables",
+        "Data Types",
+        "Operators",
+        "Functions",
+        "Loops",
+        "Modules"
+      ]
+    },
+    {
+      "title": "Object-Oriented Programming",
+      "topics": [
+        "Classes",
+        "Objects",
+        "Inheritance",
+        "Polymorphism",
+        "Encapsulation",
+        "Abstraction"
+      ]
+    },
+    {
+      "title": "Data Structures",
+      "topics": [
+        "Lists",
+        "Tuples",
+        "Dictionaries",
+        "Sets",
+        "Comprehensions"
+      ]
+    },
+    {
+      "title": "Web Development",
+      "topics": [
+        "Django",
+        "Flask",
+        "FastAPI",
+        "REST APIs"
+      ]
+    },
+    {
+      "title": "Database",
+      "topics": [
+        "SQLite",
+        "MySQL",
+        "PostgreSQL",
+        "SQLAlchemy"
+      ]
+    },
+    {
+      "title": "Testing",
+      "topics": [
+        "unittest",
+        "pytest",
+        "Mocking"
+      ]
+    },
+    {
+      "title": "Automation",
+      "topics": [
+        "File Handling",
+        "Web Scraping",
+        "Scheduling",
+        "Scripting"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "VS Code",
+        "PyCharm",
+        "Git",
+        "pip",
+        "Virtual Environment"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master Python fundamentals.",
+    "Practice object-oriented programming.",
+    "Learn one backend framework.",
+    "Understand REST APIs.",
+    "Write clean and readable code.",
+    "Practice testing your applications.",
+    "Build real-world projects."
+  ],
+
+  "practiceChecklist": [
+    "Build a REST API",
+    "Create a Django Project",
+    "Develop a Flask Application",
+    "Connect to a Database",
+    "Write Unit Tests",
+    "Automate a Task",
+    "Deploy a Python Application"
+  ],
+
+  "resources": [
+    {
+      "name": "Python Documentation",
+      "url": "https://docs.python.org/3/"
+    },
+    {
+      "name": "Django Documentation",
+      "url": "https://docs.djangoproject.com"
+    },
+    {
+      "name": "FastAPI Documentation",
+      "url": "https://fastapi.tiangolo.com"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain Python concepts clearly.",
+    "Discuss code optimization.",
+    "Write readable code.",
+    "Use project examples.",
+    "Explain problem-solving approach."
+  ]
+}

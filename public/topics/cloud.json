@@ -1,0 +1,133 @@
+{
+  "categoryId": 11,
+  "title": "Cloud Engineer",
+  "studyTime": "45-60 min",
+  "overview": "Cloud Engineers design, deploy, and maintain cloud infrastructure using platforms like AWS, Microsoft Azure, and Google Cloud. They focus on scalability, security, networking, automation, and cost optimization.",
+
+  "concepts": [
+    {
+      "title": "Cloud Fundamentals",
+      "topics": [
+        "Cloud Computing",
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "Public Cloud",
+        "Private Cloud",
+        "Hybrid Cloud"
+      ]
+    },
+    {
+      "title": "AWS",
+      "topics": [
+        "EC2",
+        "S3",
+        "IAM",
+        "VPC",
+        "RDS",
+        "Lambda"
+      ]
+    },
+    {
+      "title": "Networking",
+      "topics": [
+        "DNS",
+        "Load Balancer",
+        "CDN",
+        "Subnet",
+        "VPN",
+        "Firewall"
+      ]
+    },
+    {
+      "title": "Containers",
+      "topics": [
+        "Docker",
+        "Kubernetes",
+        "Container Registry",
+        "Orchestration"
+      ]
+    },
+    {
+      "title": "DevOps",
+      "topics": [
+        "CI/CD",
+        "Git",
+        "GitHub Actions",
+        "Jenkins",
+        "Terraform"
+      ]
+    },
+    {
+      "title": "Security",
+      "topics": [
+        "IAM",
+        "Encryption",
+        "Security Groups",
+        "Secrets Management"
+      ]
+    },
+    {
+      "title": "Monitoring",
+      "topics": [
+        "CloudWatch",
+        "Logging",
+        "Monitoring",
+        "Alerting"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "AWS CLI",
+        "Azure Portal",
+        "Google Cloud Console",
+        "Docker",
+        "Terraform"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Understand cloud service models.",
+    "Learn networking fundamentals.",
+    "Practice deploying applications.",
+    "Know IAM and cloud security best practices.",
+    "Learn Infrastructure as Code.",
+    "Understand containerization.",
+    "Practice troubleshooting cloud resources."
+  ],
+
+  "practiceChecklist": [
+    "Launch an EC2 Instance",
+    "Host a Static Website on S3",
+    "Deploy Docker Containers",
+    "Create a CI/CD Pipeline",
+    "Configure IAM Users",
+    "Build a Kubernetes Cluster",
+    "Deploy Infrastructure using Terraform"
+  ],
+
+  "resources": [
+    {
+      "name": "AWS Documentation",
+      "url": "https://docs.aws.amazon.com"
+    },
+    {
+      "name": "Microsoft Learn",
+      "url": "https://learn.microsoft.com"
+    },
+    {
+      "name": "Google Cloud Documentation",
+      "url": "https://cloud.google.com/docs"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain cloud architecture clearly.",
+    "Discuss scalability and security.",
+    "Mention cost optimization strategies.",
+    "Use real deployment examples.",
+    "Describe troubleshooting approaches."
+  ]
+}

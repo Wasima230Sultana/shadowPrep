@@ -1,0 +1,130 @@
+{
+  "categoryId": 17,
+  "title": "Java Developer",
+  "studyTime": "30-45 min",
+  "overview": "Java Developers build desktop, web, and enterprise applications using Java, object-oriented programming, collections, multithreading, databases, and frameworks such as Spring Boot.",
+
+  "concepts": [
+    {
+      "title": "Java Basics",
+      "topics": [
+        "Variables",
+        "Data Types",
+        "Operators",
+        "Control Statements",
+        "Methods"
+      ]
+    },
+    {
+      "title": "Object-Oriented Programming",
+      "topics": [
+        "Class",
+        "Object",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction",
+        "Encapsulation"
+      ]
+    },
+    {
+      "title": "Collections",
+      "topics": [
+        "ArrayList",
+        "LinkedList",
+        "HashMap",
+        "HashSet",
+        "Queue",
+        "Stack"
+      ]
+    },
+    {
+      "title": "Exception Handling",
+      "topics": [
+        "try-catch",
+        "throw",
+        "throws",
+        "Custom Exceptions"
+      ]
+    },
+    {
+      "title": "Multithreading",
+      "topics": [
+        "Thread",
+        "Runnable",
+        "Synchronization",
+        "Executor Framework"
+      ]
+    },
+    {
+      "title": "Database",
+      "topics": [
+        "JDBC",
+        "SQL",
+        "PreparedStatement",
+        "Transactions"
+      ]
+    },
+    {
+      "title": "Spring Boot",
+      "topics": [
+        "REST API",
+        "Dependency Injection",
+        "Spring MVC",
+        "Spring Data JPA"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "IntelliJ IDEA",
+        "Eclipse",
+        "Maven",
+        "Gradle",
+        "Git"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master object-oriented programming.",
+    "Practice Java collections.",
+    "Understand exception handling.",
+    "Learn multithreading concepts.",
+    "Practice SQL with JDBC.",
+    "Build REST APIs using Spring Boot.",
+    "Solve Java coding problems regularly."
+  ],
+
+  "practiceChecklist": [
+    "Build a CRUD Application",
+    "Practice Java Collections",
+    "Create REST APIs",
+    "Connect Java with MySQL",
+    "Build a Spring Boot Project",
+    "Implement Multithreading",
+    "Solve Java Coding Challenges"
+  ],
+
+  "resources": [
+    {
+      "name": "Oracle Java Documentation",
+      "url": "https://docs.oracle.com/en/java/"
+    },
+    {
+      "name": "Spring Documentation",
+      "url": "https://spring.io/projects/spring-boot"
+    },
+    {
+      "name": "Baeldung",
+      "url": "https://www.baeldung.com"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain OOP concepts with examples.",
+    "Discuss Java collections and multithreading.",
+    "Write clean and optimized code.",
+    "Mention Spring Boot best practices.",
+    "Think aloud while solving coding problems."
+  ]
+}

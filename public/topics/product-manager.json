@@ -1,0 +1,125 @@
+{
+  "categoryId": 15,
+  "title": "Product Manager",
+  "studyTime": "30-45 min",
+  "overview": "Product Managers define product vision, gather customer requirements, prioritize features, collaborate with cross-functional teams, and ensure products deliver business value and user satisfaction.",
+
+  "concepts": [
+    {
+      "title": "Product Management Fundamentals",
+      "topics": [
+        "Product Lifecycle",
+        "Product Vision",
+        "Product Strategy",
+        "Roadmap",
+        "Product Discovery"
+      ]
+    },
+    {
+      "title": "Market Research",
+      "topics": [
+        "Competitive Analysis",
+        "Customer Research",
+        "Market Trends",
+        "User Personas"
+      ]
+    },
+    {
+      "title": "Requirements",
+      "topics": [
+        "User Stories",
+        "Acceptance Criteria",
+        "Prioritization",
+        "Backlog Management"
+      ]
+    },
+    {
+      "title": "Agile",
+      "topics": [
+        "Scrum",
+        "Sprint Planning",
+        "Kanban",
+        "Product Backlog"
+      ]
+    },
+    {
+      "title": "Product Metrics",
+      "topics": [
+        "KPIs",
+        "A/B Testing",
+        "Retention",
+        "Customer Satisfaction"
+      ]
+    },
+    {
+      "title": "Communication",
+      "topics": [
+        "Stakeholder Management",
+        "Presentation Skills",
+        "Negotiation",
+        "Leadership"
+      ]
+    },
+    {
+      "title": "Analytics",
+      "topics": [
+        "Google Analytics",
+        "Product Analytics",
+        "Data-driven Decisions"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Jira",
+        "Confluence",
+        "Figma",
+        "Trello",
+        "Notion"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Always focus on customer needs.",
+    "Prioritize features based on value.",
+    "Use data to make decisions.",
+    "Communicate clearly with stakeholders.",
+    "Understand Agile methodologies.",
+    "Learn product metrics.",
+    "Think strategically."
+  ],
+
+  "practiceChecklist": [
+    "Write User Stories",
+    "Create a Product Roadmap",
+    "Prioritize a Product Backlog",
+    "Analyze Competitors",
+    "Conduct User Research",
+    "Define Product KPIs",
+    "Present a Product Strategy"
+  ],
+
+  "resources": [
+    {
+      "name": "Product School",
+      "url": "https://productschool.com"
+    },
+    {
+      "name": "Atlassian Agile Guide",
+      "url": "https://www.atlassian.com/agile"
+    },
+    {
+      "name": "Mind the Product",
+      "url": "https://www.mindtheproduct.com"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain your product thinking.",
+    "Discuss prioritization decisions.",
+    "Support ideas with user data.",
+    "Demonstrate leadership and communication.",
+    "Show how you balance business and user needs."
+  ]
+}

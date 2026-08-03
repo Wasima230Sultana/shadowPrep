@@ -1,0 +1,131 @@
+{
+  "categoryId": 15,
+  "title": "Business Analyst",
+  "studyTime": "30-45 min",
+  "overview": "Business Analysts bridge the gap between business stakeholders and technical teams by analyzing business needs, gathering requirements, improving processes, and ensuring successful project delivery.",
+
+  "concepts": [
+    {
+      "title": "Business Analysis Fundamentals",
+      "topics": [
+        "Role of Business Analyst",
+        "Business Process",
+        "Stakeholder Management",
+        "Requirement Gathering",
+        "Business Value"
+      ]
+    },
+    {
+      "title": "Requirements Engineering",
+      "topics": [
+        "Functional Requirements",
+        "Non-functional Requirements",
+        "Requirement Elicitation",
+        "Requirement Documentation",
+        "Requirement Validation"
+      ]
+    },
+    {
+      "title": "Modeling",
+      "topics": [
+        "Use Case Diagram",
+        "Activity Diagram",
+        "Flowchart",
+        "Business Process Modeling",
+        "UML Basics"
+      ]
+    },
+    {
+      "title": "Documentation",
+      "topics": [
+        "BRD",
+        "SRS",
+        "User Stories",
+        "Acceptance Criteria",
+        "Process Documentation"
+      ]
+    },
+    {
+      "title": "Agile",
+      "topics": [
+        "Scrum",
+        "Sprint Planning",
+        "Backlog",
+        "Product Owner",
+        "Kanban"
+      ]
+    },
+    {
+      "title": "Data Analysis",
+      "topics": [
+        "Excel",
+        "SQL Basics",
+        "Power BI",
+        "Data Visualization",
+        "KPIs"
+      ]
+    },
+    {
+      "title": "Communication",
+      "topics": [
+        "Presentation Skills",
+        "Negotiation",
+        "Meeting Facilitation",
+        "Stakeholder Communication"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Jira",
+        "Confluence",
+        "Microsoft Visio",
+        "Lucidchart",
+        "Microsoft Excel"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Focus on understanding business problems before proposing solutions.",
+    "Practice writing clear and measurable requirements.",
+    "Improve communication and presentation skills.",
+    "Learn Agile methodologies and Scrum practices.",
+    "Understand stakeholder expectations.",
+    "Practice SQL for data analysis.",
+    "Think from both business and technical perspectives."
+  ],
+
+  "practiceChecklist": [
+    "Write a Business Requirements Document (BRD)",
+    "Create a Software Requirements Specification (SRS)",
+    "Design Use Case Diagrams",
+    "Write User Stories",
+    "Create Process Flow Diagrams",
+    "Practice SQL Queries",
+    "Analyze Business Scenarios"
+  ],
+
+  "resources": [
+    {
+      "name": "IIBA",
+      "url": "https://www.iiba.org"
+    },
+    {
+      "name": "Modern Analyst",
+      "url": "https://www.modernanalyst.com"
+    },
+    {
+      "name": "Microsoft Learn",
+      "url": "https://learn.microsoft.com"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Clarify business requirements before proposing solutions.",
+    "Explain your requirement gathering approach.",
+    "Use real-world examples whenever possible.",
+    "Show strong communication and stakeholder management skills.",
+    "Demonstrate analytical thinking and problem-solving."
+  ]
+}

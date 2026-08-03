@@ -1,0 +1,128 @@
+{
+  "categoryId": 3,
+  "title": "Full Stack Developer",
+  "studyTime": "45-60 min",
+  "overview": "Full Stack Developers build complete web applications by working on both frontend and backend technologies, databases, APIs, authentication, deployment, and cloud services.",
+
+  "concepts": [
+    {
+      "title": "Frontend",
+      "topics": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Responsive Design"
+      ]
+    },
+    {
+      "title": "Backend",
+      "topics": [
+        "Node.js",
+        "Express.js",
+        "REST API",
+        "Middleware",
+        "Authentication"
+      ]
+    },
+    {
+      "title": "Database",
+      "topics": [
+        "MongoDB",
+        "MySQL",
+        "CRUD",
+        "Schema Design",
+        "Indexing"
+      ]
+    },
+    {
+      "title": "Authentication",
+      "topics": [
+        "JWT",
+        "OAuth",
+        "Firebase Auth",
+        "Sessions"
+      ]
+    },
+    {
+      "title": "API",
+      "topics": [
+        "REST",
+        "Axios",
+        "Fetch API",
+        "JSON"
+      ]
+    },
+    {
+      "title": "Deployment",
+      "topics": [
+        "Vercel",
+        "Render",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "title": "Performance",
+      "topics": [
+        "Caching",
+        "Optimization",
+        "Lazy Loading",
+        "Code Splitting"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Git",
+        "GitHub",
+        "Postman",
+        "VS Code",
+        "Docker"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Understand both frontend and backend development.",
+    "Practice API integration.",
+    "Master authentication.",
+    "Learn database optimization.",
+    "Build complete projects.",
+    "Understand deployment pipelines.",
+    "Write clean, maintainable code."
+  ],
+
+  "practiceChecklist": [
+    "Build a MERN Stack App",
+    "Create REST APIs",
+    "Implement JWT Authentication",
+    "Deploy Full Stack Projects",
+    "Connect Frontend and Backend",
+    "Use MongoDB",
+    "Implement CRUD Operations"
+  ],
+
+  "resources": [
+    {
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org"
+    },
+    {
+      "name": "Node.js Documentation",
+      "url": "https://nodejs.org/docs"
+    },
+    {
+      "name": "Express Documentation",
+      "url": "https://expressjs.com"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain complete application architecture.",
+    "Discuss frontend-backend communication.",
+    "Mention security best practices.",
+    "Show deployment experience.",
+    "Use project-based examples."
+  ]
+}

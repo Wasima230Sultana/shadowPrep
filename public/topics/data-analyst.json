@@ -1,0 +1,132 @@
+{
+  "categoryId": 6,
+  "title": "Data Analyst",
+  "studyTime": "30-45 min",
+  "overview": "Data Analysts collect, clean, analyze, and visualize data to help organizations make informed business decisions using SQL, Excel, Python, statistics, and business intelligence tools.",
+
+  "concepts": [
+    {
+      "title": "Data Analysis Fundamentals",
+      "topics": [
+        "Data Collection",
+        "Data Cleaning",
+        "Data Transformation",
+        "Exploratory Data Analysis",
+        "Data Quality"
+      ]
+    },
+    {
+      "title": "SQL",
+      "topics": [
+        "SELECT",
+        "JOIN",
+        "GROUP BY",
+        "HAVING",
+        "Subqueries",
+        "Window Functions"
+      ]
+    },
+    {
+      "title": "Excel",
+      "topics": [
+        "Pivot Tables",
+        "VLOOKUP",
+        "XLOOKUP",
+        "Charts",
+        "Conditional Formatting"
+      ]
+    },
+    {
+      "title": "Python",
+      "topics": [
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Data Cleaning",
+        "Data Visualization"
+      ]
+    },
+    {
+      "title": "Statistics",
+      "topics": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Standard Deviation",
+        "Probability",
+        "Hypothesis Testing"
+      ]
+    },
+    {
+      "title": "Visualization",
+      "topics": [
+        "Power BI",
+        "Tableau",
+        "Dashboards",
+        "KPIs"
+      ]
+    },
+    {
+      "title": "Business Intelligence",
+      "topics": [
+        "Reporting",
+        "Data Storytelling",
+        "Business Metrics",
+        "Decision Making"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Excel",
+        "SQL Server",
+        "Power BI",
+        "Tableau",
+        "Jupyter Notebook"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master SQL before advanced analytics.",
+    "Practice cleaning messy datasets.",
+    "Understand statistics fundamentals.",
+    "Build dashboards regularly.",
+    "Learn to communicate insights clearly.",
+    "Practice solving business problems with data.",
+    "Focus on storytelling with visualizations."
+  ],
+
+  "practiceChecklist": [
+    "Analyze Sales Data",
+    "Write Complex SQL Queries",
+    "Build a Power BI Dashboard",
+    "Create Tableau Visualizations",
+    "Clean Data using Pandas",
+    "Perform Exploratory Data Analysis",
+    "Present Business Insights"
+  ],
+
+  "resources": [
+    {
+      "name": "Kaggle",
+      "url": "https://www.kaggle.com"
+    },
+    {
+      "name": "Microsoft Learn",
+      "url": "https://learn.microsoft.com"
+    },
+    {
+      "name": "Pandas Documentation",
+      "url": "https://pandas.pydata.org"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain your analytical approach.",
+    "Describe how you clean and validate data.",
+    "Discuss business impact using examples.",
+    "Present insights using visualizations.",
+    "Communicate findings clearly and confidently."
+  ]
+}

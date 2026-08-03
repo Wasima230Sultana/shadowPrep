@@ -8,11 +8,9 @@ import {
   FaRocket,
   FaClock,
 } from "react-icons/fa";
-
 const TopicDetails = () => {
   const { id } = useParams();
   const [topic, setTopic] = useState(null);
-
   const topicFiles = {
     1: "frontend.json",
     2: "backend.json",
@@ -35,10 +33,8 @@ const TopicDetails = () => {
     19: "database.json",
     20: "flutter.json",
   };
-
   useEffect(() => {
     const file = topicFiles[id];
-
     fetch(`/topics/${file}`)
       .then((res) => res.json())
       .then((data) => setTopic(data))
@@ -54,22 +50,39 @@ const TopicDetails = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-5 py-10">
-
+    <div className="max-w-7xl mx-auto px-5 py-10 relative overflow-hidden bg-gradient-to-br from-sky-100 via-indigo-100 to-pink-100">
       {/* Hero */}
-      <div className="hero bg-base-200 rounded-2xl mb-10">
-        <div className="hero-content text-center">
+
+      <div className="hero rounded-3xl mb-10 border border-base-300 shadow-xl bg-purple-50 rounded-3xl p-10">
+        <div className="hero-content text-center ">
           <div>
+
+            <div className="avatar placeholder mb-5">
+              <div className="bg-primary text-primary-content rounded-full w-20">
+                <span className="text-6xl justify-center items-center flex mt-3">
+                  <FaBookOpen />
+                </span>
+              </div>
+            </div>
             <h1 className="text-5xl font-bold">{topic.title}</h1>
 
             <div className="flex justify-center gap-4 mt-4 flex-wrap">
-              <div className="badge badge-primary badge-lg">
-                <FaClock className="mr-2" />
-                {topic.studyTime}
-              </div>
+              <div className="stats shadow mt-6">
 
-              <div className="badge badge-secondary badge-lg">
-                {topic.concepts.length} Concepts
+                <div className="stat">
+                  <div className="stat-title">Study Time</div>
+                  <div className="stat-value text-primary">
+                    {topic.studyTime}
+                  </div>
+                </div>
+
+                <div className="stat">
+                  <div className="stat-title">Concepts</div>
+                  <div className="stat-value">
+                    {topic.concepts.length}
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -88,18 +101,22 @@ const TopicDetails = () => {
         {topic.concepts.map((concept, index) => (
           <div
             key={index}
-            className="collapse collapse-arrow bg-base-200 mb-4"
+            className="collapse collapse-arrow border border-base-300 bg-purple-50  shadow-md hover:shadow-xl transition duration-300"
           >
             <input type="checkbox" />
 
-            <div className="collapse-title text-xl font-semibold">
+            <div className="collapse-title text-xl font-semibold ">
               {concept.title}
             </div>
 
             <div className="collapse-content">
               <ul className="list-disc ml-6 space-y-2">
                 {concept.topics.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  // <li key={i}>{item}</li>
+                  <li key={i} className="flex items-center gap-3">
+                    <FaCheckCircle className="text-success" />
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -111,7 +128,7 @@ const TopicDetails = () => {
       <div className="grid lg:grid-cols-2 gap-8 mb-12">
 
         {/* Tips */}
-        <div className="card bg-base-200 shadow-lg">
+        <div className="card bg-purple-50 border border-base-300 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
           <div className="card-body">
             <h2 className="card-title text-2xl">
               <FaLightbulb className="text-warning" />
@@ -130,7 +147,7 @@ const TopicDetails = () => {
         </div>
 
         {/* Practice */}
-        <div className="card bg-base-200 shadow-lg">
+        <div className="card bg-purple-50  border border-base-300 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
           <div className="card-body">
             <h2 className="card-title text-2xl">
               <FaCheckCircle className="text-success" />
@@ -143,11 +160,19 @@ const TopicDetails = () => {
                   key={index}
                   className="label cursor-pointer justify-start gap-3"
                 >
-                  <input
-                    type="checkbox"
-                    className="checkbox checkbox-primary"
-                  />
-                  <span>{item}</span>
+                  <div className="join join-vertical w-full">
+
+                    <div className="join-item flex items-center gap-4 p-3 border rounded-lg">
+
+                      <input
+                        type="checkbox"
+                        className="checkbox checkbox-success" />
+
+                      <span>{item}</span>
+
+                    </div>
+
+                  </div>
                 </label>
               ))}
             </div>
@@ -168,20 +193,24 @@ const TopicDetails = () => {
               href={resource.url}
               target="_blank"
               rel="noreferrer"
-              className="card bg-base-200 shadow hover:shadow-xl transition"
+              className="card bg-purple-50 border border-base-300 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
             >
               <div className="card-body">
-                <h3 className="card-title">
-                  {resource.name}
-                </h3>
+                <div className="flex justify-between items-center hover:scale-105">
+
+                  <h3 className="card-title">
+                    {resource.name}
+                  </h3>
+
+                  <div className="btn btn-circle btn-sm bg-purple-400 text-white hover:bg-purple-500 transition duration-300">
+                    <FaExternalLinkAlt />
+                  </div>
+
+                </div>
 
                 <p className="text-sm break-all">
                   {resource.url}
                 </p>
-
-                <div className="card-actions justify-end">
-                  <FaExternalLinkAlt />
-                </div>
               </div>
             </a>
           ))}
@@ -198,9 +227,9 @@ const TopicDetails = () => {
           {topic.interviewStrategy.map((step, index) => (
             <div
               key={index}
-              className="flex gap-4 items-start bg-base-200 p-4 rounded-lg"
+              className="flex gap-4 items-start bg-purple-50 p-4 rounded-lg border border-base-300"
             >
-              <div className="badge badge-primary badge-lg">
+              <div className="badge bg-purple-400 badge-lg">
                 {index + 1}
               </div>
 
@@ -211,21 +240,19 @@ const TopicDetails = () => {
       </section>
 
       {/* Button */}
-      <div className="text-center mt-16">
-        <div>
-          <Link
+      <div className="sticky bottom-5 flex justify-center gap-5 mt-20">
+        <Link
           to={`/interview/${id}`}
-          className="btn btn-primary btn-lg px-10 font-semibold transition-all duration-300 hover:scale-[1.02] mb-3"
-        >
+          className="btn bg-purple-400 btn-lg rounded-full shadow-xl">
           <FaRocket />
-          Start Mock Interview
+          Start Interview
         </Link>
-        </div>
-        
-        <Link to={`/category/${id}`}
-                    className="btn btn-primary btn-lg px-10 font-semibold transition-all duration-300 hover:scale-[1.02]">
-                    Back to →
-                  </Link>
+
+        <Link
+          to={`/category/${id}`}
+          className="btn btn-outline btn-lg rounded-full bg-purple-50 border border-base-300 shadow-xl">
+          Back
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,129 @@
+{
+  "categoryId": 8,
+  "title": "Machine Learning Engineer",
+  "studyTime": "45-60 min",
+  "overview": "Machine Learning Engineers design, train, evaluate, and deploy machine learning models to solve real-world problems using Python, ML frameworks, data processing, and MLOps practices.",
+
+  "concepts": [
+    {
+      "title": "Python",
+      "topics": [
+        "Variables",
+        "Functions",
+        "OOP",
+        "NumPy",
+        "Pandas",
+        "Virtual Environments"
+      ]
+    },
+    {
+      "title": "Machine Learning",
+      "topics": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Model Evaluation"
+      ]
+    },
+    {
+      "title": "Feature Engineering",
+      "topics": [
+        "Data Cleaning",
+        "Missing Values",
+        "Feature Selection",
+        "Feature Scaling",
+        "Encoding"
+      ]
+    },
+    {
+      "title": "Deep Learning",
+      "topics": [
+        "Neural Networks",
+        "CNN",
+        "RNN",
+        "Transfer Learning"
+      ]
+    },
+    {
+      "title": "Model Deployment",
+      "topics": [
+        "REST API",
+        "FastAPI",
+        "Docker",
+        "Model Serving"
+      ]
+    },
+    {
+      "title": "MLOps",
+      "topics": [
+        "Model Versioning",
+        "Experiment Tracking",
+        "CI/CD",
+        "Monitoring"
+      ]
+    },
+    {
+      "title": "Cloud",
+      "topics": [
+        "AWS SageMaker",
+        "Google Vertex AI",
+        "Azure ML"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Scikit-learn",
+        "TensorFlow",
+        "PyTorch",
+        "Jupyter Notebook",
+        "Git"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master Python programming.",
+    "Understand machine learning algorithms deeply.",
+    "Practice feature engineering.",
+    "Evaluate models using proper metrics.",
+    "Deploy ML models as APIs.",
+    "Learn MLOps fundamentals.",
+    "Build complete ML projects."
+  ],
+
+  "practiceChecklist": [
+    "Build a Classification Model",
+    "Train a Regression Model",
+    "Deploy a FastAPI ML Service",
+    "Practice Feature Engineering",
+    "Use TensorFlow or PyTorch",
+    "Track Experiments",
+    "Deploy an ML Model to Cloud"
+  ],
+
+  "resources": [
+    {
+      "name": "Scikit-learn Documentation",
+      "url": "https://scikit-learn.org"
+    },
+    {
+      "name": "TensorFlow Documentation",
+      "url": "https://www.tensorflow.org"
+    },
+    {
+      "name": "PyTorch Documentation",
+      "url": "https://pytorch.org"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain algorithm selection.",
+    "Discuss feature engineering decisions.",
+    "Mention evaluation metrics.",
+    "Describe deployment strategy.",
+    "Show practical project experience."
+  ]
+}

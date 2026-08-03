@@ -1,0 +1,132 @@
+{
+  "categoryId": 20,
+  "title": "Flutter Developer",
+  "studyTime": "30-45 min",
+  "overview": "Flutter developers build cross-platform mobile, web, and desktop applications using Dart and the Flutter framework. They create responsive UIs, manage application state, integrate APIs, and optimize app performance.",
+
+  "concepts": [
+    {
+      "title": "Dart",
+      "topics": [
+        "Variables",
+        "Data Types",
+        "Functions",
+        "OOP",
+        "Collections",
+        "Null Safety"
+      ]
+    },
+    {
+      "title": "Flutter Basics",
+      "topics": [
+        "Widgets",
+        "StatelessWidget",
+        "StatefulWidget",
+        "Build Method",
+        "MaterialApp",
+        "Scaffold"
+      ]
+    },
+    {
+      "title": "Layouts",
+      "topics": [
+        "Container",
+        "Row",
+        "Column",
+        "Stack",
+        "Expanded",
+        "ListView"
+      ]
+    },
+    {
+      "title": "State Management",
+      "topics": [
+        "setState",
+        "Provider",
+        "Riverpod",
+        "Bloc Basics",
+        "GetX"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "topics": [
+        "Named Routes",
+        "Navigator",
+        "Passing Data",
+        "Navigation Stack"
+      ]
+    },
+    {
+      "title": "API",
+      "topics": [
+        "HTTP Package",
+        "REST API",
+        "JSON Parsing",
+        "Async/Await"
+      ]
+    },
+    {
+      "title": "Firebase",
+      "topics": [
+        "Authentication",
+        "Firestore",
+        "Storage",
+        "Cloud Messaging"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "Flutter SDK",
+        "Android Studio",
+        "VS Code",
+        "Git",
+        "Firebase CLI"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master Dart before Flutter widgets.",
+    "Understand the widget tree.",
+    "Practice state management.",
+    "Learn API integration.",
+    "Build responsive layouts.",
+    "Use Firebase for backend services.",
+    "Optimize app performance."
+  ],
+
+  "practiceChecklist": [
+    "Build a Todo App",
+    "Build a Weather App",
+    "Consume REST APIs",
+    "Implement Firebase Authentication",
+    "Use Provider or Riverpod",
+    "Deploy Android APK",
+    "Publish a Flutter App"
+  ],
+
+  "resources": [
+    {
+      "name": "Flutter Documentation",
+      "url": "https://docs.flutter.dev"
+    },
+    {
+      "name": "Dart Documentation",
+      "url": "https://dart.dev"
+    },
+    {
+      "name": "Firebase Documentation",
+      "url": "https://firebase.google.com/docs"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain Flutter's widget system.",
+    "Discuss state management choices.",
+    "Mention performance optimization.",
+    "Use practical project examples.",
+    "Demonstrate clean architecture."
+  ]
+}

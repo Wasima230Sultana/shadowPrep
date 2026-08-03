@@ -1,0 +1,124 @@
+{
+  "categoryId": 16,
+  "title": "Software Engineer",
+  "studyTime": "45-60 min",
+  "overview": "Software Engineers design, develop, test, and maintain software systems using programming languages, software engineering principles, design patterns, algorithms, and development tools.",
+
+  "concepts": [
+    {
+      "title": "Programming",
+      "topics": [
+        "Variables",
+        "Functions",
+        "Object-Oriented Programming",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    {
+      "title": "Software Engineering",
+      "topics": [
+        "SDLC",
+        "Design Patterns",
+        "SOLID Principles",
+        "Code Review"
+      ]
+    },
+    {
+      "title": "Database",
+      "topics": [
+        "SQL",
+        "NoSQL",
+        "Normalization",
+        "Transactions"
+      ]
+    },
+    {
+      "title": "System Design",
+      "topics": [
+        "Scalability",
+        "Load Balancing",
+        "Caching",
+        "Microservices"
+      ]
+    },
+    {
+      "title": "Version Control",
+      "topics": [
+        "Git",
+        "GitHub",
+        "Branching",
+        "Pull Requests"
+      ]
+    },
+    {
+      "title": "Testing",
+      "topics": [
+        "Unit Testing",
+        "Integration Testing",
+        "Debugging"
+      ]
+    },
+    {
+      "title": "Development",
+      "topics": [
+        "REST APIs",
+        "Authentication",
+        "Deployment"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "VS Code",
+        "Git",
+        "Docker",
+        "Postman",
+        "Jira"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Master programming fundamentals.",
+    "Practice algorithms regularly.",
+    "Learn software design principles.",
+    "Write clean code.",
+    "Understand system design basics.",
+    "Build complete applications.",
+    "Practice debugging."
+  ],
+
+  "practiceChecklist": [
+    "Build a Full Application",
+    "Solve Coding Problems",
+    "Design REST APIs",
+    "Practice System Design",
+    "Write Unit Tests",
+    "Deploy an Application",
+    "Use Git Effectively"
+  ],
+
+  "resources": [
+    {
+      "name": "Refactoring Guru",
+      "url": "https://refactoring.guru"
+    },
+    {
+      "name": "GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org"
+    },
+    {
+      "name": "System Design Primer",
+      "url": "https://github.com/donnemartin/system-design-primer"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Think aloud while solving problems.",
+    "Explain design decisions.",
+    "Write optimized code.",
+    "Use real project examples.",
+    "Communicate clearly."
+  ]
+}

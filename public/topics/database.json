@@ -1,0 +1,129 @@
+{
+  "categoryId": 19,
+  "title": "Database Developer",
+  "studyTime": "30-45 min",
+  "overview": "Database Developers design, optimize, and manage databases while ensuring data integrity, performance, security, and efficient querying using SQL and database management systems.",
+
+  "concepts": [
+    {
+      "title": "Database Fundamentals",
+      "topics": [
+        "DBMS",
+        "RDBMS",
+        "Primary Key",
+        "Foreign Key",
+        "Normalization"
+      ]
+    },
+    {
+      "title": "SQL",
+      "topics": [
+        "SELECT",
+        "JOIN",
+        "GROUP BY",
+        "HAVING",
+        "Subqueries",
+        "Window Functions"
+      ]
+    },
+    {
+      "title": "Database Design",
+      "topics": [
+        "ER Diagram",
+        "Relationships",
+        "Indexes",
+        "Constraints",
+        "Schema Design"
+      ]
+    },
+    {
+      "title": "Transactions",
+      "topics": [
+        "ACID Properties",
+        "Commit",
+        "Rollback",
+        "Isolation Levels"
+      ]
+    },
+    {
+      "title": "Performance",
+      "topics": [
+        "Query Optimization",
+        "Indexing",
+        "Execution Plan",
+        "Caching"
+      ]
+    },
+    {
+      "title": "NoSQL",
+      "topics": [
+        "MongoDB",
+        "Document Database",
+        "Key-Value Store",
+        "CAP Theorem"
+      ]
+    },
+    {
+      "title": "Security",
+      "topics": [
+        "User Roles",
+        "Permissions",
+        "Backup",
+        "Recovery"
+      ]
+    },
+    {
+      "title": "Tools",
+      "topics": [
+        "MySQL",
+        "PostgreSQL",
+        "SQL Server",
+        "Oracle",
+        "MongoDB Compass"
+      ]
+    }
+  ],
+
+  "tips": [
+    "Practice writing SQL queries daily.",
+    "Understand normalization thoroughly.",
+    "Know different JOIN types.",
+    "Learn indexing and optimization.",
+    "Understand transactions and ACID.",
+    "Practice database design.",
+    "Learn both SQL and NoSQL databases."
+  ],
+
+  "practiceChecklist": [
+    "Design an ER Diagram",
+    "Normalize a Database",
+    "Write Complex SQL Queries",
+    "Optimize Slow Queries",
+    "Create Stored Procedures",
+    "Practice MongoDB Queries",
+    "Backup and Restore a Database"
+  ],
+
+  "resources": [
+    {
+      "name": "PostgreSQL Documentation",
+      "url": "https://www.postgresql.org/docs"
+    },
+    {
+      "name": "MySQL Documentation",
+      "url": "https://dev.mysql.com/doc"
+    },
+    {
+      "name": "MongoDB Documentation",
+      "url": "https://www.mongodb.com/docs"
+    }
+  ],
+
+  "interviewStrategy": [
+    "Explain database design decisions.",
+    "Describe query optimization techniques.",
+    "Discuss indexing strategies.",
+    "Use SQL examples during explanations.",
+    "Emphasize data integrity and security."
+  ]
+}
