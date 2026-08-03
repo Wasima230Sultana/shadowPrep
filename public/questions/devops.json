@@ -1,0 +1,309 @@
+
+[
+  {
+    "id": 1,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is DevOps?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about collaboration between development and operations.",
+    "expectedTopics": [
+      "Culture",
+      "Automation",
+      "CI/CD"
+    ],
+    "followUpQuestion": "What are the main benefits of adopting DevOps?"
+  },
+  {
+    "id": 2,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is Continuous Integration (CI)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about automatically integrating code changes.",
+    "expectedTopics": [
+      "Automation",
+      "Build",
+      "Testing"
+    ],
+    "followUpQuestion": "Why is Continuous Integration important?"
+  },
+  {
+    "id": 3,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is Continuous Delivery and Continuous Deployment?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about software release automation.",
+    "expectedTopics": [
+      "CD",
+      "Deployment",
+      "Automation"
+    ],
+    "followUpQuestion": "What is the difference between Continuous Delivery and Continuous Deployment?"
+  },
+  {
+    "id": 4,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is Docker?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about containerization.",
+    "expectedTopics": [
+      "Containers",
+      "Images",
+      "Virtualization"
+    ],
+    "followUpQuestion": "What is the difference between a Docker image and a container?"
+  },
+  {
+    "id": 5,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is Kubernetes?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about managing containers.",
+    "expectedTopics": [
+      "Pods",
+      "Cluster",
+      "Orchestration"
+    ],
+    "followUpQuestion": "Why is Kubernetes used in modern applications?"
+  },
+  {
+    "id": 6,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is Infrastructure as Code (IaC)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about managing infrastructure using code.",
+    "expectedTopics": [
+      "Terraform",
+      "Automation",
+      "Provisioning"
+    ],
+    "followUpQuestion": "Name some Infrastructure as Code tools."
+  },
+  {
+    "id": 7,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "What is Jenkins?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about CI/CD automation.",
+    "expectedTopics": [
+      "Pipeline",
+      "Automation",
+      "CI Server"
+    ],
+    "followUpQuestion": "What is a Jenkins Pipeline?"
+  },
+  {
+    "id": 8,
+    "categoryId": 10,
+    "difficulty": "Easy",
+    "question": "Why is Git important in DevOps?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about version control.",
+    "expectedTopics": [
+      "Version Control",
+      "Repository",
+      "Branching"
+    ],
+    "followUpQuestion": "Which Git branching strategy have you used?"
+  },
+  {
+    "id": 9,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "Explain the stages of a CI/CD pipeline.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think from commit to deployment.",
+    "expectedTopics": [
+      "Build",
+      "Test",
+      "Deploy"
+    ],
+    "followUpQuestion": "Which stage is the most critical and why?"
+  },
+  {
+    "id": 10,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "How does Kubernetes perform auto-scaling?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about Horizontal Pod Autoscaler.",
+    "expectedTopics": [
+      "HPA",
+      "Metrics",
+      "Scaling"
+    ],
+    "followUpQuestion": "What metrics can trigger auto-scaling?"
+  },
+  {
+    "id": 11,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "What is Terraform and how does it work?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about provisioning cloud infrastructure.",
+    "expectedTopics": [
+      "State File",
+      "Providers",
+      "Resources"
+    ],
+    "followUpQuestion": "Why is the Terraform state file important?"
+  },
+  {
+    "id": 12,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "How do you monitor applications in production?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about metrics, logs and alerts.",
+    "expectedTopics": [
+      "Prometheus",
+      "Grafana",
+      "Logging"
+    ],
+    "followUpQuestion": "Which metrics would you monitor first?"
+  },
+  {
+    "id": 13,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "How do you secure a CI/CD pipeline?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about secrets and access control.",
+    "expectedTopics": [
+      "Secrets",
+      "IAM",
+      "Scanning"
+    ],
+    "followUpQuestion": "Where should sensitive credentials be stored?"
+  },
+  {
+    "id": 14,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "Explain Blue-Green Deployment.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about zero-downtime deployments.",
+    "expectedTopics": [
+      "Blue-Green",
+      "Rollback",
+      "Availability"
+    ],
+    "followUpQuestion": "How is Blue-Green Deployment different from Rolling Deployment?"
+  },
+  {
+    "id": 15,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "What is Ansible and where is it used?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about configuration management.",
+    "expectedTopics": [
+      "Playbooks",
+      "Automation",
+      "Configuration Management"
+    ],
+    "followUpQuestion": "How is Ansible different from Terraform?"
+  },
+  {
+    "id": 16,
+    "categoryId": 10,
+    "difficulty": "Medium",
+    "question": "How do Docker volumes and networks work?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about persistence and communication.",
+    "expectedTopics": [
+      "Volumes",
+      "Bridge Network",
+      "Persistent Storage"
+    ],
+    "followUpQuestion": "Why are Docker volumes preferred over storing data inside containers?"
+  },
+  {
+    "id": 17,
+    "categoryId": 10,
+    "difficulty": "Hard",
+    "question": "How would you design a highly available CI/CD infrastructure?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about redundancy and scalability.",
+    "expectedTopics": [
+      "Load Balancer",
+      "High Availability",
+      "Failover",
+      "Replication"
+    ],
+    "followUpQuestion": "How would you eliminate single points of failure?"
+  },
+  {
+    "id": 18,
+    "categoryId": 10,
+    "difficulty": "Hard",
+    "question": "How would you troubleshoot a failed production deployment?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about logs, rollback and monitoring.",
+    "expectedTopics": [
+      "Logs",
+      "Rollback",
+      "Pipeline",
+      "Monitoring"
+    ],
+    "followUpQuestion": "What would you investigate first?"
+  },
+  {
+    "id": 19,
+    "categoryId": 10,
+    "difficulty": "Hard",
+    "question": "How would you migrate a monolithic application to Kubernetes?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about containerization and microservices.",
+    "expectedTopics": [
+      "Docker",
+      "Microservices",
+      "Kubernetes",
+      "Migration"
+    ],
+    "followUpQuestion": "What challenges would you expect during migration?"
+  },
+  {
+    "id": 20,
+    "categoryId": 10,
+    "difficulty": "Hard",
+    "question": "Describe a DevOps project you worked on and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss CI/CD, cloud infrastructure, monitoring, security and deployment strategy.",
+    "expectedTopics": [
+      "CI/CD",
+      "Cloud",
+      "Docker",
+      "Kubernetes",
+      "Monitoring"
+    ],
+    "followUpQuestion": "If you redesigned the project today, what improvements would you make?"
+  }
+]
+

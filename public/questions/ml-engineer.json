@@ -1,0 +1,307 @@
+[
+  {
+    "id": 1,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What is Machine Learning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about computers learning from data.",
+    "expectedTopics": [
+      "Artificial Intelligence",
+      "Data",
+      "Algorithms"
+    ],
+    "followUpQuestion": "How is Machine Learning different from traditional programming?"
+  },
+  {
+    "id": 2,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What are the main types of Machine Learning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about labeled and unlabeled data.",
+    "expectedTopics": [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Reinforcement Learning"
+    ],
+    "followUpQuestion": "Can you give an example of each type?"
+  },
+  {
+    "id": 3,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What is overfitting and underfitting?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about model performance on training and test data.",
+    "expectedTopics": [
+      "Generalization",
+      "Bias",
+      "Variance"
+    ],
+    "followUpQuestion": "How can overfitting be prevented?"
+  },
+  {
+    "id": 4,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What is the difference between training, validation, and test datasets?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about model development stages.",
+    "expectedTopics": [
+      "Training",
+      "Validation",
+      "Testing"
+    ],
+    "followUpQuestion": "Why shouldn't the test set be used during training?"
+  },
+  {
+    "id": 5,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What is feature engineering?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about preparing input data.",
+    "expectedTopics": [
+      "Feature Selection",
+      "Feature Extraction",
+      "Data Preparation"
+    ],
+    "followUpQuestion": "Why is feature engineering important?"
+  },
+  {
+    "id": 6,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What is a loss function?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about measuring prediction error.",
+    "expectedTopics": [
+      "Loss",
+      "Optimization",
+      "Error"
+    ],
+    "followUpQuestion": "Can you name some common loss functions?"
+  },
+  {
+    "id": 7,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What is gradient descent?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about optimization.",
+    "expectedTopics": [
+      "Optimization",
+      "Learning Rate",
+      "Gradient"
+    ],
+    "followUpQuestion": "What happens if the learning rate is too high?"
+  },
+  {
+    "id": 8,
+    "categoryId": 8,
+    "difficulty": "Easy",
+    "question": "What evaluation metrics are used for classification problems?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think beyond accuracy.",
+    "expectedTopics": [
+      "Precision",
+      "Recall",
+      "F1-Score"
+    ],
+    "followUpQuestion": "When is F1-score preferred over accuracy?"
+  },
+  {
+    "id": 9,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "Explain the bias-variance tradeoff.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about model complexity.",
+    "expectedTopics": [
+      "Bias",
+      "Variance",
+      "Generalization"
+    ],
+    "followUpQuestion": "How do you balance bias and variance?"
+  },
+  {
+    "id": 10,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "What is cross-validation?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about model evaluation.",
+    "expectedTopics": [
+      "K-Fold",
+      "Validation",
+      "Model Evaluation"
+    ],
+    "followUpQuestion": "Why is K-Fold Cross Validation useful?"
+  },
+  {
+    "id": 11,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "Explain the difference between Random Forest and Decision Tree.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about ensemble learning.",
+    "expectedTopics": [
+      "Decision Tree",
+      "Random Forest",
+      "Bagging"
+    ],
+    "followUpQuestion": "Why is Random Forest generally more accurate?"
+  },
+  {
+    "id": 12,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "What are precision, recall, and F1-score?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about confusion matrix metrics.",
+    "expectedTopics": [
+      "Precision",
+      "Recall",
+      "F1-Score"
+    ],
+    "followUpQuestion": "Which metric is most important for medical diagnosis?"
+  },
+  {
+    "id": 13,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "How do you handle imbalanced datasets?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about sampling techniques.",
+    "expectedTopics": [
+      "SMOTE",
+      "Oversampling",
+      "Class Weights"
+    ],
+    "followUpQuestion": "When would you use SMOTE?"
+  },
+  {
+    "id": 14,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "Explain regularization in Machine Learning.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reducing overfitting.",
+    "expectedTopics": [
+      "L1",
+      "L2",
+      "Regularization"
+    ],
+    "followUpQuestion": "What is the difference between L1 and L2 regularization?"
+  },
+  {
+    "id": 15,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "How do you deploy a Machine Learning model?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about serving predictions.",
+    "expectedTopics": [
+      "REST API",
+      "Docker",
+      "Cloud"
+    ],
+    "followUpQuestion": "Which tools have you used for deployment?"
+  },
+  {
+    "id": 16,
+    "categoryId": 8,
+    "difficulty": "Medium",
+    "question": "How do you monitor a deployed Machine Learning model?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about production systems.",
+    "expectedTopics": [
+      "Model Drift",
+      "Performance Monitoring",
+      "Logging"
+    ],
+    "followUpQuestion": "What is data drift?"
+  },
+  {
+    "id": 17,
+    "categoryId": 8,
+    "difficulty": "Hard",
+    "question": "How would you build an end-to-end Machine Learning pipeline?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about the complete ML lifecycle.",
+    "expectedTopics": [
+      "Data Collection",
+      "Training",
+      "Deployment",
+      "Monitoring"
+    ],
+    "followUpQuestion": "Which stage is the most challenging and why?"
+  },
+  {
+    "id": 18,
+    "categoryId": 8,
+    "difficulty": "Hard",
+    "question": "How would you optimize a deep learning model that is overfitting?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about improving generalization.",
+    "expectedTopics": [
+      "Dropout",
+      "Data Augmentation",
+      "Regularization",
+      "Early Stopping"
+    ],
+    "followUpQuestion": "Which technique would you try first?"
+  },
+  {
+    "id": 19,
+    "categoryId": 8,
+    "difficulty": "Hard",
+    "question": "How would you design a scalable Machine Learning system for millions of users?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about serving models in production.",
+    "expectedTopics": [
+      "Load Balancing",
+      "Caching",
+      "Microservices",
+      "Scalability"
+    ],
+    "followUpQuestion": "How would you reduce prediction latency?"
+  },
+  {
+    "id": 20,
+    "categoryId": 8,
+    "difficulty": "Hard",
+    "question": "Describe a Machine Learning project you worked on and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss dataset, preprocessing, model selection, evaluation, deployment and challenges.",
+    "expectedTopics": [
+      "Data Preprocessing",
+      "Model Training",
+      "Evaluation",
+      "Deployment",
+      "Monitoring"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]

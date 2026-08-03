@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is Artificial Intelligence (AI)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about machines performing human-like tasks.",
+    "expectedTopics": [
+      "Artificial Intelligence",
+      "Machine learning",
+      "Automation"
+    ],
+    "followUpQuestion": "How is AI different from traditional programming?"
+  },
+  {
+    "id": 2,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is the difference between AI, Machine Learning, and Deep Learning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about subsets.",
+    "expectedTopics": [
+      "AI",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "followUpQuestion": "Can Deep Learning exist without Machine Learning?"
+  },
+  {
+    "id": 3,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is supervised learning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about labeled data.",
+    "expectedTopics": [
+      "Labeled data",
+      "Classification",
+      "Regression"
+    ],
+    "followUpQuestion": "Can you give two examples of supervised learning algorithms?"
+  },
+  {
+    "id": 4,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is unsupervised learning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about unlabeled data.",
+    "expectedTopics": [
+      "Clustering",
+      "Unlabeled data",
+      "Patterns"
+    ],
+    "followUpQuestion": "What are some real-world applications of clustering?"
+  },
+  {
+    "id": 5,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is a neural network?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about neurons and layers.",
+    "expectedTopics": [
+      "Input layer",
+      "Hidden layers",
+      "Output layer"
+    ],
+    "followUpQuestion": "Why are activation functions important?"
+  },
+  {
+    "id": 6,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is overfitting?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about model performance on unseen data.",
+    "expectedTopics": [
+      "Training accuracy",
+      "Generalization",
+      "Validation"
+    ],
+    "followUpQuestion": "How can overfitting be reduced?"
+  },
+  {
+    "id": 7,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is a Large Language Model (LLM)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about models like ChatGPT.",
+    "expectedTopics": [
+      "Transformer",
+      "Language generation",
+      "Pretraining"
+    ],
+    "followUpQuestion": "What tasks can LLMs perform?"
+  },
+  {
+    "id": 8,
+    "categoryId": 9,
+    "difficulty": "Easy",
+    "question": "What is prompt engineering?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about interacting with AI models.",
+    "expectedTopics": [
+      "Prompts",
+      "Instructions",
+      "LLMs"
+    ],
+    "followUpQuestion": "Why do better prompts produce better outputs?"
+  },
+  {
+    "id": 9,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "Explain the Transformer architecture.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about attention mechanisms.",
+    "expectedTopics": [
+      "Self-attention",
+      "Encoder",
+      "Decoder",
+      "Positional encoding"
+    ],
+    "followUpQuestion": "Why did Transformers replace RNNs in many NLP tasks?"
+  },
+  {
+    "id": 10,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "What is Retrieval-Augmented Generation (RAG)?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about combining search with LLMs.",
+    "expectedTopics": [
+      "Retriever",
+      "Knowledge base",
+      "Generation"
+    ],
+    "followUpQuestion": "Why is RAG useful for enterprise applications?"
+  },
+  {
+    "id": 11,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "How do you evaluate a machine learning model?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about performance metrics.",
+    "expectedTopics": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "followUpQuestion": "When is accuracy a misleading metric?"
+  },
+  {
+    "id": 12,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "What is transfer learning?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about using pretrained models.",
+    "expectedTopics": [
+      "Pretrained models",
+      "Fine-tuning",
+      "Feature extraction"
+    ],
+    "followUpQuestion": "Why is transfer learning widely used in deep learning?"
+  },
+  {
+    "id": 13,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "How would you deploy an AI model?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about serving predictions.",
+    "expectedTopics": [
+      "REST API",
+      "Docker",
+      "Cloud deployment",
+      "Inference"
+    ],
+    "followUpQuestion": "What challenges arise when deploying AI models?"
+  },
+  {
+    "id": 14,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "What is vector embedding?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about representing text as numbers.",
+    "expectedTopics": [
+      "Embeddings",
+      "Semantic similarity",
+      "Vector database"
+    ],
+    "followUpQuestion": "Why are embeddings important in semantic search?"
+  },
+  {
+    "id": 15,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "Explain the bias-variance tradeoff.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about underfitting and overfitting.",
+    "expectedTopics": [
+      "Bias",
+      "Variance",
+      "Generalization"
+    ],
+    "followUpQuestion": "How can you balance bias and variance?"
+  },
+  {
+    "id": 16,
+    "categoryId": 9,
+    "difficulty": "Medium",
+    "question": "How do you prevent overfitting in deep learning?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about regularization techniques.",
+    "expectedTopics": [
+      "Dropout",
+      "Early stopping",
+      "Data augmentation",
+      "Regularization"
+    ],
+    "followUpQuestion": "Which technique do you use most often?"
+  },
+  {
+    "id": 17,
+    "categoryId": 9,
+    "difficulty": "Hard",
+    "question": "Explain how ChatGPT works at a high level.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about Transformers, pretraining, and fine-tuning.",
+    "expectedTopics": [
+      "Transformer",
+      "Self-attention",
+      "Pretraining",
+      "Fine-tuning",
+      "Token prediction"
+    ],
+    "followUpQuestion": "Why is reinforcement learning from human feedback (RLHF) useful?"
+  },
+  {
+    "id": 18,
+    "categoryId": 9,
+    "difficulty": "Hard",
+    "question": "How would you build an end-to-end AI application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think from data collection to deployment.",
+    "expectedTopics": [
+      "Data collection",
+      "Training",
+      "Evaluation",
+      "Deployment",
+      "Monitoring"
+    ],
+    "followUpQuestion": "How would you continuously improve the model after deployment?"
+  },
+  {
+    "id": 19,
+    "categoryId": 9,
+    "difficulty": "Hard",
+    "question": "How do you optimize an LLM-powered application for speed and cost?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about caching, model selection, and token usage.",
+    "expectedTopics": [
+      "Caching",
+      "Prompt optimization",
+      "Smaller models",
+      "Token efficiency"
+    ],
+    "followUpQuestion": "How would you reduce hallucinations in an LLM application?"
+  },
+  {
+    "id": 20,
+    "categoryId": 9,
+    "difficulty": "Hard",
+    "question": "Describe an AI project you built and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss the problem, dataset, model, training, evaluation, deployment, and challenges.",
+    "expectedTopics": [
+      "Dataset",
+      "Model architecture",
+      "Training",
+      "Evaluation",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]

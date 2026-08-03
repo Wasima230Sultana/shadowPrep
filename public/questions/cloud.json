@@ -1,0 +1,311 @@
+[
+  {
+    "id": 1,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is cloud computing?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about delivering computing resources over the internet.",
+    "expectedTopics": [
+      "On-demand services",
+      "Internet",
+      "Scalability"
+    ],
+    "followUpQuestion": "What are the main benefits of cloud computing?"
+  },
+  {
+    "id": 2,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What are the three cloud service models?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about infrastructure, platforms, and software.",
+    "expectedTopics": [
+      "IaaS",
+      "PaaS",
+      "SaaS"
+    ],
+    "followUpQuestion": "Can you give an example of each service model?"
+  },
+  {
+    "id": 3,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is the difference between public, private, and hybrid clouds?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about ownership and accessibility.",
+    "expectedTopics": [
+      "Public cloud",
+      "Private cloud",
+      "Hybrid cloud"
+    ],
+    "followUpQuestion": "Which cloud deployment model is most suitable for startups?"
+  },
+  {
+    "id": 4,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is virtualization?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about creating virtual resources.",
+    "expectedTopics": [
+      "Virtual machines",
+      "Hypervisor",
+      "Resource sharing"
+    ],
+    "followUpQuestion": "How is virtualization different from containerization?"
+  },
+  {
+    "id": 5,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is a virtual machine (VM)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about software-based computers.",
+    "expectedTopics": [
+      "Guest OS",
+      "Hypervisor",
+      "Virtual hardware"
+    ],
+    "followUpQuestion": "What are the advantages of using VMs?"
+  },
+  {
+    "id": 6,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is Docker?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about containers.",
+    "expectedTopics": [
+      "Containers",
+      "Images",
+      "Isolation"
+    ],
+    "followUpQuestion": "How is Docker different from a virtual machine?"
+  },
+  {
+    "id": 7,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is Kubernetes?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about container orchestration.",
+    "expectedTopics": [
+      "Container orchestration",
+      "Pods",
+      "Cluster"
+    ],
+    "followUpQuestion": "Why is Kubernetes commonly used with Docker?"
+  },
+  {
+    "id": 8,
+    "categoryId": 11,
+    "difficulty": "Easy",
+    "question": "What is Amazon EC2?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about virtual servers in AWS.",
+    "expectedTopics": [
+      "AWS",
+      "Virtual machines",
+      "Elastic Compute Cloud"
+    ],
+    "followUpQuestion": "When would you use EC2 instead of AWS Lambda?"
+  },
+  {
+    "id": 9,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "Explain AWS IAM.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about users and permissions.",
+    "expectedTopics": [
+      "Users",
+      "Roles",
+      "Policies",
+      "Permissions"
+    ],
+    "followUpQuestion": "Why is the principle of least privilege important?"
+  },
+  {
+    "id": 10,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "What is AWS S3?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about object storage.",
+    "expectedTopics": [
+      "Object storage",
+      "Buckets",
+      "Scalability"
+    ],
+    "followUpQuestion": "What types of data are commonly stored in S3?"
+  },
+  {
+    "id": 11,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "What is load balancing in cloud computing?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about distributing traffic.",
+    "expectedTopics": [
+      "Traffic distribution",
+      "Availability",
+      "Performance"
+    ],
+    "followUpQuestion": "How does load balancing improve application reliability?"
+  },
+  {
+    "id": 12,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "What is auto scaling?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about automatically adjusting resources.",
+    "expectedTopics": [
+      "Scaling",
+      "Demand",
+      "Cost optimization"
+    ],
+    "followUpQuestion": "What metrics can trigger auto scaling?"
+  },
+  {
+    "id": 13,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "What is Infrastructure as Code (IaC)?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about managing infrastructure with code.",
+    "expectedTopics": [
+      "Terraform",
+      "CloudFormation",
+      "Automation"
+    ],
+    "followUpQuestion": "Why is IaC preferred over manual infrastructure management?"
+  },
+  {
+    "id": 14,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "How do you secure cloud resources?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about access control and encryption.",
+    "expectedTopics": [
+      "IAM",
+      "Encryption",
+      "Network security",
+      "Monitoring"
+    ],
+    "followUpQuestion": "What are common cloud security risks?"
+  },
+  {
+    "id": 15,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "What is serverless computing?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about running code without managing servers.",
+    "expectedTopics": [
+      "AWS Lambda",
+      "Event-driven",
+      "Scalability"
+    ],
+    "followUpQuestion": "What are the advantages and limitations of serverless computing?"
+  },
+  {
+    "id": 16,
+    "categoryId": 11,
+    "difficulty": "Medium",
+    "question": "How do you monitor cloud applications?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about logging and metrics.",
+    "expectedTopics": [
+      "CloudWatch",
+      "Logs",
+      "Metrics",
+      "Alerts"
+    ],
+    "followUpQuestion": "Which metrics are most important for production systems?"
+  },
+  {
+    "id": 17,
+    "categoryId": 11,
+    "difficulty": "Hard",
+    "question": "How would you design a highly available cloud architecture?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about redundancy and fault tolerance.",
+    "expectedTopics": [
+      "Availability Zones",
+      "Load balancer",
+      "Auto Scaling",
+      "Backup"
+    ],
+    "followUpQuestion": "How would your design handle a regional outage?"
+  },
+  {
+    "id": 18,
+    "categoryId": 11,
+    "difficulty": "Hard",
+    "question": "Explain the process of deploying a web application to AWS.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think from code to production.",
+    "expectedTopics": [
+      "EC2",
+      "S3",
+      "RDS",
+      "Load Balancer",
+      "DNS"
+    ],
+    "followUpQuestion": "How would you automate the deployment process?"
+  },
+  {
+    "id": 19,
+    "categoryId": 11,
+    "difficulty": "Hard",
+    "question": "How would you optimize cloud costs without affecting performance?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about efficient resource usage.",
+    "expectedTopics": [
+      "Reserved instances",
+      "Auto Scaling",
+      "Storage classes",
+      "Monitoring"
+    ],
+    "followUpQuestion": "Which AWS tools help analyze cloud costs?"
+  },
+  {
+    "id": 20,
+    "categoryId": 11,
+    "difficulty": "Hard",
+    "question": "Describe a cloud project you built and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss the cloud services, networking, security, deployment, monitoring, and scalability.",
+    "expectedTopics": [
+      "Architecture",
+      "AWS/Azure/GCP",
+      "Security",
+      "Deployment",
+      "Scalability"
+    ],
+    "followUpQuestion": "If you redesigned the project today, what improvements would you make?"
+  }
+]

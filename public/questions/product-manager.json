@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "Who is a Product Manager?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about the person responsible for a product's success.",
+    "expectedTopics": [
+      "Product Strategy",
+      "Leadership",
+      "Cross-functional Teams"
+    ],
+    "followUpQuestion": "How is a Product Manager different from a Project Manager?"
+  },
+  {
+    "id": 2,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "What is the product development lifecycle?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think from idea to launch.",
+    "expectedTopics": [
+      "Discovery",
+      "Development",
+      "Launch"
+    ],
+    "followUpQuestion": "Which phase do you think is the most challenging?"
+  },
+  {
+    "id": 3,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "What is a product roadmap?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about long-term planning.",
+    "expectedTopics": [
+      "Planning",
+      "Prioritization",
+      "Goals"
+    ],
+    "followUpQuestion": "Why is a roadmap important?"
+  },
+  {
+    "id": 4,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "What is a Minimum Viable Product (MVP)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about launching with essential features.",
+    "expectedTopics": [
+      "Validation",
+      "Core Features",
+      "User Feedback"
+    ],
+    "followUpQuestion": "Why do startups often begin with an MVP?"
+  },
+  {
+    "id": 5,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "What is Agile methodology?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about iterative development.",
+    "expectedTopics": [
+      "Sprint",
+      "Scrum",
+      "Iteration"
+    ],
+    "followUpQuestion": "What role does a Product Manager play in Agile?"
+  },
+  {
+    "id": 6,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "What is a user story?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about describing features from a user's perspective.",
+    "expectedTopics": [
+      "User Story",
+      "Acceptance Criteria",
+      "Requirements"
+    ],
+    "followUpQuestion": "What makes a good user story?"
+  },
+  {
+    "id": 7,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "How do you prioritize product features?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about customer value and business goals.",
+    "expectedTopics": [
+      "MoSCoW",
+      "RICE",
+      "Prioritization"
+    ],
+    "followUpQuestion": "Which prioritization framework have you used?"
+  },
+  {
+    "id": 8,
+    "categoryId": 14,
+    "difficulty": "Easy",
+    "question": "Why is customer feedback important in product management?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about improving products.",
+    "expectedTopics": [
+      "Feedback",
+      "Customer Needs",
+      "Improvement"
+    ],
+    "followUpQuestion": "How do you collect customer feedback?"
+  },
+  {
+    "id": 9,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "How do you define product success?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about metrics and goals.",
+    "expectedTopics": [
+      "KPIs",
+      "User Growth",
+      "Business Value"
+    ],
+    "followUpQuestion": "Which KPIs would you track for a mobile app?"
+  },
+  {
+    "id": 10,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "Explain the RICE prioritization framework.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about scoring features.",
+    "expectedTopics": [
+      "Reach",
+      "Impact",
+      "Confidence",
+      "Effort"
+    ],
+    "followUpQuestion": "When would you use RICE instead of MoSCoW?"
+  },
+  {
+    "id": 11,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "How do you perform market research?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about customers and competitors.",
+    "expectedTopics": [
+      "Competitor Analysis",
+      "Surveys",
+      "Interviews"
+    ],
+    "followUpQuestion": "Why is competitor analysis important?"
+  },
+  {
+    "id": 12,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "What is A/B testing?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about comparing product variations.",
+    "expectedTopics": [
+      "Experiment",
+      "Metrics",
+      "Optimization"
+    ],
+    "followUpQuestion": "What metrics would you measure during an A/B test?"
+  },
+  {
+    "id": 13,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "How do you handle conflicting stakeholder requirements?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about balancing priorities.",
+    "expectedTopics": [
+      "Communication",
+      "Negotiation",
+      "Decision Making"
+    ],
+    "followUpQuestion": "How do you communicate difficult decisions?"
+  },
+  {
+    "id": 14,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "How do you write effective product requirements?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about clear documentation.",
+    "expectedTopics": [
+      "PRD",
+      "Acceptance Criteria",
+      "Requirements"
+    ],
+    "followUpQuestion": "What should every Product Requirements Document include?"
+  },
+  {
+    "id": 15,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "How do you measure customer satisfaction?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about surveys and user metrics.",
+    "expectedTopics": [
+      "NPS",
+      "CSAT",
+      "Customer Feedback"
+    ],
+    "followUpQuestion": "What is the difference between NPS and CSAT?"
+  },
+  {
+    "id": 16,
+    "categoryId": 14,
+    "difficulty": "Medium",
+    "question": "How do you manage product risks?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about identifying and mitigating issues.",
+    "expectedTopics": [
+      "Risk Analysis",
+      "Mitigation",
+      "Planning"
+    ],
+    "followUpQuestion": "What is the biggest product risk you've encountered?"
+  },
+  {
+    "id": 17,
+    "categoryId": 14,
+    "difficulty": "Hard",
+    "question": "How would you launch a new digital product from scratch?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about discovery, validation, development, and launch.",
+    "expectedTopics": [
+      "Research",
+      "MVP",
+      "Go-to-Market",
+      "Metrics"
+    ],
+    "followUpQuestion": "How would you validate the product idea before building it?"
+  },
+  {
+    "id": 18,
+    "categoryId": 14,
+    "difficulty": "Hard",
+    "question": "How would you increase user engagement for an existing product?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about analytics and experimentation.",
+    "expectedTopics": [
+      "Analytics",
+      "Retention",
+      "A/B Testing",
+      "Feature Prioritization"
+    ],
+    "followUpQuestion": "Which engagement metrics would you monitor?"
+  },
+  {
+    "id": 19,
+    "categoryId": 14,
+    "difficulty": "Hard",
+    "question": "How would you prioritize hundreds of feature requests from customers?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about balancing business value and customer needs.",
+    "expectedTopics": [
+      "Prioritization Frameworks",
+      "Customer Value",
+      "Business Impact",
+      "Roadmap"
+    ],
+    "followUpQuestion": "How would you explain rejected requests to customers?"
+  },
+  {
+    "id": 20,
+    "categoryId": 14,
+    "difficulty": "Hard",
+    "question": "Describe a product you managed and explain its strategy, roadmap, execution, and outcomes.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss customer research, prioritization, development, launch, metrics, and lessons learned.",
+    "expectedTopics": [
+      "Product Strategy",
+      "Roadmap",
+      "Execution",
+      "KPIs",
+      "Customer Feedback"
+    ],
+    "followUpQuestion": "If you managed the product again today, what would you improve?"
+  }
+]

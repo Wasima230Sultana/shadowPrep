@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "Who is a Business Analyst?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about the bridge between business and technology.",
+    "expectedTopics": [
+      "Business requirements",
+      "Stakeholders",
+      "Communication"
+    ],
+    "followUpQuestion": "Why is a Business Analyst important in software projects?"
+  },
+  {
+    "id": 2,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "What are the primary responsibilities of a Business Analyst?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about gathering and analyzing requirements.",
+    "expectedTopics": [
+      "Requirement gathering",
+      "Documentation",
+      "Stakeholder management"
+    ],
+    "followUpQuestion": "How does a Business Analyst contribute to project success?"
+  },
+  {
+    "id": 3,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "What is requirement gathering?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about understanding business needs.",
+    "expectedTopics": [
+      "Interviews",
+      "Workshops",
+      "Business needs"
+    ],
+    "followUpQuestion": "Which techniques can be used to gather requirements?"
+  },
+  {
+    "id": 4,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "What is the difference between functional and non-functional requirements?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "One defines features, the other defines quality.",
+    "expectedTopics": [
+      "Functional requirements",
+      "Non-functional requirements",
+      "Examples"
+    ],
+    "followUpQuestion": "Can you provide an example of each?"
+  },
+  {
+    "id": 5,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "Who are stakeholders in a project?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about people affected by the project.",
+    "expectedTopics": [
+      "Clients",
+      "Users",
+      "Project team"
+    ],
+    "followUpQuestion": "How do you identify key stakeholders?"
+  },
+  {
+    "id": 6,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "What is a use case?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about user interactions with a system.",
+    "expectedTopics": [
+      "Actor",
+      "Scenario",
+      "System behavior"
+    ],
+    "followUpQuestion": "How is a use case different from a user story?"
+  },
+  {
+    "id": 7,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "What is a user story?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about Agile development.",
+    "expectedTopics": [
+      "As a...",
+      "I want...",
+      "So that..."
+    ],
+    "followUpQuestion": "What makes a good user story?"
+  },
+  {
+    "id": 8,
+    "categoryId": 15,
+    "difficulty": "Easy",
+    "question": "What is SWOT analysis?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about analyzing a business.",
+    "expectedTopics": [
+      "Strengths",
+      "Weaknesses",
+      "Opportunities",
+      "Threats"
+    ],
+    "followUpQuestion": "When would you perform a SWOT analysis?"
+  },
+  {
+    "id": 9,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "What is the Software Development Life Cycle (SDLC)?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about the phases of software development.",
+    "expectedTopics": [
+      "Planning",
+      "Analysis",
+      "Design",
+      "Development",
+      "Testing",
+      "Deployment"
+    ],
+    "followUpQuestion": "In which SDLC phase is a Business Analyst most involved?"
+  },
+  {
+    "id": 10,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "What is the difference between Agile and Waterfall?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Compare iterative and sequential development.",
+    "expectedTopics": [
+      "Agile",
+      "Waterfall",
+      "Iterations",
+      "Flexibility"
+    ],
+    "followUpQuestion": "Which methodology is more suitable for changing requirements?"
+  },
+  {
+    "id": 11,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "How do you prioritize business requirements?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about business value and urgency.",
+    "expectedTopics": [
+      "MoSCoW",
+      "Business value",
+      "Priority"
+    ],
+    "followUpQuestion": "What is the MoSCoW prioritization technique?"
+  },
+  {
+    "id": 12,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "What is gap analysis?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about current vs desired state.",
+    "expectedTopics": [
+      "Current state",
+      "Future state",
+      "Improvement"
+    ],
+    "followUpQuestion": "How does gap analysis help organizations?"
+  },
+  {
+    "id": 13,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "What documentation does a Business Analyst create?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about project documents.",
+    "expectedTopics": [
+      "BRD",
+      "FRD",
+      "User stories",
+      "Use cases"
+    ],
+    "followUpQuestion": "What is the difference between BRD and FRD?"
+  },
+  {
+    "id": 14,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "How do you handle changing requirements during a project?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about change management.",
+    "expectedTopics": [
+      "Change request",
+      "Impact analysis",
+      "Stakeholder communication"
+    ],
+    "followUpQuestion": "Why is impact analysis important?"
+  },
+  {
+    "id": 15,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "How do Business Analysts work with developers and testers?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about collaboration.",
+    "expectedTopics": [
+      "Communication",
+      "Clarification",
+      "Requirement validation"
+    ],
+    "followUpQuestion": "How do you resolve misunderstandings between teams?"
+  },
+  {
+    "id": 16,
+    "categoryId": 15,
+    "difficulty": "Medium",
+    "question": "Which tools are commonly used by Business Analysts?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about documentation and project management.",
+    "expectedTopics": [
+      "Jira",
+      "Confluence",
+      "Microsoft Visio",
+      "Excel"
+    ],
+    "followUpQuestion": "Which BA tool have you used the most?"
+  },
+  {
+    "id": 17,
+    "categoryId": 15,
+    "difficulty": "Hard",
+    "question": "How would you analyze the requirements for developing an online banking system?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about users, security, and business processes.",
+    "expectedTopics": [
+      "Stakeholders",
+      "Functional requirements",
+      "Security",
+      "Compliance"
+    ],
+    "followUpQuestion": "What would be the highest priority requirements?"
+  },
+  {
+    "id": 18,
+    "categoryId": 15,
+    "difficulty": "Hard",
+    "question": "How do you ensure requirements are complete, clear, and testable?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about validation techniques.",
+    "expectedTopics": [
+      "Requirement reviews",
+      "Acceptance criteria",
+      "Validation"
+    ],
+    "followUpQuestion": "How do acceptance criteria improve software quality?"
+  },
+  {
+    "id": 19,
+    "categoryId": 15,
+    "difficulty": "Hard",
+    "question": "Describe the complete requirement analysis process from project initiation to deployment.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about the BA lifecycle.",
+    "expectedTopics": [
+      "Requirement elicitation",
+      "Analysis",
+      "Documentation",
+      "Validation",
+      "Implementation support"
+    ],
+    "followUpQuestion": "Which phase is usually the most challenging and why?"
+  },
+  {
+    "id": 20,
+    "categoryId": 15,
+    "difficulty": "Hard",
+    "question": "Describe a business analysis project you worked on and explain your role.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss the problem, stakeholders, requirements, solution, challenges, and outcomes.",
+    "expectedTopics": [
+      "Business problem",
+      "Stakeholder communication",
+      "Requirements",
+      "Solution",
+      "Project outcome"
+    ],
+    "followUpQuestion": "If you could improve that project today, what would you change?"
+  }
+]

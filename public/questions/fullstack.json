@@ -1,67 +1,53 @@
 [
   {
     "id": 1,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
-    "question": "What is Full Stack Development?",
+    "question": "What is a Full Stack Developer?",
     "timeLimit": 120,
     "score": 10,
-    "hint": "Think about frontend and backend together.",
+    "hint": "Think about both frontend and backend development.",
     "expectedTopics": [
       "Frontend",
       "Backend",
       "Database"
     ],
-    "followUpQuestion": "Why are full stack developers valuable?"
+    "followUpQuestion": "What skills should every Full Stack Developer have?"
   },
   {
     "id": 2,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
-    "question": "What is Node.js?",
+    "question": "What is the MERN Stack?",
     "timeLimit": 120,
     "score": 10,
-    "hint": "It runs JavaScript outside the browser.",
+    "hint": "Think about four popular JavaScript technologies.",
     "expectedTopics": [
-      "Runtime",
-      "JavaScript",
-      "Server"
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js"
     ],
-    "followUpQuestion": "Is Node.js a programming language?"
+    "followUpQuestion": "Why is MERN popular for web development?"
   },
   {
     "id": 3,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
-    "question": "What is Express.js?",
+    "question": "What is the difference between frontend and backend?",
     "timeLimit": 120,
     "score": 10,
-    "hint": "Think about backend frameworks.",
+    "hint": "One runs in the browser, the other on the server.",
     "expectedTopics": [
-      "Framework",
-      "Routing",
-      "Middleware"
+      "Client-side",
+      "Server-side",
+      "Responsibilities"
     ],
-    "followUpQuestion": "Why is Express popular?"
+    "followUpQuestion": "How do frontend and backend communicate?"
   },
   {
     "id": 4,
-    "categoryId": 2,
-    "difficulty": "Easy",
-    "question": "What is MongoDB?",
-    "timeLimit": 120,
-    "score": 10,
-    "hint": "Think about NoSQL databases.",
-    "expectedTopics": [
-      "NoSQL",
-      "Collections",
-      "Documents"
-    ],
-    "followUpQuestion": "How is MongoDB different from SQL databases?"
-  },
-  {
-    "id": 5,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
     "question": "What is REST API?",
     "timeLimit": 120,
@@ -69,239 +55,261 @@
     "hint": "Think about communication between client and server.",
     "expectedTopics": [
       "HTTP",
-      "Endpoints",
+      "Resources",
       "CRUD"
     ],
-    "followUpQuestion": "Which HTTP methods are commonly used?"
+    "followUpQuestion": "Which HTTP methods are commonly used in REST APIs?"
+  },
+  {
+    "id": 5,
+    "categoryId": 3,
+    "difficulty": "Easy",
+    "question": "Why is React commonly used for frontend development?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about reusable user interfaces.",
+    "expectedTopics": [
+      "Components",
+      "Virtual DOM",
+      "SPA"
+    ],
+    "followUpQuestion": "What are the advantages of React over traditional JavaScript?"
   },
   {
     "id": 6,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
-    "question": "What is CRUD?",
+    "question": "What is Express.js?",
     "timeLimit": 120,
     "score": 10,
-    "hint": "Database operations.",
+    "hint": "Think about Node.js web applications.",
     "expectedTopics": [
-      "Create",
-      "Read",
-      "Update",
-      "Delete"
+      "Node.js framework",
+      "Routing",
+      "Middleware"
     ],
-    "followUpQuestion": "How do CRUD operations map to HTTP methods?"
+    "followUpQuestion": "Why is Express preferred over the built-in HTTP module?"
   },
   {
     "id": 7,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
-    "question": "What is middleware in Express?",
+    "question": "What is MongoDB?",
     "timeLimit": 120,
     "score": 10,
-    "hint": "Think about request processing.",
+    "hint": "Think about NoSQL databases.",
     "expectedTopics": [
-      "Request",
-      "Response",
-      "next()"
+      "NoSQL",
+      "Document database",
+      "Collections"
     ],
-    "followUpQuestion": "Can middleware modify requests?"
+    "followUpQuestion": "How is MongoDB different from relational databases?"
   },
   {
     "id": 8,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Easy",
-    "question": "Why do we use environment variables?",
+    "question": "What is JWT Authentication?",
     "timeLimit": 120,
     "score": 10,
-    "hint": "Think about sensitive data.",
+    "hint": "Think about secure user login.",
     "expectedTopics": [
-      ".env",
-      "Security",
-      "Configuration"
+      "JSON Web Token",
+      "Authentication",
+      "Authorization"
     ],
-    "followUpQuestion": "Should API keys be stored in GitHub?"
+    "followUpQuestion": "Where should JWT tokens be stored?"
   },
   {
     "id": 9,
-    "categoryId": 2,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you connect a React frontend with a Node.js backend?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about API communication.",
+    "expectedTopics": [
+      "Axios",
+      "Fetch API",
+      "REST API",
+      "CORS"
+    ],
+    "followUpQuestion": "How do you handle API errors on the frontend?"
+  },
+  {
+    "id": 10,
+    "categoryId": 3,
     "difficulty": "Medium",
     "question": "Explain authentication and authorization.",
     "timeLimit": 180,
     "score": 15,
-    "hint": "One verifies identity, the other grants permissions.",
+    "hint": "Think about identity and permissions.",
     "expectedTopics": [
       "Authentication",
       "Authorization",
-      "Permissions"
+      "JWT",
+      "Roles"
     ],
     "followUpQuestion": "Can a user be authenticated but not authorized?"
   },
   {
-    "id": 10,
-    "categoryId": 2,
-    "difficulty": "Medium",
-    "question": "What is JWT?",
-    "timeLimit": 180,
-    "score": 15,
-    "hint": "Think about login tokens.",
-    "expectedTopics": [
-      "JSON Web Token",
-      "Authentication",
-      "Token"
-    ],
-    "followUpQuestion": "Where should JWTs be stored?"
-  },
-  {
     "id": 11,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Medium",
-    "question": "What is Mongoose?",
-    "timeLimit": 180,
-    "score": 15,
-    "hint": "Think about MongoDB in Node.js.",
-    "expectedTopics": [
-      "ODM",
-      "Schema",
-      "Models"
-    ],
-    "followUpQuestion": "Why use Mongoose instead of the MongoDB driver?"
-  },
-  {
-    "id": 12,
-    "categoryId": 2,
-    "difficulty": "Medium",
-    "question": "How do you connect Node.js with MongoDB?",
-    "timeLimit": 180,
-    "score": 15,
-    "hint": "Think about connection strings.",
-    "expectedTopics": [
-      "MongoDB URI",
-      "Mongoose",
-      "Connection"
-    ],
-    "followUpQuestion": "Where should the database URI be stored?"
-  },
-  {
-    "id": 13,
-    "categoryId": 2,
-    "difficulty": "Medium",
-    "question": "What is CORS?",
+    "question": "What is CORS and why is it needed?",
     "timeLimit": 180,
     "score": 15,
     "hint": "Think about browser security.",
     "expectedTopics": [
-      "Cross-Origin",
-      "Browser",
+      "Cross-Origin Resource Sharing",
+      "Origins",
       "Security"
     ],
-    "followUpQuestion": "Why do frontend applications need CORS?"
+    "followUpQuestion": "How do you enable CORS in an Express application?"
+  },
+  {
+    "id": 12,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you manage state in a React application?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about local and global state.",
+    "expectedTopics": [
+      "useState",
+      "Context API",
+      "Redux"
+    ],
+    "followUpQuestion": "When would you choose Redux over Context API?"
+  },
+  {
+    "id": 13,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you deploy a MERN Stack application?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about frontend, backend, and database hosting.",
+    "expectedTopics": [
+      "Vercel",
+      "Render",
+      "MongoDB Atlas",
+      "Environment variables"
+    ],
+    "followUpQuestion": "Why are environment variables important during deployment?"
   },
   {
     "id": 14,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Medium",
-    "question": "How do you handle errors in Express?",
+    "question": "Explain the MVC architecture.",
     "timeLimit": 180,
     "score": 15,
-    "hint": "Think about middleware.",
-    "expectedTopics": [
-      "Error middleware",
-      "try-catch",
-      "Status codes"
-    ],
-    "followUpQuestion": "Why should APIs return proper HTTP status codes?"
-  },
-  {
-    "id": 15,
-    "categoryId": 2,
-    "difficulty": "Medium",
-    "question": "Explain MVC architecture.",
-    "timeLimit": 180,
-    "score": 15,
-    "hint": "Separate responsibilities.",
+    "hint": "Think about organizing backend code.",
     "expectedTopics": [
       "Model",
       "View",
       "Controller"
     ],
-    "followUpQuestion": "Why is MVC useful?"
+    "followUpQuestion": "Why is MVC useful in large applications?"
   },
   {
-    "id": 16,
-    "categoryId": 2,
+    "id": 15,
+    "categoryId": 3,
     "difficulty": "Medium",
-    "question": "How do you deploy a MERN application?",
+    "question": "How do you secure a full stack web application?",
     "timeLimit": 180,
     "score": 15,
-    "hint": "Think about frontend and backend hosting.",
-    "expectedTopics": [
-      "Vercel",
-      "Render",
-      "MongoDB Atlas"
-    ],
-    "followUpQuestion": "Where would you host the frontend and backend?"
-  },
-  {
-    "id": 17,
-    "categoryId": 2,
-    "difficulty": "Hard",
-    "question": "Explain the request-response lifecycle in a MERN application.",
-    "timeLimit": 240,
-    "score": 20,
-    "hint": "Think from browser to database.",
-    "expectedTopics": [
-      "Client",
-      "Server",
-      "Database",
-      "Response"
-    ],
-    "followUpQuestion": "Where can validation occur?"
-  },
-  {
-    "id": 18,
-    "categoryId": 2,
-    "difficulty": "Hard",
-    "question": "How do you secure a full stack application?",
-    "timeLimit": 240,
-    "score": 20,
-    "hint": "Think about security best practices.",
+    "hint": "Think about authentication and validation.",
     "expectedTopics": [
       "JWT",
       "HTTPS",
-      "Validation",
+      "Input validation",
       "Password hashing"
     ],
-    "followUpQuestion": "Why should passwords never be stored in plain text?"
+    "followUpQuestion": "What common security vulnerabilities should developers avoid?"
+  },
+  {
+    "id": 16,
+    "categoryId": 3,
+    "difficulty": "Medium",
+    "question": "How do you optimize the performance of a MERN application?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about frontend and backend optimizations.",
+    "expectedTopics": [
+      "Caching",
+      "Lazy loading",
+      "Database indexing",
+      "Code splitting"
+    ],
+    "followUpQuestion": "Which optimization usually provides the biggest improvement?"
+  },
+  {
+    "id": 17,
+    "categoryId": 3,
+    "difficulty": "Hard",
+    "question": "Explain the complete request-response lifecycle in a MERN application.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Start from the browser and end with the database response.",
+    "expectedTopics": [
+      "React",
+      "Express",
+      "Middleware",
+      "MongoDB",
+      "Response"
+    ],
+    "followUpQuestion": "Where can performance bottlenecks occur in this flow?"
+  },
+  {
+    "id": 18,
+    "categoryId": 3,
+    "difficulty": "Hard",
+    "question": "How would you design a scalable full stack application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about architecture and maintainability.",
+    "expectedTopics": [
+      "Modular architecture",
+      "Authentication",
+      "Caching",
+      "Load balancing"
+    ],
+    "followUpQuestion": "How would you handle thousands of concurrent users?"
   },
   {
     "id": 19,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Hard",
-    "question": "How do you optimize backend performance?",
+    "question": "How would you implement role-based authentication in a MERN application?",
     "timeLimit": 240,
     "score": 20,
-    "hint": "Think about caching and databases.",
+    "hint": "Think about users, roles, and middleware.",
     "expectedTopics": [
-      "Caching",
-      "Indexes",
-      "Pagination"
+      "JWT",
+      "Authorization",
+      "Middleware",
+      "Admin",
+      "User roles"
     ],
-    "followUpQuestion": "Why is pagination important?"
+    "followUpQuestion": "Where should authorization checks be performed?"
   },
   {
     "id": 20,
-    "categoryId": 2,
+    "categoryId": 3,
     "difficulty": "Hard",
     "question": "Describe a full stack project you built and explain its architecture.",
     "timeLimit": 300,
     "score": 25,
-    "hint": "Discuss frontend, backend, database, authentication, deployment.",
+    "hint": "Discuss frontend, backend, database, authentication, APIs, and deployment.",
     "expectedTopics": [
+      "Project structure",
       "React",
-      "Node",
+      "Node.js",
       "MongoDB",
-      "Authentication",
       "Deployment"
     ],
-    "followUpQuestion": "What improvements would you make if given more time?"
+    "followUpQuestion": "If you rebuilt this project today, what improvements would you make?"
   }
 ]

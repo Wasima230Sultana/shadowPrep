@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is a Database Management System (DBMS)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about software that stores and manages data.",
+    "expectedTopics": [
+      "DBMS",
+      "Data storage",
+      "Database management"
+    ],
+    "followUpQuestion": "What are the advantages of using a DBMS?"
+  },
+  {
+    "id": 2,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is the difference between DBMS and RDBMS?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about relational databases.",
+    "expectedTopics": [
+      "Relationships",
+      "Tables",
+      "Primary key"
+    ],
+    "followUpQuestion": "Can you name some popular RDBMS systems?"
+  },
+  {
+    "id": 3,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is a primary key?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about uniquely identifying records.",
+    "expectedTopics": [
+      "Unique",
+      "Not NULL",
+      "Record identification"
+    ],
+    "followUpQuestion": "Can a table have more than one primary key?"
+  },
+  {
+    "id": 4,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is a foreign key?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about relationships between tables.",
+    "expectedTopics": [
+      "Referential integrity",
+      "Relationships",
+      "Primary key reference"
+    ],
+    "followUpQuestion": "Why are foreign keys important?"
+  },
+  {
+    "id": 5,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is normalization?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about reducing redundancy.",
+    "expectedTopics": [
+      "Redundancy",
+      "Normal forms",
+      "Data consistency"
+    ],
+    "followUpQuestion": "What is the purpose of normalization?"
+  },
+  {
+    "id": 6,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is an index in a database?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about improving query speed.",
+    "expectedTopics": [
+      "Performance",
+      "Searching",
+      "B-Tree"
+    ],
+    "followUpQuestion": "Can indexes slow down any operations?"
+  },
+  {
+    "id": 7,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is SQL?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about querying databases.",
+    "expectedTopics": [
+      "Structured Query Language",
+      "DDL",
+      "DML"
+    ],
+    "followUpQuestion": "What are the main categories of SQL commands?"
+  },
+  {
+    "id": 8,
+    "categoryId": 19,
+    "difficulty": "Easy",
+    "question": "What is a database transaction?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about a unit of work.",
+    "expectedTopics": [
+      "Commit",
+      "Rollback",
+      "Consistency"
+    ],
+    "followUpQuestion": "Why are transactions important?"
+  },
+  {
+    "id": 9,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "Explain ACID properties.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reliable transactions.",
+    "expectedTopics": [
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ],
+    "followUpQuestion": "Which ACID property prevents partial updates?"
+  },
+  {
+    "id": 10,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "What are SQL joins?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about combining tables.",
+    "expectedTopics": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL JOIN"
+    ],
+    "followUpQuestion": "When would you use a LEFT JOIN instead of an INNER JOIN?"
+  },
+  {
+    "id": 11,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "What are stored procedures?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reusable SQL code.",
+    "expectedTopics": [
+      "Stored procedures",
+      "Automation",
+      "Performance"
+    ],
+    "followUpQuestion": "What are the benefits of stored procedures?"
+  },
+  {
+    "id": 12,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "What is a database view?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about virtual tables.",
+    "expectedTopics": [
+      "Virtual table",
+      "Security",
+      "Query abstraction"
+    ],
+    "followUpQuestion": "Why are views useful?"
+  },
+  {
+    "id": 13,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "How do you optimize SQL queries?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about indexes and execution plans.",
+    "expectedTopics": [
+      "Indexes",
+      "Execution plan",
+      "Optimization"
+    ],
+    "followUpQuestion": "How can you identify a slow query?"
+  },
+  {
+    "id": 14,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "How do you perform database backup and recovery?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about protecting data.",
+    "expectedTopics": [
+      "Backup",
+      "Restore",
+      "Recovery"
+    ],
+    "followUpQuestion": "Why should backups be tested regularly?"
+  },
+  {
+    "id": 15,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "What is database replication?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about copying data.",
+    "expectedTopics": [
+      "Replication",
+      "High availability",
+      "Read replicas"
+    ],
+    "followUpQuestion": "How does replication improve availability?"
+  },
+  {
+    "id": 16,
+    "categoryId": 19,
+    "difficulty": "Medium",
+    "question": "How do you secure a database?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about users and permissions.",
+    "expectedTopics": [
+      "Authentication",
+      "Authorization",
+      "Encryption",
+      "Auditing"
+    ],
+    "followUpQuestion": "What are database security best practices?"
+  },
+  {
+    "id": 17,
+    "categoryId": 19,
+    "difficulty": "Hard",
+    "question": "How would you design a highly available database system?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about redundancy and failover.",
+    "expectedTopics": [
+      "Replication",
+      "Failover",
+      "Clustering",
+      "Load balancing"
+    ],
+    "followUpQuestion": "How would you minimize downtime during failures?"
+  },
+  {
+    "id": 18,
+    "categoryId": 19,
+    "difficulty": "Hard",
+    "question": "How would you troubleshoot a slow production database?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about identifying bottlenecks.",
+    "expectedTopics": [
+      "Monitoring",
+      "Query optimization",
+      "Indexes",
+      "Execution plans"
+    ],
+    "followUpQuestion": "Which performance metrics would you check first?"
+  },
+  {
+    "id": 19,
+    "categoryId": 19,
+    "difficulty": "Hard",
+    "question": "How do you ensure database scalability for millions of users?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about scaling strategies.",
+    "expectedTopics": [
+      "Sharding",
+      "Partitioning",
+      "Replication",
+      "Caching"
+    ],
+    "followUpQuestion": "When would you choose horizontal scaling over vertical scaling?"
+  },
+  {
+    "id": 20,
+    "categoryId": 19,
+    "difficulty": "Hard",
+    "question": "Describe a database administration project you worked on and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss database design, security, backups, optimization, monitoring, and challenges.",
+    "expectedTopics": [
+      "Database design",
+      "Performance tuning",
+      "Backup and recovery",
+      "Security",
+      "Monitoring"
+    ],
+    "followUpQuestion": "If you redesigned the database today, what improvements would you make?"
+  }
+]

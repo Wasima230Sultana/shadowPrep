@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is cybersecurity?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about protecting systems and data.",
+    "expectedTopics": ["Confidentiality", "Integrity", "Availability"],
+    "followUpQuestion": "What is the CIA Triad?"
+  },
+  {
+    "id": 2,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is malware?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about malicious software.",
+    "expectedTopics": ["Virus", "Worm", "Trojan", "Ransomware"],
+    "followUpQuestion": "How can malware infect a system?"
+  },
+  {
+    "id": 3,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is phishing?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about fake emails and websites.",
+    "expectedTopics": ["Social engineering", "Fake emails", "Credential theft"],
+    "followUpQuestion": "How can users recognize phishing attacks?"
+  },
+  {
+    "id": 4,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is a firewall?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about network protection.",
+    "expectedTopics": ["Traffic filtering", "Network security", "Rules"],
+    "followUpQuestion": "How is a firewall different from an antivirus?"
+  },
+  {
+    "id": 5,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is encryption?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about protecting data.",
+    "expectedTopics": ["Plaintext", "Ciphertext", "Keys"],
+    "followUpQuestion": "Why is encryption important?"
+  },
+  {
+    "id": 6,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is authentication?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about verifying identity.",
+    "expectedTopics": ["Username", "Password", "MFA"],
+    "followUpQuestion": "What is multi-factor authentication?"
+  },
+  {
+    "id": 7,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is SQL Injection?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about database attacks.",
+    "expectedTopics": ["SQL", "User input", "Database"],
+    "followUpQuestion": "How can SQL Injection be prevented?"
+  },
+  {
+    "id": 8,
+    "categoryId": 12,
+    "difficulty": "Easy",
+    "question": "What is Cross-Site Scripting (XSS)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about malicious scripts.",
+    "expectedTopics": ["JavaScript", "Browser", "Input validation"],
+    "followUpQuestion": "How do developers prevent XSS?"
+  },
+  {
+    "id": 9,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "Explain symmetric and asymmetric encryption.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about encryption keys.",
+    "expectedTopics": ["AES", "RSA", "Public key", "Private key"],
+    "followUpQuestion": "When is asymmetric encryption preferred?"
+  },
+  {
+    "id": 10,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "What is a VPN?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about secure communication.",
+    "expectedTopics": ["Encrypted tunnel", "Remote access", "Privacy"],
+    "followUpQuestion": "Why do organizations use VPNs?"
+  },
+  {
+    "id": 11,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "What is penetration testing?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about ethical hacking.",
+    "expectedTopics": ["Vulnerability assessment", "Ethical hacking", "Security testing"],
+    "followUpQuestion": "How does penetration testing differ from vulnerability scanning?"
+  },
+  {
+    "id": 12,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "What is the OWASP Top 10?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about common web security risks.",
+    "expectedTopics": ["Web security", "OWASP", "Vulnerabilities"],
+    "followUpQuestion": "Which OWASP risk is most common?"
+  },
+  {
+    "id": 13,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "What is network segmentation?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about dividing networks.",
+    "expectedTopics": ["Subnets", "Security", "Isolation"],
+    "followUpQuestion": "Why does segmentation improve security?"
+  },
+  {
+    "id": 14,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "What are IDS and IPS?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about detecting attacks.",
+    "expectedTopics": ["Intrusion Detection", "Intrusion Prevention", "Monitoring"],
+    "followUpQuestion": "How are IDS and IPS different?"
+  },
+  {
+    "id": 15,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "What is social engineering?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about manipulating people.",
+    "expectedTopics": ["Human factor", "Phishing", "Pretexting"],
+    "followUpQuestion": "How can organizations reduce social engineering attacks?"
+  },
+  {
+    "id": 16,
+    "categoryId": 12,
+    "difficulty": "Medium",
+    "question": "How do you secure a web application?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about authentication and validation.",
+    "expectedTopics": ["HTTPS", "Input validation", "Authentication", "Authorization"],
+    "followUpQuestion": "What security headers should be implemented?"
+  },
+  {
+    "id": 17,
+    "categoryId": 12,
+    "difficulty": "Hard",
+    "question": "Describe the steps you would take after discovering a data breach.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about incident response.",
+    "expectedTopics": ["Containment", "Investigation", "Recovery", "Reporting"],
+    "followUpQuestion": "Why is documentation important during incident response?"
+  },
+  {
+    "id": 18,
+    "categoryId": 12,
+    "difficulty": "Hard",
+    "question": "How would you secure a cloud-based application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about IAM, encryption, and monitoring.",
+    "expectedTopics": ["IAM", "Encryption", "Cloud security", "Monitoring"],
+    "followUpQuestion": "What is the shared responsibility model?"
+  },
+  {
+    "id": 19,
+    "categoryId": 12,
+    "difficulty": "Hard",
+    "question": "Explain the Zero Trust security model.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about continuous verification.",
+    "expectedTopics": ["Least privilege", "Identity verification", "Micro-segmentation"],
+    "followUpQuestion": "Why are organizations adopting Zero Trust?"
+  },
+  {
+    "id": 20,
+    "categoryId": 12,
+    "difficulty": "Hard",
+    "question": "Describe a cybersecurity project you worked on and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss tools, security controls, challenges, and outcomes.",
+    "expectedTopics": ["Security tools", "Architecture", "Monitoring", "Incident response", "Risk mitigation"],
+    "followUpQuestion": "If you redesigned the project today, what improvements would you make?"
+  }
+]

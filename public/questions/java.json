@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is Java?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about object-oriented programming and platform independence.",
+    "expectedTopics": [
+      "OOP",
+      "Platform Independent",
+      "JVM"
+    ],
+    "followUpQuestion": "Why is Java called platform independent?"
+  },
+  {
+    "id": 2,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is the difference between JDK, JRE, and JVM?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about development and execution.",
+    "expectedTopics": [
+      "JDK",
+      "JRE",
+      "JVM"
+    ],
+    "followUpQuestion": "Can Java programs run without the JRE?"
+  },
+  {
+    "id": 3,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What are the four pillars of Object-Oriented Programming?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about the core OOP concepts.",
+    "expectedTopics": [
+      "Encapsulation",
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction"
+    ],
+    "followUpQuestion": "Which OOP concept do you use most often?"
+  },
+  {
+    "id": 4,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is the difference between == and equals() in Java?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about object comparison.",
+    "expectedTopics": [
+      "Reference Comparison",
+      "Value Comparison",
+      "equals()"
+    ],
+    "followUpQuestion": "When should you override equals()?"
+  },
+  {
+    "id": 5,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is exception handling in Java?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about handling runtime errors.",
+    "expectedTopics": [
+      "try",
+      "catch",
+      "finally"
+    ],
+    "followUpQuestion": "What is the difference between checked and unchecked exceptions?"
+  },
+  {
+    "id": 6,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is the Java Collections Framework?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about data structures.",
+    "expectedTopics": [
+      "List",
+      "Set",
+      "Map"
+    ],
+    "followUpQuestion": "Which collection would you use to avoid duplicate elements?"
+  },
+  {
+    "id": 7,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is multithreading in Java?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about running multiple tasks simultaneously.",
+    "expectedTopics": [
+      "Thread",
+      "Runnable",
+      "Concurrency"
+    ],
+    "followUpQuestion": "What is the difference between extending Thread and implementing Runnable?"
+  },
+  {
+    "id": 8,
+    "categoryId": 17,
+    "difficulty": "Easy",
+    "question": "What is the purpose of the static keyword in Java?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about class-level members.",
+    "expectedTopics": [
+      "Static Variable",
+      "Static Method",
+      "Class Member"
+    ],
+    "followUpQuestion": "Can a static method access non-static variables directly?"
+  },
+  {
+    "id": 9,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "Explain the Java Memory Model.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about heap and stack memory.",
+    "expectedTopics": [
+      "Heap",
+      "Stack",
+      "Garbage Collection"
+    ],
+    "followUpQuestion": "How does Garbage Collection improve memory management?"
+  },
+  {
+    "id": 10,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "What is the difference between ArrayList and LinkedList?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about internal implementation and performance.",
+    "expectedTopics": [
+      "Dynamic Array",
+      "Linked List",
+      "Performance"
+    ],
+    "followUpQuestion": "When would you choose LinkedList over ArrayList?"
+  },
+  {
+    "id": 11,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "How does HashMap work internally?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about hashing and buckets.",
+    "expectedTopics": [
+      "Hashing",
+      "Buckets",
+      "Collision"
+    ],
+    "followUpQuestion": "How are collisions handled in HashMap?"
+  },
+  {
+    "id": 12,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "What are Java Streams?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about functional-style data processing.",
+    "expectedTopics": [
+      "Stream API",
+      "Lambda",
+      "Filter"
+    ],
+    "followUpQuestion": "What are the advantages of using Streams?"
+  },
+  {
+    "id": 13,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "What is synchronization in Java?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about thread safety.",
+    "expectedTopics": [
+      "synchronized",
+      "Lock",
+      "Concurrency"
+    ],
+    "followUpQuestion": "Why is synchronization necessary?"
+  },
+  {
+    "id": 14,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "What are lambda expressions?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about functional programming.",
+    "expectedTopics": [
+      "Lambda",
+      "Functional Interface",
+      "Java 8"
+    ],
+    "followUpQuestion": "What is a functional interface?"
+  },
+  {
+    "id": 15,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "What is dependency injection?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reducing coupling.",
+    "expectedTopics": [
+      "IoC",
+      "Spring",
+      "Loose Coupling"
+    ],
+    "followUpQuestion": "Why is dependency injection widely used in Spring?"
+  },
+  {
+    "id": 16,
+    "categoryId": 17,
+    "difficulty": "Medium",
+    "question": "What are annotations in Java?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about metadata.",
+    "expectedTopics": [
+      "@Override",
+      "@Autowired",
+      "Metadata"
+    ],
+    "followUpQuestion": "Can developers create custom annotations?"
+  },
+  {
+    "id": 17,
+    "categoryId": 17,
+    "difficulty": "Hard",
+    "question": "How would you design a scalable Java backend application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about architecture and scalability.",
+    "expectedTopics": [
+      "Spring Boot",
+      "Microservices",
+      "Caching",
+      "Database"
+    ],
+    "followUpQuestion": "How would you improve the application's performance?"
+  },
+  {
+    "id": 18,
+    "categoryId": 17,
+    "difficulty": "Hard",
+    "question": "How would you troubleshoot a Java application with high memory usage?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about profiling and JVM tools.",
+    "expectedTopics": [
+      "Heap Dump",
+      "Memory Leak",
+      "Garbage Collection",
+      "JVM"
+    ],
+    "followUpQuestion": "Which JVM tools would you use first?"
+  },
+  {
+    "id": 19,
+    "categoryId": 17,
+    "difficulty": "Hard",
+    "question": "Explain the architecture of a Spring Boot REST API.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about layered architecture.",
+    "expectedTopics": [
+      "Controller",
+      "Service",
+      "Repository",
+      "REST API"
+    ],
+    "followUpQuestion": "How would you secure the REST API?"
+  },
+  {
+    "id": 20,
+    "categoryId": 17,
+    "difficulty": "Hard",
+    "question": "Describe a Java project you worked on and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss project structure, design patterns, database, APIs, security and deployment.",
+    "expectedTopics": [
+      "Architecture",
+      "Spring Boot",
+      "Database",
+      "REST API",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]

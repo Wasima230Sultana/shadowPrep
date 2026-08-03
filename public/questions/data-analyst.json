@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "Who is a Data Analyst?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about analyzing data to support decision-making.",
+    "expectedTopics": ["Data analysis", "Insights", "Decision making"],
+    "followUpQuestion": "How does a Data Analyst differ from a Data Scientist?"
+  },
+  {
+    "id": 2,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What is data cleaning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about preparing raw data.",
+    "expectedTopics": ["Missing values", "Duplicates", "Data quality"],
+    "followUpQuestion": "Why is data cleaning important?"
+  },
+  {
+    "id": 3,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What is the difference between structured and unstructured data?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about organization of data.",
+    "expectedTopics": ["Tables", "Text", "Images"],
+    "followUpQuestion": "Can you give examples of each?"
+  },
+  {
+    "id": 4,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What is SQL and why is it important for Data Analysts?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about querying databases.",
+    "expectedTopics": ["SQL", "SELECT", "Database"],
+    "followUpQuestion": "Which SQL command do you use most often?"
+  },
+  {
+    "id": 5,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What is Microsoft Excel used for in data analysis?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about spreadsheets and calculations.",
+    "expectedTopics": ["Excel", "Pivot Tables", "Charts"],
+    "followUpQuestion": "What are Pivot Tables used for?"
+  },
+  {
+    "id": 6,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What is data visualization?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about presenting insights graphically.",
+    "expectedTopics": ["Charts", "Graphs", "Dashboards"],
+    "followUpQuestion": "Which chart would you use to show trends over time?"
+  },
+  {
+    "id": 7,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What are KPIs?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about measuring business performance.",
+    "expectedTopics": ["Key Performance Indicators", "Metrics", "Goals"],
+    "followUpQuestion": "Can you give an example of a KPI?"
+  },
+  {
+    "id": 8,
+    "categoryId": 6,
+    "difficulty": "Easy",
+    "question": "What is descriptive analytics?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about analyzing past data.",
+    "expectedTopics": ["Historical data", "Summaries", "Reports"],
+    "followUpQuestion": "How is descriptive analytics different from predictive analytics?"
+  },
+  {
+    "id": 9,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "How do you handle missing data?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about cleaning datasets.",
+    "expectedTopics": ["Deletion", "Imputation", "Data quality"],
+    "followUpQuestion": "When should missing values be removed instead of filled?"
+  },
+  {
+    "id": 10,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "What is normalization in data analysis?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about scaling data.",
+    "expectedTopics": ["Scaling", "Min-Max", "Z-score"],
+    "followUpQuestion": "Why is normalization important?"
+  },
+  {
+    "id": 11,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "Explain the difference between correlation and causation.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about relationships between variables.",
+    "expectedTopics": ["Correlation", "Causation", "Statistics"],
+    "followUpQuestion": "Can correlation imply causation?"
+  },
+  {
+    "id": 12,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "What are Power BI and Tableau?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about business intelligence tools.",
+    "expectedTopics": ["Dashboards", "Visualization", "Reporting"],
+    "followUpQuestion": "Which tool do you prefer and why?"
+  },
+  {
+    "id": 13,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "How do you validate data quality?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about accuracy and consistency.",
+    "expectedTopics": ["Accuracy", "Completeness", "Consistency"],
+    "followUpQuestion": "What checks do you perform before analysis?"
+  },
+  {
+    "id": 14,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "Explain the ETL process.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about moving and preparing data.",
+    "expectedTopics": ["Extract", "Transform", "Load"],
+    "followUpQuestion": "Why is ETL important in analytics?"
+  },
+  {
+    "id": 15,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "How do you choose the right visualization for a dataset?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about the type of data and audience.",
+    "expectedTopics": ["Bar chart", "Line chart", "Pie chart", "Scatter plot"],
+    "followUpQuestion": "When should a scatter plot be used?"
+  },
+  {
+    "id": 16,
+    "categoryId": 6,
+    "difficulty": "Medium",
+    "question": "How do you communicate analytical findings to non-technical stakeholders?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about storytelling with data.",
+    "expectedTopics": ["Visualization", "Business insights", "Presentation"],
+    "followUpQuestion": "Why is storytelling important in data analysis?"
+  },
+  {
+    "id": 17,
+    "categoryId": 6,
+    "difficulty": "Hard",
+    "question": "Describe your approach to analyzing a large sales dataset.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think from data collection to insights.",
+    "expectedTopics": ["Cleaning", "Exploration", "Visualization", "KPIs"],
+    "followUpQuestion": "Which metrics would you prioritize?"
+  },
+  {
+    "id": 18,
+    "categoryId": 6,
+    "difficulty": "Hard",
+    "question": "How would you build an executive dashboard for business leaders?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about KPIs and visualization.",
+    "expectedTopics": ["Dashboard", "KPIs", "Filters", "Visualization"],
+    "followUpQuestion": "What makes a dashboard effective?"
+  },
+  {
+    "id": 19,
+    "categoryId": 6,
+    "difficulty": "Hard",
+    "question": "How would you identify trends and anomalies in business data?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about statistical analysis and visualization.",
+    "expectedTopics": ["Trend analysis", "Outliers", "Time series", "Statistics"],
+    "followUpQuestion": "How would you verify that an anomaly is genuine?"
+  },
+  {
+    "id": 20,
+    "categoryId": 6,
+    "difficulty": "Hard",
+    "question": "Describe a data analysis project you worked on and explain your process.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss the dataset, tools, analysis, visualization, insights, and business impact.",
+    "expectedTopics": ["Data collection", "SQL", "Excel/Power BI", "Visualization", "Business insights"],
+    "followUpQuestion": "If you repeated the project today, what improvements would you make?"
+  }
+]

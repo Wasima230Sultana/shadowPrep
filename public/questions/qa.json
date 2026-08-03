@@ -1,0 +1,307 @@
+[
+  {
+    "id": 1,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What is Python and what are its key features?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about readability and versatility.",
+    "expectedTopics": [
+      "Interpreted",
+      "High-level",
+      "Object-oriented"
+    ],
+    "followUpQuestion": "Why is Python so popular among developers?"
+  },
+  {
+    "id": 2,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What is the difference between a list and a tuple in Python?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about mutability.",
+    "expectedTopics": [
+      "Mutable",
+      "Immutable",
+      "Performance"
+    ],
+    "followUpQuestion": "When would you choose a tuple over a list?"
+  },
+  {
+    "id": 3,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What are Python dictionaries?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about key-value pairs.",
+    "expectedTopics": [
+      "Dictionary",
+      "Keys",
+      "Values"
+    ],
+    "followUpQuestion": "How are dictionaries different from lists?"
+  },
+  {
+    "id": 4,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What is the difference between == and is in Python?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about value and object identity.",
+    "expectedTopics": [
+      "Equality",
+      "Identity",
+      "Objects"
+    ],
+    "followUpQuestion": "When should you use 'is' instead of '=='?"
+  },
+  {
+    "id": 5,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "Explain Python's exception handling.",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about try-except blocks.",
+    "expectedTopics": [
+      "try",
+      "except",
+      "finally"
+    ],
+    "followUpQuestion": "Why is exception handling important?"
+  },
+  {
+    "id": 6,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What are Python functions?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about reusable code.",
+    "expectedTopics": [
+      "def",
+      "Arguments",
+      "Return"
+    ],
+    "followUpQuestion": "What is the difference between parameters and arguments?"
+  },
+  {
+    "id": 7,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What are Python modules and packages?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about organizing code.",
+    "expectedTopics": [
+      "Modules",
+      "Packages",
+      "Import"
+    ],
+    "followUpQuestion": "How do you create your own Python module?"
+  },
+  {
+    "id": 8,
+    "categoryId": 18,
+    "difficulty": "Easy",
+    "question": "What is list comprehension?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about concise list creation.",
+    "expectedTopics": [
+      "List Comprehension",
+      "Loop",
+      "Condition"
+    ],
+    "followUpQuestion": "What are the advantages of list comprehensions?"
+  },
+  {
+    "id": 9,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "Explain decorators in Python.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about modifying function behavior.",
+    "expectedTopics": [
+      "Decorator",
+      "Wrapper",
+      "Function"
+    ],
+    "followUpQuestion": "When would you use a decorator?"
+  },
+  {
+    "id": 10,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "What are generators in Python?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about lazy evaluation.",
+    "expectedTopics": [
+      "yield",
+      "Iterator",
+      "Memory Efficiency"
+    ],
+    "followUpQuestion": "How are generators different from normal functions?"
+  },
+  {
+    "id": 11,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "Explain Python's Global Interpreter Lock (GIL).",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about threading limitations.",
+    "expectedTopics": [
+      "GIL",
+      "Threading",
+      "Concurrency"
+    ],
+    "followUpQuestion": "How can you overcome GIL limitations?"
+  },
+  {
+    "id": 12,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "What is the difference between multithreading and multiprocessing in Python?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about CPU-bound and I/O-bound tasks.",
+    "expectedTopics": [
+      "Threading",
+      "Multiprocessing",
+      "Concurrency"
+    ],
+    "followUpQuestion": "Which one would you choose for CPU-intensive tasks?"
+  },
+  {
+    "id": 13,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "How do you work with files in Python?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about opening and closing files.",
+    "expectedTopics": [
+      "open()",
+      "read()",
+      "write()"
+    ],
+    "followUpQuestion": "Why is the 'with' statement recommended for file handling?"
+  },
+  {
+    "id": 14,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "How do you manage Python dependencies?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about package management.",
+    "expectedTopics": [
+      "pip",
+      "virtualenv",
+      "requirements.txt"
+    ],
+    "followUpQuestion": "Why are virtual environments useful?"
+  },
+  {
+    "id": 15,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "Explain Object-Oriented Programming in Python.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about classes and objects.",
+    "expectedTopics": [
+      "Class",
+      "Object",
+      "Inheritance"
+    ],
+    "followUpQuestion": "What are the benefits of OOP?"
+  },
+  {
+    "id": 16,
+    "categoryId": 18,
+    "difficulty": "Medium",
+    "question": "How do you optimize Python code for better performance?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about profiling and efficient data structures.",
+    "expectedTopics": [
+      "Profiling",
+      "Optimization",
+      "Memory"
+    ],
+    "followUpQuestion": "Which profiling tools have you used?"
+  },
+  {
+    "id": 17,
+    "categoryId": 18,
+    "difficulty": "Hard",
+    "question": "How would you design a scalable Python backend application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about architecture and scalability.",
+    "expectedTopics": [
+      "Django",
+      "FastAPI",
+      "Microservices",
+      "Caching"
+    ],
+    "followUpQuestion": "How would you improve the application's performance?"
+  },
+  {
+    "id": 18,
+    "categoryId": 18,
+    "difficulty": "Hard",
+    "question": "How would you troubleshoot a Python application with high memory usage?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about profiling and memory leaks.",
+    "expectedTopics": [
+      "Memory Profiling",
+      "Garbage Collection",
+      "Optimization",
+      "Debugging"
+    ],
+    "followUpQuestion": "Which tools would you use to identify memory issues?"
+  },
+  {
+    "id": 19,
+    "categoryId": 18,
+    "difficulty": "Hard",
+    "question": "Explain the architecture of a REST API built with Django or FastAPI.",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about layered architecture.",
+    "expectedTopics": [
+      "Routing",
+      "Models",
+      "Views",
+      "Authentication"
+    ],
+    "followUpQuestion": "How would you secure the API?"
+  },
+  {
+    "id": 20,
+    "categoryId": 18,
+    "difficulty": "Hard",
+    "question": "Describe a Python project you worked on and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss project structure, libraries, database, APIs, testing, deployment and challenges.",
+    "expectedTopics": [
+      "Architecture",
+      "Framework",
+      "Database",
+      "Testing",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]

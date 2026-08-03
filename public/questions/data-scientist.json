@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is Data Science?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about extracting insights from data.",
+    "expectedTopics": [
+      "Data analysis",
+      "Machine Learning",
+      "Statistics"
+    ],
+    "followUpQuestion": "How is Data Science different from Data Analytics?"
+  },
+  {
+    "id": 2,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is the data science lifecycle?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about the complete workflow.",
+    "expectedTopics": [
+      "Data collection",
+      "Cleaning",
+      "Modeling",
+      "Evaluation"
+    ],
+    "followUpQuestion": "Which phase usually takes the most time?"
+  },
+  {
+    "id": 3,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about labeled and unlabeled data.",
+    "expectedTopics": [
+      "Classification",
+      "Regression",
+      "Clustering"
+    ],
+    "followUpQuestion": "Can you give examples of both?"
+  },
+  {
+    "id": 4,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is feature engineering?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about improving model inputs.",
+    "expectedTopics": [
+      "Feature selection",
+      "Feature creation",
+      "Data preprocessing"
+    ],
+    "followUpQuestion": "Why is feature engineering important?"
+  },
+  {
+    "id": 5,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is overfitting?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about poor generalization.",
+    "expectedTopics": [
+      "Training",
+      "Validation",
+      "Generalization"
+    ],
+    "followUpQuestion": "How can overfitting be prevented?"
+  },
+  {
+    "id": 6,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is normalization?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about scaling data.",
+    "expectedTopics": [
+      "Scaling",
+      "Min-Max",
+      "Standardization"
+    ],
+    "followUpQuestion": "When is normalization necessary?"
+  },
+  {
+    "id": 7,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "What is a confusion matrix?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about classification evaluation.",
+    "expectedTopics": [
+      "True Positive",
+      "False Positive",
+      "Accuracy"
+    ],
+    "followUpQuestion": "How do precision and recall relate to it?"
+  },
+  {
+    "id": 8,
+    "categoryId": 7,
+    "difficulty": "Easy",
+    "question": "Why is Python popular in Data Science?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about libraries.",
+    "expectedTopics": [
+      "NumPy",
+      "Pandas",
+      "Scikit-learn"
+    ],
+    "followUpQuestion": "Which Python library do you use most?"
+  },
+  {
+    "id": 9,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "Explain bias-variance tradeoff.",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about underfitting and overfitting.",
+    "expectedTopics": [
+      "Bias",
+      "Variance",
+      "Generalization"
+    ],
+    "followUpQuestion": "How do you balance bias and variance?"
+  },
+  {
+    "id": 10,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "How do you evaluate a machine learning model?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about evaluation metrics.",
+    "expectedTopics": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "followUpQuestion": "When is F1-score preferred?"
+  },
+  {
+    "id": 11,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "What is cross-validation?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about model validation.",
+    "expectedTopics": [
+      "K-Fold",
+      "Validation",
+      "Generalization"
+    ],
+    "followUpQuestion": "Why is K-Fold Cross Validation useful?"
+  },
+  {
+    "id": 12,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "What is feature selection?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about choosing important variables.",
+    "expectedTopics": [
+      "Correlation",
+      "Importance",
+      "Dimensionality reduction"
+    ],
+    "followUpQuestion": "How does feature selection improve models?"
+  },
+  {
+    "id": 13,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "How do you handle missing data?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about preprocessing.",
+    "expectedTopics": [
+      "Imputation",
+      "Deletion",
+      "Mean",
+      "Median"
+    ],
+    "followUpQuestion": "When should missing rows be removed?"
+  },
+  {
+    "id": 14,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "Explain Principal Component Analysis (PCA).",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about dimensionality reduction.",
+    "expectedTopics": [
+      "Variance",
+      "Principal components",
+      "Reduction"
+    ],
+    "followUpQuestion": "Why is PCA useful?"
+  },
+  {
+    "id": 15,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "What is ensemble learning?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about combining models.",
+    "expectedTopics": [
+      "Random Forest",
+      "Boosting",
+      "Bagging"
+    ],
+    "followUpQuestion": "Why are ensemble models often more accurate?"
+  },
+  {
+    "id": 16,
+    "categoryId": 7,
+    "difficulty": "Medium",
+    "question": "How do you deploy a machine learning model?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about production.",
+    "expectedTopics": [
+      "API",
+      "Docker",
+      "Cloud",
+      "Monitoring"
+    ],
+    "followUpQuestion": "How do you monitor model performance after deployment?"
+  },
+  {
+    "id": 17,
+    "categoryId": 7,
+    "difficulty": "Hard",
+    "question": "How would you build an end-to-end data science pipeline?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think from raw data to deployment.",
+    "expectedTopics": [
+      "ETL",
+      "Feature engineering",
+      "Training",
+      "Deployment"
+    ],
+    "followUpQuestion": "How would you automate the pipeline?"
+  },
+  {
+    "id": 18,
+    "categoryId": 7,
+    "difficulty": "Hard",
+    "question": "How do you deal with imbalanced datasets?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about class imbalance.",
+    "expectedTopics": [
+      "SMOTE",
+      "Oversampling",
+      "Undersampling",
+      "Class weights"
+    ],
+    "followUpQuestion": "Which approach do you prefer?"
+  },
+  {
+    "id": 19,
+    "categoryId": 7,
+    "difficulty": "Hard",
+    "question": "How would you optimize a machine learning model for production?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about performance and scalability.",
+    "expectedTopics": [
+      "Hyperparameter tuning",
+      "Caching",
+      "Monitoring",
+      "Optimization"
+    ],
+    "followUpQuestion": "How do you reduce inference latency?"
+  },
+  {
+    "id": 20,
+    "categoryId": 7,
+    "difficulty": "Hard",
+    "question": "Describe a Data Science project you built and explain its architecture.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss data collection, preprocessing, model selection, evaluation, deployment, and challenges.",
+    "expectedTopics": [
+      "Dataset",
+      "Model",
+      "Evaluation",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]
