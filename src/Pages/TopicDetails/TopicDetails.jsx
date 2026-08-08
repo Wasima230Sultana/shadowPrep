@@ -50,10 +50,10 @@ const TopicDetails = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-5 py-10 relative overflow-hidden bg-gradient-to-br from-sky-100 via-indigo-100 to-pink-100">
+    <div className="my-4 max-w-7xl mx-auto px-5 py-10 bg-gradient-to-br from-sky-100 via-indigo-100 to-pink-100">
       {/* Hero */}
 
-      <div className="hero rounded-3xl mb-10 border border-base-300 shadow-xl bg-purple-50 rounded-3xl p-10">
+      <div className=" hero rounded-3xl mb-10 border border-base-300 shadow-xl bg-purple-50 rounded-3xl p-10">
         <div className="hero-content text-center ">
           <div>
 

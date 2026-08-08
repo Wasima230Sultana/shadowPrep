@@ -1,0 +1,318 @@
+[
+  {
+    "id": 1,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is UI/UX design and what is the difference between UI and UX?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about visual design versus user experience.",
+    "expectedTopics": [
+      "UI Design",
+      "UX Design",
+      "User Experience"
+    ],
+    "followUpQuestion": "Why are both UI and UX important in a digital product?"
+  },
+  {
+    "id": 2,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What are the main principles of good UI design?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about consistency, simplicity, hierarchy, and usability.",
+    "expectedTopics": [
+      "Consistency",
+      "Simplicity",
+      "Visual Hierarchy",
+      "Usability"
+    ],
+    "followUpQuestion": "Which UI principle do you consider most important and why?"
+  },
+  {
+    "id": 3,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is user-centered design?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about designing based on user needs.",
+    "expectedTopics": [
+      "User-Centered Design",
+      "User Needs",
+      "Usability"
+    ],
+    "followUpQuestion": "How do you identify what users actually need?"
+  },
+  {
+    "id": 4,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is a wireframe and why is it used?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about a basic layout before visual design.",
+    "expectedTopics": [
+      "Wireframe",
+      "Layout",
+      "User Flow"
+    ],
+    "followUpQuestion": "What is the difference between a wireframe and a prototype?"
+  },
+  {
+    "id": 5,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is a prototype in UI/UX design?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about an interactive representation of a product.",
+    "expectedTopics": [
+      "Prototype",
+      "Interaction",
+      "User Flow"
+    ],
+    "followUpQuestion": "Why should prototypes be tested before development?"
+  },
+  {
+    "id": 6,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is visual hierarchy in UI design?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about how users notice and understand elements.",
+    "expectedTopics": [
+      "Visual Hierarchy",
+      "Typography",
+      "Contrast",
+      "Layout"
+    ],
+    "followUpQuestion": "How can color and size improve visual hierarchy?"
+  },
+  {
+    "id": 7,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is usability and why is it important?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about how easily users can accomplish tasks.",
+    "expectedTopics": [
+      "Usability",
+      "User Experience",
+      "Ease of Use"
+    ],
+    "followUpQuestion": "How would you measure the usability of a website?"
+  },
+  {
+    "id": 8,
+    "categoryId": 5,
+    "difficulty": "Easy",
+    "question": "What is responsive design?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about websites adapting to different screen sizes.",
+    "expectedTopics": [
+      "Responsive Design",
+      "Mobile",
+      "Desktop",
+      "Screen Sizes"
+    ],
+    "followUpQuestion": "What factors should you consider when designing for mobile devices?"
+  },
+  {
+    "id": 9,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "What is user research and what methods can UX designers use?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about interviews, surveys, and observing users.",
+    "expectedTopics": [
+      "User Research",
+      "Interviews",
+      "Surveys",
+      "User Observation"
+    ],
+    "followUpQuestion": "Which user research method would you choose for a new product and why?"
+  },
+  {
+    "id": 10,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "What are user personas and how are they used in UX design?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about fictional representations of target users.",
+    "expectedTopics": [
+      "User Personas",
+      "Target Users",
+      "User Needs"
+    ],
+    "followUpQuestion": "What information should a useful persona contain?"
+  },
+  {
+    "id": 11,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "What is a user journey map?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about the user's steps and experiences when using a product.",
+    "expectedTopics": [
+      "User Journey",
+      "User Experience",
+      "Touchpoints"
+    ],
+    "followUpQuestion": "How can a journey map help identify UX problems?"
+  },
+  {
+    "id": 12,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "What is usability testing and how would you conduct it?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about observing real users performing tasks.",
+    "expectedTopics": [
+      "Usability Testing",
+      "User Testing",
+      "Tasks",
+      "Feedback"
+    ],
+    "followUpQuestion": "What metrics would you use to evaluate usability?"
+  },
+  {
+    "id": 13,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "What is the difference between low-fidelity and high-fidelity prototypes?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about detail, visual accuracy, and interaction.",
+    "expectedTopics": [
+      "Low-Fidelity",
+      "High-Fidelity",
+      "Prototype",
+      "Interaction"
+    ],
+    "followUpQuestion": "When would you use a low-fidelity prototype?"
+  },
+  {
+    "id": 14,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "What is a design system and why is it useful?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reusable components and design consistency.",
+    "expectedTopics": [
+      "Design System",
+      "Components",
+      "Consistency",
+      "Reusable Design"
+    ],
+    "followUpQuestion": "What elements would you include in a design system?"
+  },
+  {
+    "id": 15,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "How do accessibility principles apply to UI/UX design?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about designing products that can be used by people with different abilities.",
+    "expectedTopics": [
+      "Accessibility",
+      "WCAG",
+      "Contrast",
+      "Keyboard Navigation"
+    ],
+    "followUpQuestion": "How would you make a website more accessible?"
+  },
+  {
+    "id": 16,
+    "categoryId": 5,
+    "difficulty": "Medium",
+    "question": "How do you choose colors and typography for a user interface?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about readability, branding, contrast, and visual consistency.",
+    "expectedTopics": [
+      "Color Theory",
+      "Typography",
+      "Contrast",
+      "Branding"
+    ],
+    "followUpQuestion": "How would you ensure that your color choices remain accessible?"
+  },
+  {
+    "id": 17,
+    "categoryId": 5,
+    "difficulty": "Hard",
+    "question": "How would you design a complete user experience for a new mobile application?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about research, user flows, wireframes, prototypes, testing, and iteration.",
+    "expectedTopics": [
+      "User Research",
+      "User Flow",
+      "Wireframes",
+      "Prototyping",
+      "Usability Testing"
+    ],
+    "followUpQuestion": "How would you validate that your design solves the users' problems?"
+  },
+  {
+    "id": 18,
+    "categoryId": 5,
+    "difficulty": "Hard",
+    "question": "How would you improve the UX of a website with a high user drop-off rate?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about analytics, user feedback, usability testing, and identifying friction points.",
+    "expectedTopics": [
+      "UX Analysis",
+      "User Analytics",
+      "Usability Testing",
+      "Conversion Rate",
+      "User Feedback"
+    ],
+    "followUpQuestion": "Which data would you analyze first to identify the problem?"
+  },
+  {
+    "id": 19,
+    "categoryId": 5,
+    "difficulty": "Hard",
+    "question": "How would you handle conflicting feedback from different users and stakeholders?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about prioritization, user goals, business requirements, and evidence.",
+    "expectedTopics": [
+      "User Feedback",
+      "Stakeholders",
+      "Prioritization",
+      "User Goals"
+    ],
+    "followUpQuestion": "How would you decide which feedback should influence the final design?"
+  },
+  {
+    "id": 20,
+    "categoryId": 5,
+    "difficulty": "Hard",
+    "question": "Describe a UI/UX project you worked on and explain your design process from research to final implementation.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss research, personas, user flows, wireframes, prototypes, testing, design decisions, and implementation.",
+    "expectedTopics": [
+      "User Research",
+      "Wireframes",
+      "Prototyping",
+      "Usability Testing",
+      "Implementation"
+    ],
+    "followUpQuestion": "If you redesigned the project today, what improvements would you make?"
+  }
+]

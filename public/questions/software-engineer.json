@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is software engineering and why is it important?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about systematic software development.",
+    "expectedTopics": [
+      "Software Engineering",
+      "Software Development",
+      "Quality"
+    ],
+    "followUpQuestion": "How is software engineering different from programming?"
+  },
+  {
+    "id": 2,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What are the main phases of the Software Development Life Cycle (SDLC)?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about the steps from planning to maintenance.",
+    "expectedTopics": [
+      "Planning",
+      "Design",
+      "Development",
+      "Testing",
+      "Maintenance"
+    ],
+    "followUpQuestion": "Why is each SDLC phase important?"
+  },
+  {
+    "id": 3,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is the difference between functional and non-functional requirements?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about what the system does versus how it performs.",
+    "expectedTopics": [
+      "Functional Requirements",
+      "Non-functional Requirements",
+      "Performance"
+    ],
+    "followUpQuestion": "Can you give an example of each type?"
+  },
+  {
+    "id": 4,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is the Waterfall model in software engineering?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about sequential development phases.",
+    "expectedTopics": [
+      "Waterfall",
+      "Sequential Model",
+      "Phases"
+    ],
+    "followUpQuestion": "What are the main disadvantages of the Waterfall model?"
+  },
+  {
+    "id": 5,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is Agile software development?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about iterative development and customer feedback.",
+    "expectedTopics": [
+      "Agile",
+      "Iteration",
+      "Customer Feedback"
+    ],
+    "followUpQuestion": "Why is Agile preferred for projects with changing requirements?"
+  },
+  {
+    "id": 6,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is Scrum and what are its main components?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about roles, events, and artifacts.",
+    "expectedTopics": [
+      "Scrum",
+      "Sprint",
+      "Product Owner",
+      "Scrum Master"
+    ],
+    "followUpQuestion": "What is the purpose of a sprint in Scrum?"
+  },
+  {
+    "id": 7,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is version control and why is Git commonly used?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about tracking changes in source code.",
+    "expectedTopics": [
+      "Version Control",
+      "Git",
+      "Repository"
+    ],
+    "followUpQuestion": "What is the difference between Git and GitHub?"
+  },
+  {
+    "id": 8,
+    "categoryId": 16,
+    "difficulty": "Easy",
+    "question": "What is software testing and why is it important?",
+    "timeLimit": 120,
+    "score": 10,
+    "hint": "Think about finding defects and ensuring quality.",
+    "expectedTopics": [
+      "Testing",
+      "Bugs",
+      "Quality Assurance"
+    ],
+    "followUpQuestion": "What can happen if software is released without proper testing?"
+  },
+  {
+    "id": 9,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What is the difference between unit testing, integration testing, and system testing?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about different levels of software testing.",
+    "expectedTopics": [
+      "Unit Testing",
+      "Integration Testing",
+      "System Testing"
+    ],
+    "followUpQuestion": "Which type of testing would you perform first and why?"
+  },
+  {
+    "id": 10,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What are the SOLID principles in software engineering?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about principles for maintainable object-oriented design.",
+    "expectedTopics": [
+      "SOLID",
+      "Single Responsibility",
+      "Open-Closed",
+      "Dependency Inversion"
+    ],
+    "followUpQuestion": "Which SOLID principle do you find most useful and why?"
+  },
+  {
+    "id": 11,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What is the difference between high-level and low-level software design?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about architecture versus implementation details.",
+    "expectedTopics": [
+      "High-Level Design",
+      "Low-Level Design",
+      "Architecture"
+    ],
+    "followUpQuestion": "When should developers start thinking about low-level design?"
+  },
+  {
+    "id": 12,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What are software design patterns and why are they useful?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about reusable solutions to common design problems.",
+    "expectedTopics": [
+      "Design Patterns",
+      "Reusable Solutions",
+      "Software Design"
+    ],
+    "followUpQuestion": "Can you name and explain one design pattern?"
+  },
+  {
+    "id": 13,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What is continuous integration and continuous delivery (CI/CD)?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about automating software building, testing, and deployment.",
+    "expectedTopics": [
+      "CI/CD",
+      "Automation",
+      "Deployment"
+    ],
+    "followUpQuestion": "How does CI/CD improve software development?"
+  },
+  {
+    "id": 14,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What is refactoring and why is it important?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about improving code without changing its behavior.",
+    "expectedTopics": [
+      "Refactoring",
+      "Code Quality",
+      "Maintainability"
+    ],
+    "followUpQuestion": "When should a developer refactor code?"
+  },
+  {
+    "id": 15,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "What is technical debt in software engineering?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about the future cost of quick technical decisions.",
+    "expectedTopics": [
+      "Technical Debt",
+      "Code Quality",
+      "Maintenance"
+    ],
+    "followUpQuestion": "How can a development team reduce technical debt?"
+  },
+  {
+    "id": 16,
+    "categoryId": 16,
+    "difficulty": "Medium",
+    "question": "How do you ensure software quality throughout the development process?",
+    "timeLimit": 180,
+    "score": 15,
+    "hint": "Think about testing, code reviews, automation, and standards.",
+    "expectedTopics": [
+      "Quality Assurance",
+      "Code Review",
+      "Testing",
+      "Automation"
+    ],
+    "followUpQuestion": "Which software quality practices have you used in a project?"
+  },
+  {
+    "id": 17,
+    "categoryId": 16,
+    "difficulty": "Hard",
+    "question": "How would you design a scalable and maintainable software system?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about architecture, modularity, scalability, and maintainability.",
+    "expectedTopics": [
+      "Software Architecture",
+      "Scalability",
+      "Modularity",
+      "Maintainability"
+    ],
+    "followUpQuestion": "How would you handle increasing numbers of users?"
+  },
+  {
+    "id": 18,
+    "categoryId": 16,
+    "difficulty": "Hard",
+    "question": "How would you troubleshoot a software system that is experiencing frequent failures?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about logs, monitoring, debugging, and root cause analysis.",
+    "expectedTopics": [
+      "Debugging",
+      "Logging",
+      "Monitoring",
+      "Root Cause Analysis"
+    ],
+    "followUpQuestion": "Which tools or techniques would you use to identify the root cause?"
+  },
+  {
+    "id": 19,
+    "categoryId": 16,
+    "difficulty": "Hard",
+    "question": "How would you design a software development process for a large team working on the same project?",
+    "timeLimit": 240,
+    "score": 20,
+    "hint": "Think about collaboration, version control, code reviews, and CI/CD.",
+    "expectedTopics": [
+      "Team Collaboration",
+      "Git",
+      "Code Review",
+      "CI/CD"
+    ],
+    "followUpQuestion": "How would you minimize conflicts between developers?"
+  },
+  {
+    "id": 20,
+    "categoryId": 16,
+    "difficulty": "Hard",
+    "question": "Describe a software project you worked on and explain the development process, architecture, testing, and deployment.",
+    "timeLimit": 300,
+    "score": 25,
+    "hint": "Discuss requirements, design, architecture, development, testing, version control, and deployment.",
+    "expectedTopics": [
+      "Requirements",
+      "Architecture",
+      "Development",
+      "Testing",
+      "Deployment"
+    ],
+    "followUpQuestion": "If you rebuilt the project today, what improvements would you make?"
+  }
+]

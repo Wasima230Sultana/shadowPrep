@@ -67,7 +67,8 @@ const Footer = () => {
   <aside>
 <p className="text-gray-400">
   © {new Date().getFullYear()} ShadowPrep. All rights reserved.
-</p>  </aside>
+</p> 
+ </aside>
 </footer>
        
   );

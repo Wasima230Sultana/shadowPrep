@@ -82,7 +82,7 @@ const Navbar = () => {
 
           <Link
             to="/"
-            className="text-xl md:text-2xl font-extrabold tracking-wide"
+            className="text-lg md:text-2xl font-extrabold tracking-wide"
           >
             SHADOW<span className="text-[#8b5cf6]">PREP</span>
           </Link>

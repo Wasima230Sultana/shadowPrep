@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { Link } from "react-router";
 import VoiceRecorder from "../../VoiceRecorder/VoiceRecorder";
+
 const Interview = () => {
     const questions = useLoaderData();
+
     const QUESTION_TIME = 120;
 
     const options = [5, 10, 15, 20];
+
     const [submitted, setSubmitted] = useState(false);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState({});
@@ -14,6 +17,9 @@ const Interview = () => {
     const [started, setStarted] = useState(false);
     const [skippedQuestions, setSkippedQuestions] = useState([]);
     const [timeLeft, setTimeLeft] = useState(QUESTION_TIME);
+
+    // Stores the evaluation result of every question
+    const [evaluationResults, setEvaluationResults] = useState({});
 
     useEffect(() => {
         if (!started) return;
@@ -28,73 +34,257 @@ const Interview = () => {
             </div>
         );
     }
+
     const interviewQuestions = questions.slice(0, selectedCount);
     const question = interviewQuestions[currentQuestion] || {};
 
-useEffect(() => {
-    if (!started || !question?.question) return;
+    // Text-to-speech
+    useEffect(() => {
+        if (!started || !question?.question) return;
 
-    // Stop any previous speech
-    window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(question.question);
-
-    utterance.lang = "en-US";
-    utterance.rate = 1;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    // Small delay so cancel() finishes first
-    const timer = setTimeout(() => {
-        window.speechSynthesis.speak(utterance);
-    }, 150);
-
-    return () => {
-        clearTimeout(timer);
         window.speechSynthesis.cancel();
-    };
-}, [question?.id, started]);
 
+        const utterance = new SpeechSynthesisUtterance(question.question);
 
-    const progress = ((currentQuestion + 1) / interviewQuestions.length) * 100;
+        utterance.lang = "en-US";
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+
+        const timer = setTimeout(() => {
+            window.speechSynthesis.speak(utterance);
+        }, 150);
+
+        return () => {
+            clearTimeout(timer);
+            window.speechSynthesis.cancel();
+        };
+    }, [question?.id, started]);
+
+    const progress =
+        ((currentQuestion + 1) / interviewQuestions.length) * 100;
+
     const answeredCount = Object.values(answers).filter(
-        answer => answer.trim() !== ""
+        (answer) => answer.trim() !== ""
     ).length;
+
     const skippedCount = skippedQuestions.length;
+
     const remainingCount = interviewQuestions.filter((q) => {
         return (
             !answers[q.id]?.trim() &&
             !skippedQuestions.includes(q.id)
         );
-    }).length; const minutes = Math.floor(timeLeft / 60);
+    }).length;
+
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = String(timeLeft % 60).padStart(2, "0");
+
     const totalQuestions = interviewQuestions.length;
 
-    const score = Math.round(
-        (answeredCount / totalQuestions) * 100
-    );
-    const seconds = String(timeLeft % 60).padStart(2, "0");
+    // ---------------------------------------------------------
+    // ANSWER CHECKING
+    // ---------------------------------------------------------
+
+    // Normalize text so that:
+    // "UI Design", "ui-design", "UI DESIGN"
+    // can be compared more easily.
+    const normalizeText = (text) => {
+        return text
+            .toLowerCase()
+            .replace(/[^\w\s]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+    };
+
+    // Check whether a topic exists in the user's answer.
+    const topicMatchesAnswer = (answer, topic) => {
+        const normalizedAnswer = normalizeText(answer);
+        const normalizedTopic = normalizeText(topic);
+
+        if (!normalizedAnswer || !normalizedTopic) {
+            return false;
+        }
+
+        // First check the complete topic phrase
+        if (normalizedAnswer.includes(normalizedTopic)) {
+            return true;
+        }
+
+        // If topic contains multiple words,
+        // check whether most important words exist.
+        const topicWords = normalizedTopic
+            .split(" ")
+            .filter((word) => word.length > 2);
+
+        if (topicWords.length === 0) {
+            return false;
+        }
+
+        const matchedWords = topicWords.filter((word) =>
+            normalizedAnswer.includes(word)
+        );
+
+        return matchedWords.length / topicWords.length >= 0.5;
+    };
+
+    // Evaluate one answer
+    const evaluateAnswer = (question, userAnswer) => {
+        const maxScore = question.score || 10;
+
+        // Empty answer
+        if (!userAnswer || !userAnswer.trim()) {
+            return {
+                questionId: question.id,
+                score: 0,
+                maxScore,
+                percentage: 0,
+                status: "Not Answered",
+                matchedTopics: [],
+                missingTopics: question.expectedTopics || [],
+                feedback: "No answer was provided."
+            };
+        }
+
+        const expectedTopics = question.expectedTopics || [];
+
+        const matchedTopics = expectedTopics.filter((topic) =>
+            topicMatchesAnswer(userAnswer, topic)
+        );
+
+        const missingTopics = expectedTopics.filter(
+            (topic) => !matchedTopics.includes(topic)
+        );
+
+        const topicPercentage =
+            expectedTopics.length > 0
+                ? matchedTopics.length / expectedTopics.length
+                : 0;
+
+        // Calculate score based on matched topics
+        let score = Math.round(maxScore * topicPercentage);
+
+        // Prevent a non-empty answer from automatically receiving 0
+        if (score === 0 && userAnswer.trim().length > 10) {
+            score = 1;
+        }
+
+        const percentage =
+            maxScore > 0
+                ? Math.round((score / maxScore) * 100)
+                : 0;
+
+        let status;
+        let feedback;
+
+        if (percentage >= 80) {
+            status = "Correct";
+
+            feedback =
+                "Good answer. You covered most of the expected topics.";
+        } else if (percentage >= 50) {
+            status = "Partially Correct";
+
+            feedback =
+                "Your answer contains some important points, but it could be more complete.";
+        } else {
+            status = "Incorrect";
+
+            feedback =
+                "Your answer needs improvement. Try to explain the main concepts mentioned in the expected topics.";
+        }
+
+        return {
+            questionId: question.id,
+            score,
+            maxScore,
+            percentage,
+            status,
+            matchedTopics,
+            missingTopics,
+            feedback
+        };
+    };
+
+    // Evaluate every question
+    const evaluateAllAnswers = () => {
+        const results = {};
+
+        interviewQuestions.forEach((q) => {
+            const userAnswer = answers[q.id] || "";
+
+            results[q.id] = evaluateAnswer(q, userAnswer);
+        });
+
+        return results;
+    };
+
+    // Calculate final score based on actual answer quality
+    const calculateFinalScore = (results) => {
+        let obtainedScore = 0;
+        let maximumScore = 0;
+
+        interviewQuestions.forEach((q) => {
+            const result = results[q.id];
+
+            if (result) {
+                obtainedScore += result.score;
+                maximumScore += result.maxScore;
+            }
+        });
+
+        if (maximumScore === 0) {
+            return 0;
+        }
+
+        return Math.round(
+            (obtainedScore / maximumScore) * 100
+        );
+    };
+
+    // ---------------------------------------------------------
+    // FINAL SCORE
+    // ---------------------------------------------------------
+
+    const finalScore = calculateFinalScore(evaluationResults);
+
+    // ---------------------------------------------------------
+    // NAVIGATION
+    // ---------------------------------------------------------
+
     const handleNext = () => {
-        // Stop reading the current question
         window.speechSynthesis.cancel();
 
         if (currentQuestion < interviewQuestions.length - 1) {
-            setCurrentQuestion(prev => prev + 1);
+            setCurrentQuestion((prev) => prev + 1);
         }
     };
 
     const handlePrevious = () => {
-        // Stop reading the current question
         window.speechSynthesis.cancel();
 
         if (currentQuestion > 0) {
-            setCurrentQuestion(prev => prev - 1);
+            setCurrentQuestion((prev) => prev - 1);
         }
     };
 
+    // ---------------------------------------------------------
+    // SUBMIT
+    // ---------------------------------------------------------
+
     const handleSubmit = () => {
         window.speechSynthesis.cancel();
+
+        // Evaluate all answers before showing result
+        const results = evaluateAllAnswers();
+
+        setEvaluationResults(results);
         setSubmitted(true);
     };
+
+    // ---------------------------------------------------------
+    // SKIP
+    // ---------------------------------------------------------
 
     const handleSkip = () => {
         window.speechSynthesis.cancel();
@@ -102,42 +292,57 @@ useEffect(() => {
         const id = question.id;
 
         if (!skippedQuestions.includes(id)) {
-            setSkippedQuestions(prev => [...prev, id]);
+            setSkippedQuestions((prev) => [...prev, id]);
         }
 
         if (currentQuestion < interviewQuestions.length - 1) {
-            setCurrentQuestion(prev => prev + 1);
+            setCurrentQuestion((prev) => prev + 1);
         } else {
             handleSubmit();
         }
     };
 
+    // ---------------------------------------------------------
+    // TIMER
+    // ---------------------------------------------------------
+
     useEffect(() => {
         if (!started) return;
+
         const timer = setInterval(() => {
             setTimeLeft((prev) => {
                 if (prev <= 1) {
                     clearInterval(timer);
+
                     setTimeout(() => {
                         handleSkip();
                     }, 0);
+
                     return 0;
                 }
+
                 return prev - 1;
             });
         }, 1000);
+
         return () => clearInterval(timer);
     }, [currentQuestion, started]);
-  
+
+    // ---------------------------------------------------------
+    // CLEANUP SPEECH
+    // ---------------------------------------------------------
+
     useEffect(() => {
         return () => {
             window.speechSynthesis.cancel();
         };
     }, []);
 
+    // ---------------------------------------------------------
+    // QUESTION STATUS
+    // ---------------------------------------------------------
 
     const getQuestionStatus = (q, index) => {
-
         if (currentQuestion === index) {
             return "current";
         }
@@ -151,14 +356,18 @@ useEffect(() => {
         }
 
         return "unvisited";
-
     };
+
+    // =========================================================
+    // START INTERVIEW
+    // =========================================================
 
     if (!started) {
         return (
             <div className="min-h-screen flex justify-center items-center">
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
+
                         <h2 className="text-2xl font-bold">
                             Start Interview
                         </h2>
@@ -166,7 +375,9 @@ useEffect(() => {
                         <select
                             className="select select-bordered mt-5"
                             value={selectedCount}
-                            onChange={(e) => setSelectedCount(Number(e.target.value))}
+                            onChange={(e) =>
+                                setSelectedCount(Number(e.target.value))
+                            }
                         >
                             {options.map((count) => (
                                 <option
@@ -184,13 +395,14 @@ useEffect(() => {
                         <button
                             className="btn btn-primary mt-6"
                             onClick={() => {
-                                // Stop any speech from a previous interview
                                 window.speechSynthesis.cancel();
 
                                 setCurrentQuestion(0);
                                 setAnswers({});
                                 setSkippedQuestions([]);
+                                setEvaluationResults({});
                                 setTimeLeft(QUESTION_TIME);
+                                setSubmitted(false);
                                 setStarted(true);
                             }}
                         >
@@ -198,122 +410,299 @@ useEffect(() => {
                         </button>
 
                     </div>
-
                 </div>
-
             </div>
         );
     }
+
+    // =========================================================
+    // RESULT PAGE
+    // =========================================================
+
     if (submitted) {
         return (
-            <div className="min-h-screen bg-base-200 flex justify-center items-center px-4">
+            <div className="min-h-screen bg-base-200 py-10 px-4">
 
-                <div className="card bg-base-100 shadow-2xl w-full max-w-3xl">
+                <div className="max-w-5xl mx-auto">
 
-                    <div className="card-body">
+                    <div className="card bg-base-100 shadow-2xl">
 
-                        <div className="text-center text-6xl mb-4">
-                            🏆
-                        </div>
+                        <div className="card-body">
 
-                        <h1 className="text-4xl font-bold text-center">
-                            Interview Completed
-                        </h1>
-
-                        <div className="stats stats-vertical lg:stats-horizontal shadow mt-8">
-
-                            <div className="stat">
-                                <div className="stat-title">
-                                    Answered
-                                </div>
-
-                                <div className="stat-value text-success">
-                                    {answeredCount}
-                                </div>
+                            <div className="text-center text-6xl mb-4">
+                                🏆
                             </div>
 
-                            <div className="stat">
-                                <div className="stat-title">
-                                    Skipped
+                            <h1 className="text-4xl font-bold text-center">
+                                Interview Completed
+                            </h1>
+
+                            {/* SUMMARY */}
+                            <div className="stats stats-vertical lg:stats-horizontal shadow mt-8">
+
+                                <div className="stat">
+                                    <div className="stat-title">
+                                        Answered
+                                    </div>
+
+                                    <div className="stat-value text-success">
+                                        {answeredCount}
+                                    </div>
                                 </div>
 
-                                <div className="stat-value text-warning">
-                                    {skippedCount}
+                                <div className="stat">
+                                    <div className="stat-title">
+                                        Skipped
+                                    </div>
+
+                                    <div className="stat-value text-warning">
+                                        {skippedCount}
+                                    </div>
                                 </div>
+
+                                <div className="stat">
+                                    <div className="stat-title">
+                                        Total
+                                    </div>
+
+                                    <div className="stat-value">
+                                        {interviewQuestions.length}
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <div className="stat">
-                                <div className="stat-title">
-                                    Remaining
-                                </div>
+                            {/* FINAL SCORE */}
+                            <div className="text-center mt-10">
 
-                                <div className="stat-value text-info">
-                                    {remainingCount}
-                                </div>
+                                <h2 className="text-6xl font-bold text-primary">
+                                    {finalScore}%
+                                </h2>
+
+                                <p className="text-lg mt-2">
+                                    Answer Quality Score
+                                </p>
+
                             </div>
 
-                            <div className="stat">
-                                <div className="stat-title">Total</div>
+                            <div className="flex justify-center mt-6">
 
-                                <div className="stat-value">
-                                    {interviewQuestions.length}
+                                <div
+                                    className={`badge badge-lg ${finalScore >= 80
+                                            ? "badge-success"
+                                            : finalScore >= 50
+                                                ? "badge-warning"
+                                                : "badge-error"
+                                        }`}
+                                >
+                                    {finalScore >= 80
+                                        ? "Excellent"
+                                        : finalScore >= 50
+                                            ? "Good"
+                                            : "Needs Improvement"}
                                 </div>
+
                             </div>
 
-                        </div>
+                            {/* QUESTION RESULTS */}
+                            <div className="mt-10">
 
-                        <div className="text-center mt-10">
+                                <h2 className="text-2xl font-bold mb-5">
+                                    Answer Evaluation
+                                </h2>
 
-                            <h2 className="text-6xl font-bold text-primary">
-                                {score}%
-                            </h2>
-                            <p className="text-lg mt-2">
-                                {answeredCount} of {interviewQuestions.length} questions answered
-                            </p>
-                            <p className="mt-3">
-                                Overall Completion Score
-                            </p>
+                                <div className="space-y-5">
 
-                        </div>
+                                    {interviewQuestions.map((q, index) => {
 
-                        <div className="flex justify-center mt-6">
+                                        const result =
+                                            evaluationResults[q.id];
 
-                            <div
-                                className={`badge badge-lg ${score >= 80
-                                    ? "badge-success"
-                                    : score >= 60
-                                        ? "badge-warning"
-                                        : "badge-error"
-                                    }`}
-                            >
-                                {score >= 80
-                                    ? "Excellent"
-                                    : score >= 60
-                                        ? "Good"
-                                        : "Needs Improvement"}
+                                        const userAnswer =
+                                            answers[q.id] || "";
+
+                                        return (
+                                            <div
+                                                key={q.id}
+                                                className="card bg-base-200 shadow"
+                                            >
+
+                                                <div className="card-body">
+
+                                                    <div className="flex justify-between gap-4">
+
+                                                        <h3 className="font-bold">
+                                                            Question {index + 1}
+                                                        </h3>
+
+                                                        {result && (
+                                                            <div
+                                                                className={`badge ${result.status === "Correct"
+                                                                        ? "badge-success"
+                                                                        : result.status === "Partially Correct"
+                                                                            ? "badge-warning"
+                                                                            : "badge-error"
+                                                                    }`}
+                                                            >
+                                                                {result.status}
+                                                            </div>
+                                                        )}
+
+                                                    </div>
+
+                                                    <p className="font-medium mt-2">
+                                                        {q.question}
+                                                    </p>
+
+                                                    {/* USER ANSWER */}
+                                                    <div className="mt-4">
+
+                                                        <p className="font-semibold">
+                                                            Your Answer:
+                                                        </p>
+
+                                                        <p className="text-base-content/80 mt-1">
+                                                            {userAnswer ||
+                                                                "No answer provided."}
+                                                        </p>
+
+                                                    </div>
+
+                                                    {/* SCORE */}
+                                                    {result && (
+                                                        <>
+                                                            <div className="mt-4">
+
+                                                                <div className="flex justify-between">
+
+                                                                    <span className="font-semibold">
+                                                                        Score
+                                                                    </span>
+
+                                                                    <span className="font-bold">
+                                                                        {result.score}/
+                                                                        {result.maxScore}
+                                                                    </span>
+
+                                                                </div>
+
+                                                                <progress
+                                                                    className={`progress w-full mt-2 ${result.percentage >= 80
+                                                                            ? "progress-success"
+                                                                            : result.percentage >= 50
+                                                                                ? "progress-warning"
+                                                                                : "progress-error"
+                                                                        }`}
+                                                                    value={result.percentage}
+                                                                    max="100"
+                                                                />
+
+                                                            </div>
+
+                                                            {/* FEEDBACK */}
+                                                            <div className="mt-4">
+
+                                                                <p className="font-semibold">
+                                                                    Feedback:
+                                                                </p>
+
+                                                                <p className="text-base-content/80 mt-1">
+                                                                    {result.feedback}
+                                                                </p>
+
+                                                            </div>
+
+                                                            {/* MATCHED TOPICS */}
+                                                            {result.matchedTopics.length > 0 && (
+                                                                <div className="mt-4">
+
+                                                                    <p className="font-semibold">
+                                                                        Covered Topics:
+                                                                    </p>
+
+                                                                    <div className="flex flex-wrap gap-2 mt-2">
+
+                                                                        {result.matchedTopics.map(
+                                                                            (topic) => (
+                                                                                <span
+                                                                                    key={topic}
+                                                                                    className="badge badge-success"
+                                                                                >
+                                                                                    ✓ {topic}
+                                                                                </span>
+                                                                            )
+                                                                        )}
+
+                                                                    </div>
+
+                                                                </div>
+                                                            )}
+
+                                                            {/* MISSING TOPICS */}
+                                                            {result.missingTopics.length > 0 && (
+                                                                <div className="mt-4">
+
+                                                                    <p className="font-semibold">
+                                                                        Missing Topics:
+                                                                    </p>
+
+                                                                    <div className="flex flex-wrap gap-2 mt-2">
+
+                                                                        {result.missingTopics.map(
+                                                                            (topic) => (
+                                                                                <span
+                                                                                    key={topic}
+                                                                                    className="badge badge-warning"
+                                                                                >
+                                                                                    ⚠ {topic}
+                                                                                </span>
+                                                                            )
+                                                                        )}
+
+                                                                    </div>
+
+                                                                </div>
+                                                            )}
+
+                                                        </>
+                                                    )}
+
+                                                </div>
+
+                                            </div>
+                                        );
+                                    })}
+
+                                </div>
+
                             </div>
 
-                        </div>
+                            {/* BUTTONS */}
+                            <div className="flex justify-center gap-4 mt-10">
 
-                        <div className="flex justify-center gap-4 mt-8">
+                                <button
+                                    className="btn btn-primary"
+                                    onClick={() => {
+                                        setSubmitted(false);
+                                        setStarted(false);
+                                        setCurrentQuestion(0);
+                                        setAnswers({});
+                                        setSkippedQuestions([]);
+                                        setEvaluationResults({});
+                                        setTimeLeft(QUESTION_TIME);
+                                    }}
+                                >
+                                    Retake Interview
+                                </button>
 
-                            <button
-                                className="btn btn-primary"
-                                onClick={() => {
-                                    setSubmitted(false);
-                                    setStarted(false);
-                                    setCurrentQuestion(0);
-                                    setAnswers({});
-                                    setSkippedQuestions([]);
-                                    setTimeLeft(QUESTION_TIME);
-                                }}
-                            >
-                                Retake Interview
-                            </button>
+                                <Link
+                                    to="/"
+                                    className="btn btn-outline"
+                                >
+                                    Back to Home
+                                </Link>
 
-                            <Link to="/" className="btn btn-outline">
-                                Back to Home
-                            </Link>
+                            </div>
 
                         </div>
 
@@ -325,11 +714,16 @@ useEffect(() => {
         );
     }
 
+    // =========================================================
+    // INTERVIEW PAGE
+    // =========================================================
+
     return (
         <div className="min-h-screen bg-base-200 py-10 px-4">
 
             <div className="max-w-5xl mx-auto">
 
+                {/* HEADER */}
                 <div className="mb-8">
 
                     <h1 className="text-4xl font-bold">
@@ -341,6 +735,8 @@ useEffect(() => {
                     </p>
 
                 </div>
+
+                {/* STATS */}
                 <div className="stats shadow">
 
                     <div className="stat">
@@ -379,14 +775,16 @@ useEffect(() => {
 
                     </div>
 
-
                 </div>
-                <div className="mb-6">
+
+                {/* PROGRESS */}
+                <div className="mb-6 mt-6">
 
                     <div className="flex justify-between mb-2">
 
                         <span>
-                            Question {currentQuestion + 1} of {interviewQuestions.length}
+                            Question {currentQuestion + 1} of{" "}
+                            {interviewQuestions.length}
                         </span>
 
                         <span>
@@ -394,18 +792,20 @@ useEffect(() => {
                         </span>
 
                     </div>
+
                     <div className="flex justify-end mb-4">
 
                         <div
                             className={`badge badge-lg ${timeLeft <= 30
-                                ? "badge-error"
-                                : "badge-primary"
+                                    ? "badge-error"
+                                    : "badge-primary"
                                 }`}
                         >
                             ⏱ {minutes}:{seconds}
                         </div>
 
                     </div>
+
                     <progress
                         className="progress progress-primary w-full"
                         value={progress}
@@ -413,64 +813,84 @@ useEffect(() => {
                     />
 
                 </div>
+
+                {/* MAIN GRID */}
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+                    {/* QUESTION */}
                     <div className="lg:col-span-3">
-                        {/* Question Card */}
+
                         <div className="card bg-base-100 shadow-xl">
 
                             <div className="card-body">
+
                                 <div className="flex justify-between items-start">
 
                                     <div>
+
                                         <h2 className="text-2xl font-bold">
                                             Question {currentQuestion + 1}
                                         </h2>
+
                                         <p className="text-sm opacity-70">
                                             {question.category || "General"}
                                         </p>
+
                                     </div>
 
-                                    <div className={`badge badge-primary badge
-${question.difficulty === "Easy"
-                                            ? "badge-success"
-                                            : question.difficulty === "Medium"
-                                                ? "badge-warning"
-                                                : "badge-error"
-                                        }`}
+                                    <div
+                                        className={`badge badge-primary ${question.difficulty === "Easy"
+                                                ? "badge-success"
+                                                : question.difficulty === "Medium"
+                                                    ? "badge-warning"
+                                                    : "badge-error"
+                                            }`}
                                     >
                                         {question.difficulty}
-
                                     </div>
+
                                 </div>
+
                                 <p className="text-lg mt-6 leading-8">
                                     {question.question}
                                 </p>
+
                                 <p className="text-sm text-success">
-                                    Answered {answeredCount} / {interviewQuestions.length}
+                                    Answered {answeredCount} /{" "}
+                                    {interviewQuestions.length}
                                 </p>
+
+                                {/* ANSWER */}
                                 <textarea
-                                    className="textarea textarea-bordered w-full mt-8 
-                                    min-h-[180px]"
+                                    className="textarea textarea-bordered w-full mt-8 min-h-[180px]"
                                     placeholder="Write your answer here..."
                                     value={answers[question.id] || ""}
                                     onChange={(e) => {
-                                        setAnswers(prev => ({
+
+                                        setAnswers((prev) => ({
                                             ...prev,
-                                            [question.id]: e.target.value,
+                                            [question.id]: e.target.value
                                         }));
 
-                                        setSkippedQuestions(prev =>
-                                            prev.filter(id => id !== question.id)
+                                        setSkippedQuestions((prev) =>
+                                            prev.filter(
+                                                (id) => id !== question.id
+                                            )
                                         );
+
                                     }}
                                 />
+
+                                {/* VOICE */}
                                 <VoiceRecorder
                                     question={question}
                                     answers={answers}
                                     setAnswers={setAnswers}
                                 />
 
+                                {/* BUTTONS */}
                                 <div className="flex justify-between mt-8">
+
                                     <button
                                         className="btn"
                                         disabled={currentQuestion === 0}
@@ -486,29 +906,32 @@ ${question.difficulty === "Easy"
                                         Skip
                                     </button>
 
-                                    {
-                                        currentQuestion === interviewQuestions.length - 1 ?
+                                    {currentQuestion ===
+                                        interviewQuestions.length - 1 ? (
 
-                                            <button
-                                                className="btn btn-success"
-                                                onClick={handleSubmit}
-                                            >
-                                                Submit
-                                            </button>
+                                        <button
+                                            className="btn btn-success"
+                                            onClick={handleSubmit}
+                                        >
+                                            Submit
+                                        </button>
 
-                                            :
+                                    ) : (
 
-                                            <button
-                                                className="btn btn-primary"
-                                                onClick={handleNext}
-                                            >
-                                                Next
-                                            </button>
+                                        <button
+                                            className="btn btn-primary"
+                                            onClick={handleNext}
+                                        >
+                                            Next
+                                        </button>
 
-                                    }
+                                    )}
 
                                 </div>
+
+                                {/* COUNTERS */}
                                 <div className="flex justify-between text-sm mt-4">
+
                                     <span className="text-success">
                                         Answered: {answeredCount}
                                     </span>
@@ -526,10 +949,12 @@ ${question.difficulty === "Easy"
                             </div>
 
                         </div>
+
                     </div>
 
+                    {/* QUESTION PALETTE */}
                     <div className="lg:col-span-1">
-                        {/* Question Palette */}
+
                         <div className="card bg-base-100 shadow-xl sticky top-24">
 
                             <div className="card-body">
@@ -537,43 +962,54 @@ ${question.difficulty === "Easy"
                                 <div className="flex justify-between items-center">
 
                                     <h2 className="font-bold text-lg">
-
                                         Question Palette
-
                                     </h2>
 
                                     <span className="badge badge-primary">
-
                                         {interviewQuestions.length}
-
                                     </span>
 
                                 </div>
+
                                 <div className="grid grid-cols-5 gap-3 mt-4">
 
                                     {interviewQuestions.map((q, index) => {
 
-                                        const status = getQuestionStatus(q, index);
+                                        const status =
+                                            getQuestionStatus(q, index);
 
                                         return (
 
                                             <button
                                                 key={q.id}
-                                                onClick={() => setCurrentQuestion(index)}
+                                                onClick={() =>
+                                                    setCurrentQuestion(index)
+                                                }
                                                 className={`
-                btn
-                btn-circle
-                ${status === "current" ? "ring-2 ring-primary ring-offset-2" : ""}
-                ${status === "answered" ? "btn-success" : ""}
-                ${status === "skipped" ? "btn-warning" : ""}
-                ${status === "unvisited" ? "btn-outline" : ""}
-            `}
+                                                    btn
+                                                    btn-circle
+                                                    ${status === "current"
+                                                        ? "ring-2 ring-primary ring-offset-2"
+                                                        : ""
+                                                    }
+                                                    ${status === "answered"
+                                                        ? "btn-success"
+                                                        : ""
+                                                    }
+                                                    ${status === "skipped"
+                                                        ? "btn-warning"
+                                                        : ""
+                                                    }
+                                                    ${status === "unvisited"
+                                                        ? "btn-outline"
+                                                        : ""
+                                                    }
+                                                `}
                                             >
                                                 {index + 1}
                                             </button>
 
                                         );
-
                                     })}
 
                                 </div>
@@ -586,7 +1022,9 @@ ${question.difficulty === "Easy"
 
                                         <button className="btn btn-circle btn-success btn-xs"></button>
 
-                                        <span>Answered</span>
+                                        <span>
+                                            Answered
+                                        </span>
 
                                     </div>
 
@@ -594,7 +1032,9 @@ ${question.difficulty === "Easy"
 
                                         <button className="btn btn-circle btn-warning btn-xs"></button>
 
-                                        <span>Skipped</span>
+                                        <span>
+                                            Skipped
+                                        </span>
 
                                     </div>
 
@@ -602,18 +1042,21 @@ ${question.difficulty === "Easy"
 
                                         <button className="btn btn-circle btn-outline btn-xs"></button>
 
-                                        <span>Not Visited</span>
+                                        <span>
+                                            Not Visited
+                                        </span>
 
                                     </div>
 
                                 </div>
+
                             </div>
 
                         </div>
 
                     </div>
-                </div>
 
+                </div>
 
             </div>
 

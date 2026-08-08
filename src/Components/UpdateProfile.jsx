@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Context/AuthContext';
 import { Link, useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {
     const { user, updateProfileFunc, setUser } = useContext(AuthContext);
@@ -20,10 +21,11 @@ const UpdateProfile = () => {
                     displayName: name,
                     photoURL: photoURL
                 });
-                alert("Profile Updated Successfully!");
+                toast.success("Profile Updated Successfully!");
                 navigate('/my-profile')
             })
             .catch((error) => {
+                toast.error("Failed to update profile.");
                 // console.log(error)
             })
     }
