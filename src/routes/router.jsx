@@ -14,6 +14,7 @@ import TopicDetails from "../Pages/TopicDetails/TopicDetails";
 import Interview from "../Pages/Interview/Interview";
 import Dashboard from "../Dashboard/Dashboard";
 import InterviewResult from "../Pages/InterviewResult/InterviewResult";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -144,5 +145,8 @@ export const router = createBrowserRouter([
   }, {
     path: '/forget-password',
     element: <ForgetPassword></ForgetPassword>
+  },{
+    path:'/*',
+    element: <ErrorPage></ErrorPage>
   }
 ]);

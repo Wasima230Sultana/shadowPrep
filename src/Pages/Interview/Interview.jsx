@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router";
 import { Link } from "react-router";
 import VoiceRecorder from "../../VoiceRecorder/VoiceRecorder";
 import { AuthContext } from "../../Context/AuthContext";
-import categories from "../../../public/categories.json";
+// import categories from "../../../public/categories.json";
 const Interview = () => {
     const { user } = useContext(AuthContext)
     const questions = useLoaderData();
@@ -19,7 +19,7 @@ const Interview = () => {
     const [started, setStarted] = useState(false);
     const [skippedQuestions, setSkippedQuestions] = useState([]);
     const [timeLeft, setTimeLeft] = useState(QUESTION_TIME);
-
+    const [categories, setCategories] = useState([]);
     // Stores the evaluation result of every question
     const [evaluationResults, setEvaluationResults] = useState({});
 
@@ -36,6 +36,15 @@ const Interview = () => {
             </div>
         );
     }
+
+    useEffect(() => {
+    fetch("/categories.json")
+        .then((res) => res.json())
+        .then((data) => setCategories(data))
+        .catch((error) => {
+            console.error("Category loading error:", error);
+        });
+}, []);
 
     const interviewQuestions = questions.slice(0, selectedCount);
     const question = interviewQuestions[currentQuestion] || {};
