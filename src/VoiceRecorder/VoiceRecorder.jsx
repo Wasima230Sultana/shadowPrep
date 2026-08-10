@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const VoiceRecorder = ({ question, answers, setAnswers }) => {
     const [isListening, setIsListening] = useState(false);
@@ -10,7 +11,7 @@ const VoiceRecorder = ({ question, answers, setAnswers }) => {
             window.webkitSpeechRecognition;
 
         if (!SpeechRecognition) {
-            alert("Speech Recognition is not supported.");
+            toast.error("Speech Recognition is not supported.");
             return;
         }
 

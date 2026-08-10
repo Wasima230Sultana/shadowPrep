@@ -272,7 +272,7 @@ const Interview = () => {
 
             // Save COMPLETE interview to MongoDB
             const saveResponse = await fetch(
-                "http://localhost:3000/api/interviews",
+                "https://shadowprep-server.onrender.com/api/interviews",
                 {
                     method: "POST",
 

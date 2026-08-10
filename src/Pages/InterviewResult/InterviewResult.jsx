@@ -12,7 +12,7 @@ const InterviewResult = () => {
         const fetchResult = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:3000/api/interviews/result/${id}`
+                    `https://shadowprep-server.onrender.com/api/interviews/result/${id}`
                 );
 
                 if (!response.ok) {

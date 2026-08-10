@@ -22,7 +22,7 @@ const Dashboard = () => {
                 setError("");
 
                 const response = await fetch(
-                    `http://localhost:3000/api/interviews/${user.uid}`
+                    `https://shadowprep-server.onrender.com/api/interviews/${user.uid}`
                 );
 
                 if (!response.ok) {
