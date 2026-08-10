@@ -12,6 +12,7 @@ import UpdateProfile from "../Components/UpdateProfile";
 import ForgetPassword from '../Pages/ForgetPassword'
 import TopicDetails from "../Pages/TopicDetails/TopicDetails";
 import Interview from "../Pages/Interview/Interview";
+import Dashboard from "../Dashboard/Dashboard";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,13 @@ export const router = createBrowserRouter([
         path: "/my-profile",
         element: <PrivateRoutes>
           <MyProfile />
+        </PrivateRoutes>
+
+      },
+      {
+        path: "/dashboard",
+        element: <PrivateRoutes>
+          <Dashboard />
         </PrivateRoutes>
 
       },

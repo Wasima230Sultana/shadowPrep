@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { Link } from "react-router";
 import VoiceRecorder from "../../VoiceRecorder/VoiceRecorder";
-
+import { AuthContext } from "../../Context/AuthContext";
+import categories from "../../../public/categories.json";
 const Interview = () => {
+    const { user } = useContext(AuthContext)
     const questions = useLoaderData();
 
     const QUESTION_TIME = 120;
@@ -37,7 +39,12 @@ const Interview = () => {
 
     const interviewQuestions = questions.slice(0, selectedCount);
     const question = interviewQuestions[currentQuestion] || {};
+     const categoryId = interviewQuestions[0]?.categoryId;
 
+    const category = categories.find(
+        (cat) => cat.id === categoryId
+    );
+    
     // Text-to-speech
     useEffect(() => {
         if (!started || !question?.question) return;
@@ -86,138 +93,32 @@ const Interview = () => {
     // ANSWER CHECKING
     // ---------------------------------------------------------
 
-    // Normalize text so that:
-    // "UI Design", "ui-design", "UI DESIGN"
-    // can be compared more easily.
-    const normalizeText = (text) => {
-        return text
-            .toLowerCase()
-            .replace(/[^\w\s]/g, " ")
-            .replace(/\s+/g, " ")
-            .trim();
-    };
-
-    // Check whether a topic exists in the user's answer.
-    const topicMatchesAnswer = (answer, topic) => {
-        const normalizedAnswer = normalizeText(answer);
-        const normalizedTopic = normalizeText(topic);
-
-        if (!normalizedAnswer || !normalizedTopic) {
-            return false;
-        }
-
-        // First check the complete topic phrase
-        if (normalizedAnswer.includes(normalizedTopic)) {
-            return true;
-        }
-
-        // If topic contains multiple words,
-        // check whether most important words exist.
-        const topicWords = normalizedTopic
-            .split(" ")
-            .filter((word) => word.length > 2);
-
-        if (topicWords.length === 0) {
-            return false;
-        }
-
-        const matchedWords = topicWords.filter((word) =>
-            normalizedAnswer.includes(word)
-        );
-
-        return matchedWords.length / topicWords.length >= 0.5;
-    };
-
     // Evaluate one answer
-    const evaluateAnswer = (question, userAnswer) => {
-        const maxScore = question.score || 10;
-
-        // Empty answer
-        if (!userAnswer || !userAnswer.trim()) {
-            return {
-                questionId: question.id,
-                score: 0,
-                maxScore,
-                percentage: 0,
-                status: "Not Answered",
-                matchedTopics: [],
-                missingTopics: question.expectedTopics || [],
-                feedback: "No answer was provided."
-            };
-        }
-
-        const expectedTopics = question.expectedTopics || [];
-
-        const matchedTopics = expectedTopics.filter((topic) =>
-            topicMatchesAnswer(userAnswer, topic)
+    const evaluateAnswerWithAI = async (question, userAnswer) => {
+        const response = await fetch(
+            "http://localhost:3000/api/evaluate-answer",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    question: question.question,
+                    expectedTopics: question.expectedTopics,
+                    userAnswer: userAnswer,
+                    maxScore: question.score,
+                }),
+            }
         );
 
-        const missingTopics = expectedTopics.filter(
-            (topic) => !matchedTopics.includes(topic)
-        );
-
-        const topicPercentage =
-            expectedTopics.length > 0
-                ? matchedTopics.length / expectedTopics.length
-                : 0;
-
-        // Calculate score based on matched topics
-        let score = Math.round(maxScore * topicPercentage);
-
-        // Prevent a non-empty answer from automatically receiving 0
-        if (score === 0 && userAnswer.trim().length > 10) {
-            score = 1;
+        if (!response.ok) {
+            throw new Error("Failed to evaluate answer");
         }
 
-        const percentage =
-            maxScore > 0
-                ? Math.round((score / maxScore) * 100)
-                : 0;
-
-        let status;
-        let feedback;
-
-        if (percentage >= 80) {
-            status = "Correct";
-
-            feedback =
-                "Good answer. You covered most of the expected topics.";
-        } else if (percentage >= 50) {
-            status = "Partially Correct";
-
-            feedback =
-                "Your answer contains some important points, but it could be more complete.";
-        } else {
-            status = "Incorrect";
-
-            feedback =
-                "Your answer needs improvement. Try to explain the main concepts mentioned in the expected topics.";
-        }
-
-        return {
-            questionId: question.id,
-            score,
-            maxScore,
-            percentage,
-            status,
-            matchedTopics,
-            missingTopics,
-            feedback
-        };
+        return await response.json();
     };
 
-    // Evaluate every question
-    const evaluateAllAnswers = () => {
-        const results = {};
 
-        interviewQuestions.forEach((q) => {
-            const userAnswer = answers[q.id] || "";
-
-            results[q.id] = evaluateAnswer(q, userAnswer);
-        });
-
-        return results;
-    };
 
     // Calculate final score based on actual answer quality
     const calculateFinalScore = (results) => {
@@ -272,14 +173,158 @@ const Interview = () => {
     // SUBMIT
     // ---------------------------------------------------------
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         window.speechSynthesis.cancel();
 
-        // Evaluate all answers before showing result
-        const results = evaluateAllAnswers();
+        try {
+            const results = {};
 
-        setEvaluationResults(results);
-        setSubmitted(true);
+            // Evaluate every question using Gemini
+            for (const q of interviewQuestions) {
+                const userAnswer = answers[q.id] || "";
+
+                if (!userAnswer.trim()) {
+                    results[q.id] = {
+                        questionId: q.id,
+                        score: 0,
+                        maxScore: q.score,
+                        percentage: 0,
+                        status: "Not Answered",
+                        feedback: "No answer was provided.",
+                        matchedTopics: [],
+                        missingTopics: q.expectedTopics || [],
+                    };
+
+                    continue;
+                }
+
+                const result = await evaluateAnswerWithAI(
+                    q,
+                    userAnswer
+                );
+
+                results[q.id] = {
+                    questionId: q.id,
+                    question: q.question,
+                    userAnswer,
+                    ...result,
+                };
+            }
+
+            // Calculate total score
+            let totalScore = 0;
+            let maxScore = 0;
+
+            interviewQuestions.forEach((q) => {
+                const result = results[q.id];
+
+                totalScore += result.score || 0;
+                maxScore += result.maxScore || q.score || 0;
+            });
+
+            const percentage =
+                maxScore > 0
+                    ? Math.round(
+                        (totalScore / maxScore) * 100
+                    )
+                    : 0;
+
+            // Convert results object into array
+            const answerResults =
+                interviewQuestions.map((q) => ({
+                    questionId: q.id,
+                    question: q.question,
+                    userAnswer: answers[q.id] || "",
+
+                    score: results[q.id]?.score || 0,
+
+                    maxScore:
+                        results[q.id]?.maxScore ||
+                        q.score ||
+                        0,
+
+                    percentage:
+                        results[q.id]?.percentage || 0,
+
+                    status:
+                        results[q.id]?.status ||
+                        "Not Answered",
+
+                    feedback:
+                        results[q.id]?.feedback ||
+                        "No answer was provided.",
+
+                    matchedTopics:
+                        results[q.id]?.matchedTopics || [],
+
+                    missingTopics:
+                        results[q.id]?.missingTopics || [],
+                }));
+
+            // Save COMPLETE interview to MongoDB
+            const saveResponse = await fetch(
+                "http://localhost:3000/api/interviews",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+
+                    body: JSON.stringify({
+                        userId: user.uid,
+
+                        categoryId: category?.id,
+
+                        categoryName: category?.title,
+
+                        totalQuestions:
+                            interviewQuestions.length,
+
+                        answered: answeredCount,
+
+                        skipped: skippedCount,
+
+                        totalScore,
+
+                        maxScore,
+
+                        percentage,
+
+                        answers: answerResults,
+                    }),
+                }
+            );
+
+            if (!saveResponse.ok) {
+                throw new Error(
+                    "Failed to save interview"
+                );
+            }
+
+            const savedInterview =
+                await saveResponse.json();
+
+            console.log(
+                "Interview saved:",
+                savedInterview
+            );
+
+            // Store results for result page
+            setEvaluationResults(results);
+
+            setSubmitted(true);
+
+        } catch (error) {
+            console.error(
+                "Interview submission error:",
+                error
+            );
+
+            alert(
+                "Something went wrong while submitting the interview."
+            );
+        }
     };
 
     // ---------------------------------------------------------
@@ -489,10 +534,10 @@ const Interview = () => {
 
                                 <div
                                     className={`badge badge-lg ${finalScore >= 80
-                                            ? "badge-success"
-                                            : finalScore >= 50
-                                                ? "badge-warning"
-                                                : "badge-error"
+                                        ? "badge-success"
+                                        : finalScore >= 50
+                                            ? "badge-warning"
+                                            : "badge-error"
                                         }`}
                                 >
                                     {finalScore >= 80
@@ -538,10 +583,10 @@ const Interview = () => {
                                                         {result && (
                                                             <div
                                                                 className={`badge ${result.status === "Correct"
-                                                                        ? "badge-success"
-                                                                        : result.status === "Partially Correct"
-                                                                            ? "badge-warning"
-                                                                            : "badge-error"
+                                                                    ? "badge-success"
+                                                                    : result.status === "Partially Correct"
+                                                                        ? "badge-warning"
+                                                                        : "badge-error"
                                                                     }`}
                                                             >
                                                                 {result.status}
@@ -588,10 +633,10 @@ const Interview = () => {
 
                                                                 <progress
                                                                     className={`progress w-full mt-2 ${result.percentage >= 80
-                                                                            ? "progress-success"
-                                                                            : result.percentage >= 50
-                                                                                ? "progress-warning"
-                                                                                : "progress-error"
+                                                                        ? "progress-success"
+                                                                        : result.percentage >= 50
+                                                                            ? "progress-warning"
+                                                                            : "progress-error"
                                                                         }`}
                                                                     value={result.percentage}
                                                                     max="100"
@@ -797,8 +842,8 @@ const Interview = () => {
 
                         <div
                             className={`badge badge-lg ${timeLeft <= 30
-                                    ? "badge-error"
-                                    : "badge-primary"
+                                ? "badge-error"
+                                : "badge-primary"
                                 }`}
                         >
                             ⏱ {minutes}:{seconds}
@@ -840,10 +885,10 @@ const Interview = () => {
 
                                     <div
                                         className={`badge badge-primary ${question.difficulty === "Easy"
-                                                ? "badge-success"
-                                                : question.difficulty === "Medium"
-                                                    ? "badge-warning"
-                                                    : "badge-error"
+                                            ? "badge-success"
+                                            : question.difficulty === "Medium"
+                                                ? "badge-warning"
+                                                : "badge-error"
                                             }`}
                                     >
                                         {question.difficulty}
