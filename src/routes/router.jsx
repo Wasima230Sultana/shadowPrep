@@ -13,6 +13,7 @@ import ForgetPassword from '../Pages/ForgetPassword'
 import TopicDetails from "../Pages/TopicDetails/TopicDetails";
 import Interview from "../Pages/Interview/Interview";
 import Dashboard from "../Dashboard/Dashboard";
+import InterviewResult from "../Pages/InterviewResult/InterviewResult";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
           <Dashboard />
         </PrivateRoutes>
 
+      },
+      {
+        path: "/interview-result/:id",
+        element: <InterviewResult />
       },
       {
         path: "/category",

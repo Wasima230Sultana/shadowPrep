@@ -1,7 +1,7 @@
 
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router";
-import { AuthContext } from "../../Context/AuthContext";
+import { AuthContext } from "../Context/AuthContext";
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext);
