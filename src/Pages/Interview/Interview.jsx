@@ -29,6 +29,15 @@ const Interview = () => {
         setTimeLeft(QUESTION_TIME);
     }, [currentQuestion, started]);
 
+        useEffect(() => {
+    fetch("/categories.json")
+        .then((res) => res.json())
+        .then((data) => setCategories(data))
+        .catch((error) => {
+            console.error("Category loading error:", error);
+        });
+}, []);
+
     if (!questions?.length) {
         return (
             <div className="min-h-screen flex justify-center items-center">
@@ -37,14 +46,7 @@ const Interview = () => {
         );
     }
 
-    useEffect(() => {
-    fetch("/categories.json")
-        .then((res) => res.json())
-        .then((data) => setCategories(data))
-        .catch((error) => {
-            console.error("Category loading error:", error);
-        });
-}, []);
+
 
     const interviewQuestions = questions.slice(0, selectedCount);
     const question = interviewQuestions[currentQuestion] || {};
@@ -103,30 +105,29 @@ const Interview = () => {
     // ---------------------------------------------------------
 
     // Evaluate one answer
-    const evaluateAnswerWithAI = async (question, userAnswer) => {
-        const response = await fetch(
-            "http://localhost:3000/api/evaluate-answer",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    question: question.question,
-                    expectedTopics: question.expectedTopics,
-                    userAnswer: userAnswer,
-                    maxScore: question.score,
-                }),
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error("Failed to evaluate answer");
+const evaluateAnswerWithAI = async (question, userAnswer) => {
+    const response = await fetch(
+        "https://shadowprep-server.onrender.com/api/evaluate-answer",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                question: question.question,
+                expectedTopics: question.expectedTopics,
+                userAnswer: userAnswer,
+                maxScore: question.score,
+            }),
         }
+    );
 
-        return await response.json();
-    };
+    if (!response.ok) {
+        throw new Error("Failed to evaluate answer");
+    }
 
+    return await response.json();
+};
 
 
     // Calculate final score based on actual answer quality
