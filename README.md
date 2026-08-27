@@ -113,7 +113,7 @@ After completing an interview, users can review:
 ### 1. Clone the Frontend
 
 ```bash
-git clone <https://github.com/Wasima230Sultana/shadowPrep.git>
+git clone https://github.com/Wasima230Sultana/shadowPrep.git
 cd shadowPrep
 npm install
 npm run dev
@@ -122,13 +122,13 @@ npm run dev
 ### 2. Clone the Backend
 
 ```bash
-git clone <https://github.com/Wasima230Sultana/shadowPrep-Server.git>
+git clone https://github.com/Wasima230Sultana/shadowPrep-Server.git
 cd shadowPrep-Server
 npm install
 npm run dev
 ```
 
-Create a `.env` file in the backend and add your required environment variables:
+Create a `.env` file in the backend and add required environment variables:
 
 ```env
 MONGODB_URI=your_mongodb_connection_string
