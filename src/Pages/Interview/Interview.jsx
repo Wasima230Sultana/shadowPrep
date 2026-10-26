@@ -104,30 +104,44 @@ const Interview = () => {
     // ANSWER CHECKING
     // ---------------------------------------------------------
 
-    // Evaluate one answer
+    
+
 const evaluateAnswerWithAI = async (question, userAnswer) => {
-    const response = await fetch(
-        "https://shadowprep-server.onrender.com/api/evaluate-answer",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                question: question.question,
-                expectedTopics: question.expectedTopics,
-                userAnswer: userAnswer,
-                maxScore: question.score,
-            }),
-        }
-    );
-
-    if (!response.ok) {
-        throw new Error("Failed to evaluate answer");
+  const response = await fetch(
+    "https://shadowprep-server.onrender.com/api/evaluate-answer",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        question: question.question,
+        expectedTopics: question.expectedTopics || [],
+        userAnswer,
+        maxScore: question.score,
+      }),
     }
+  );
 
-    return await response.json();
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok) {
+    console.error("AI evaluation failed:", {
+      status: response.status,
+      response: data,
+    });
+
+    throw new Error(
+      data.message ||
+      data.error ||
+      `Evaluation failed with status ${response.status}`
+    );
+  }
+
+  return data;
 };
+
+
 
 
     // Calculate final score based on actual answer quality
