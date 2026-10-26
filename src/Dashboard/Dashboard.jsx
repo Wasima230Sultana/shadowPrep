@@ -259,7 +259,7 @@ const Dashboard = () => {
                             </p>
 
                             <Link
-                                to="/topics"
+                                to="/category"
                                 className="btn btn-primary"
                             >
                                 Start Interview

@@ -6,7 +6,12 @@ Users can practice interviews, submit their answers, receive AI evaluation, and 
 
 ## 🌐 Live Demo
 
-👉 [**Try ShadowPrep**](https://shadowprep-3164b.web.app/)
+[Try ShadowPrep](https://shadowprep-3164b.web.app/)
+
+## 🔗 GitHub Repositories
+
+- [Frontend Repository](https://github.com/Wasima230Sultana/shadowPrep)
+- [Backend Repository](https://github.com/Wasima230Sultana/shadowPrep-Server)
 
 ## ✨ Features
 
@@ -132,8 +137,8 @@ Create a `.env` file in the backend and add required environment variables:
 
 ```env
 MONGODB_URI=your_mongodb_connection_string
-AI_API_KEY=your_ai_api_key
-PORT=10000
+GEMINI_API_KEY=your_gemini_api_key
+PORT=3000
 ```
 
 ## 🎯 Future Improvements
